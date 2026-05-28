@@ -7,28 +7,35 @@ const { Pool } = pkg;
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  
-
   ssl: {
-    rejectUnauthorized: false
-  }
+    rejectUnauthorized: false,
+  },
+  connectionTimeoutMillis: 15000,
+  idleTimeoutMillis: 30000,
+  max: 10,
 });
 
 console.log("DATABASE_URL:", process.env.DATABASE_URL);
 
-
-
-// test connection
-(async () => {
-  try {
-    const client = await pool.connect();
-    console.log("✅ PostgreSQL Connected");
-    client.release();
-  } catch (err) {
-    console.error("❌ DB Connection FAILED:");
-    console.error(err);
-    process.exit(1);
+const connectWithRetry = async (retries = 5, delay = 3000) => {
+  for (let i = 1; i <= retries; i++) {
+    try {
+      const client = await pool.connect();
+      console.log("✅ PostgreSQL Connected");
+      client.release();
+      return;
+    } catch (err) {
+      console.error(`❌ DB Attempt ${i}/${retries} failed: ${err.message}`);
+      if (i < retries) {
+        console.log(`⏳ Retrying in ${delay / 1000}s...`);
+        await new Promise((res) => setTimeout(res, delay));
+      } else {
+        console.error("🚨 All DB connection attempts failed.");
+      }
+    }
   }
-})();
+};
+
+connectWithRetry();
 
 export default pool;

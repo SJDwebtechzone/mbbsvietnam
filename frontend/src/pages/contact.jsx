@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Contact from "../assets/Professional-contact.png"; // adjust path
+import Contact from "../assets/Professional-contact.png";
 
 const PhoneIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -36,6 +36,7 @@ const SendIcon = () => (
 export default function ContactPage() {
   const [form, setForm] = useState({ fullName: "", email: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const BASE_URL = import.meta.env.VITE_API_URL || "https://mbbs-vietnam.onrender.com";
 
@@ -61,669 +62,226 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f5f5f5", display: "flex", flexDirection: "column", fontFamily: "'DM Sans', sans-serif" }}>
+    <div className="min-h-screen bg-gray-50 flex flex-col font-['DM_Sans']">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap');
         .serif { font-family: 'Playfair Display', Georgia, serif; }
-
-        /* ── HERO ── */
-        .contact-hero {
-          background: #CC1B1B;
-          position: relative;
-          overflow: hidden;
-          padding: 5rem 1.5rem;
-          text-align: center;
-        }
-        .contact-hero::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(ellipse 55% 80% at 0% 100%, rgba(0,0,0,0.22) 0%, transparent 60%),
-            radial-gradient(ellipse 45% 65% at 100% 0%, rgba(245,197,24,0.18) 0%, transparent 55%);
-          pointer-events: none;
-        }
-        .hero-grid {
-          position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-          background-size: 44px 44px;
-          pointer-events: none;
-        }
-
-        /* ── BADGE ── */
-        .badge-gold {
-          display: inline-flex;
-          align-items: center;
-          background: #F5C518;
-          color: #111;
-          border-radius: 100px;
-          padding: 5px 16px;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.09em;
-          text-transform: uppercase;
-          margin-bottom: 1.25rem;
-        }
-
-        /* ── LEFT CARD (info panel) ── */
-        .info-card {
-          background: #CC1B1B;
-          border-radius: 20px;
-          padding: 2.5rem;
-          position: relative;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          gap: 1.75rem;
-          box-shadow: 0 20px 60px rgba(204,27,27,0.25);
-        }
-        .info-card::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(ellipse 60% 50% at 100% 0%, rgba(245,197,24,0.15) 0%, transparent 55%),
-            radial-gradient(ellipse 50% 60% at 0% 100%, rgba(0,0,0,0.2) 0%, transparent 55%);
-          pointer-events: none;
-        }
-        .info-card::after {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background-image:
-            linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-          background-size: 36px 36px;
-          pointer-events: none;
-        }
-
-        .info-row {
-          position: relative;
-          z-index: 1;
-          display: flex;
-          align-items: flex-start;
-          gap: 1rem;
-        }
-        .info-icon {
-          width: 42px; height: 42px;
-          border-radius: 10px;
-          background: #F5C518;
-          color: #111;
-          display: flex; align-items: center; justify-content: center;
-          flex-shrink: 0;
-        }
-
-        .info-divider {
-          position: relative; z-index: 1;
-          height: 1px;
-          background: rgba(255,255,255,0.15);
-        }
-
-        .wa-btn {
-          position: relative; z-index: 1;
-          width: 100%;
-          background: #F5C518;
-          color: #111;
-          padding: 0.875rem;
-          border-radius: 12px;
-          font-weight: 700;
-          font-size: 0.9rem;
-          display: flex; align-items: center; justify-content: center; gap: 8px;
-          border: none; cursor: pointer;
-          transition: background 0.2s, transform 0.15s;
-          margin-top: auto;
-        }
-        .wa-btn:hover { background: #e0b315; transform: translateY(-1px); }
-        .wa-btn:active { transform: scale(0.98); }
-
-        /* ── FORM CARD ── */
-        .form-card {
-          background: #fff;
-          border-radius: 20px;
-          padding: 2.5rem;
-          border: 1.5px solid #ebebeb;
-          box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-        }
-
-        .gold-bar {
-          width: 44px; height: 3px;
-          background: #F5C518;
-          border-radius: 2px;
-          margin-bottom: 1.25rem;
-        }
-
-        .field-label {
-          display: block;
-          font-size: 11px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.09em;
-          color: #333;
-          margin-bottom: 6px;
-        }
-
-        .field-input {
-          width: 100%;
-          border: 1.5px solid #e0e0e0;
-          background: #fafafa;
-          border-radius: 10px;
-          padding: 0.7rem 1rem;
-          font-size: 0.875rem;
-          color: #111;
-          font-family: 'DM Sans', sans-serif;
-          transition: border-color 0.2s, background 0.2s;
-          outline: none;
-          box-sizing: border-box;
-        }
-        .field-input::placeholder { color: #aaa; }
-        .field-input:focus { border-color: #CC1B1B; background: #fff; }
-
-        .submit-btn {
-          width: 100%;
-          background: #CC1B1B;
-          color: #fff;
-          padding: 0.9rem;
-          border-radius: 12px;
-          font-weight: 700;
-          font-size: 0.9375rem;
-          display: flex; align-items: center; justify-content: center; gap: 8px;
-          border: none; cursor: pointer;
-          transition: background 0.2s, transform 0.15s;
-          font-family: 'DM Sans', sans-serif;
-        }
-        .submit-btn:hover { background: #b01616; transform: translateY(-1px); }
-        .submit-btn:active { transform: scale(0.98); }
-
-        /* ── TRUST BAR ── */
-        .trust-bar {
-          background: #CC1B1B;
-          border-radius: 16px;
-          padding: 1.75rem 2rem;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-          gap: 1rem;
-          text-align: center;
-          position: relative;
-          overflow: hidden;
-        }
-        .trust-bar::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: radial-gradient(ellipse 60% 80% at 100% 50%, rgba(245,197,24,0.15) 0%, transparent 60%);
-          pointer-events: none;
-        }
-        .trust-stat {
-          position: relative; z-index: 1;
-        }
-
-        /* ── LAYOUT GRID ── */
-        .contact-grid {
-          display: grid;
-          grid-template-columns: 1fr 1.4fr;
-          gap: 1.75rem;
-          max-width: 1000px;
-          margin: 0 auto;
-        }
-        @media (max-width: 768px) {
-          .contact-grid { grid-template-columns: 1fr; }
-        }
-
-        .two-col {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
-        }
-        @media (max-width: 480px) {
-          .two-col { grid-template-columns: 1fr; }
-        }
       `}</style>
 
       <Header />
 
-      {/* ── HERO ──  
-      <section className="contact-hero">
-        <div className="hero-grid" />
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "640px", margin: "0 auto" }}>
-          <div className="badge-gold">Contact Us</div>
-          <h1 className="serif" style={{ color: "#fff", fontSize: "clamp(2rem, 4.5vw, 3rem)", fontWeight: 900, lineHeight: 1.2, marginBottom: "1rem" }}>
-            Let's Start a{" "}
-            <span style={{ color: "#F5C518" }}>Conversation</span>
-          </h1>
-          <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "1rem", lineHeight: 1.75 }}>
-            Our expert counsellors are ready to guide you toward your MBBS goals in Vietnam. Reach out — we respond within 24 hours.
-          </p>
-        </div>
-      </section> */}
+      {/* Hero Section - Fully Responsive */}
+      <section className="relative overflow-hidden min-h-[480px] md:min-h-[500px] flex items-center bg-white">
+        {/* Red Background with Diagonal Cut */}
+        <div className="absolute top-0 left-0 w-full md:w-[42%] h-full bg-gradient-to-br from-[#CC1B1B] via-[#CC1B1B] to-[#a01414] md:clip-diagonal" />
+        
+        {/* Pattern Overlay */}
+        <div className="absolute top-0 left-0 w-full md:w-[42%] h-full bg-[radial-gradient(circle,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[length:22px_22px] md:clip-diagonal" />
 
-
-    <section
-  style={{
-    position: "relative",
-    overflow: "hidden",
-    minHeight: "480px",
-    display: "flex",
-    alignItems: "center",
-    background: "#fff",
-  }}
-
-  >
-
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "42%",
-      height: "100%",
-      background: "linear-gradient(160deg, #CC1B1B 60%, #a01414 100%)",
-      clipPath: "polygon(0 0, 88% 0, 100% 100%, 0 100%)",
-      zIndex: 0,
-    }}
-  />
-
-  
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "42%",
-      height: "100%",
-      backgroundImage:
-        "radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px)",
-      backgroundSize: "22px 22px",
-      clipPath: "polygon(0 0, 88% 0, 100% 100%, 0 100%)",
-      zIndex: 1,
-    }}
-  />
-
-  
-  <div
-    style={{
-      position: "relative",
-      zIndex: 2,
-      maxWidth: "1200px",
-      width: "100%",
-      margin: "0 auto",
-      padding: "3.5rem clamp(1.5rem, 5vw, 4rem)",
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr 1fr",
-      gap: "2rem",
-      alignItems: "center",
-    }}
-  >
-    
-    <div>
-      <div
-        style={{
-          display: "inline-block",
-          marginBottom: "1.1rem",
-          padding: "4px 14px",
-          borderRadius: "999px",
-          border: "1px solid rgba(255,255,255,0.35)",
-          background: "rgba(255,255,255,0.15)",
-          color: "#fff",
-          fontSize: "0.68rem",
-          fontWeight: 700,
-          letterSpacing: "0.14em",
-          textTransform: "uppercase",
-        }}
-      >
-        Contact Us
-      </div>
-
-      <h1
-        className="serif"
-        style={{
-          color: "#ffffff",
-          fontSize: "clamp(1.9rem, 3.2vw, 2.75rem)",
-          fontWeight: 900,
-          lineHeight: 1.18,
-          marginBottom: "1rem",
-        }}
-      >
-        Let's Start a{" "}
-        <span
-          style={{
-            color: "#F5C518",
-            display: "block",
-          }}
-        >
-          Conversation
-        </span>
-      </h1>
-
-      <p
-        style={{
-          color: "rgba(255,255,255,0.82)",
-          fontSize: "0.92rem",
-          lineHeight: 1.75,
-          marginBottom: "1.75rem",
-        }}
-      >
-        Our expert counsellors are ready to guide you every step of the
-        way — from course selection to visa approval.
-      </p>
-
-      <button
-        type="button"
-        onClick={() => setIsModalOpen(true)}
-        style={{
-          padding: "11px 26px",
-          background: "#F5C518",
-          color: "#7a4f00",
-          fontWeight: 700,
-          fontSize: "0.88rem",
-          border: "none",
-          borderRadius: "10px",
-          cursor: "pointer",
-          boxShadow: "0 4px 18px rgba(0,0,0,0.2)",
-        }}
-      >
-        Enquire Now →
-      </button>
-    </div>
-
-    
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.85rem",
-      }}
-    >
-      {[
-        {
-          icon: "📞",
-          label: "Call Us",
-          value: "+91 98765 43210",
-          sub: "Mon – Sat, 9 AM – 6 PM",
-        },
-        {
-          icon: "✉️",
-          label: "Email Us",
-          value: "info@vietnammbbs.in",
-          sub: "We reply within 24 hours",
-        },
-        {
-          icon: "📍",
-          label: "Our Office",
-          value: "Chennai, Tamil Nadu",
-          sub: "India Headquarters",
-        },
-      ].map((item) => (
-        <div
-          key={item.label}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "14px",
-            padding: "14px 18px",
-            borderRadius: "12px",
-            background: "#fff",
-            border: "1px solid #f0f0f0",
-            boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-          }}
-        >
-          <div
-            style={{
-              width: "42px",
-              height: "42px",
-              borderRadius: "10px",
-              background: "#fff5f5",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "18px",
-              flexShrink: 0,
-            }}
-          >
-            {item.icon}
-          </div>
-          <div>
-            <div
-              style={{
-                fontSize: "0.68rem",
-                fontWeight: 700,
-                color: "#CC1B1B",
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
-                marginBottom: "2px",
-              }}
-            >
-              {item.label}
-            </div>
-            <div
-              style={{
-                fontSize: "0.9rem",
-                fontWeight: 700,
-                color: "#111",
-                marginBottom: "1px",
-              }}
-            >
-              {item.value}
-            </div>
-            <div style={{ fontSize: "0.75rem", color: "#888" }}>
-              {item.sub}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <img
-        src={Contact}
-        alt="Contact illustration"
-        style={{
-          marginLeft: "7rem",
-          width: "150%",
-          maxWidth: "450px",
-          height: "auto",
-          objectFit: "contain",
-         
-        }}
-      />
-    </div>
-  </div>
-</section>  
-
-
-
-{/* <section
-  style={{
-    width: "100%",
-    lineHeight: 0,
-    height: "90vh", // removes gap below image
-  }}
->
-  <img
-    style={{
-      width: "100%",
-      height: "80vh",      // height follows the image's natural ratio
-      display: "block",
-         // no inline spacing
-    }}
-    src="https://answerfirst.com/wp-content/uploads/2018/04/communication.jpeg"
-    alt="Hero background"
-    loading="eager"
-  />
-</section> */}
-      
-      
-
-      {/* ── MAIN ── */}
-      <main style={{ flex: 1, padding: "4rem 1.5rem" }}>
-
-        <div className="contact-grid">
-
-          {/* ── INFO CARD ── 
-          <div className="info-card">
-            <div style={{ position: "relative", zIndex: 1 }}>
-              <div style={{ width: "36px", height: "3px", background: "#F5C518", borderRadius: "2px", marginBottom: "1rem" }} />
-              <h2 className="serif" style={{ color: "#fff", fontSize: "1.875rem", fontWeight: 900, lineHeight: 1.2 }}>
-                We're here<br />to help you.
-              </h2>
-              <p style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.875rem", marginTop: "0.5rem", lineHeight: 1.7 }}>
-                Talk to our counsellors about MBBS admissions, visa, fees, and more.
+        {/* Content Container */}
+        <div className="relative z-10 max-w-7xl w-full mx-auto px-5 md:px-8 py-12 md:py-16">
+          <div className="flex flex-col lg:flex-row gap-8 items-center">
+            {/* Left Content */}
+            <div className="w-full lg:w-1/3 text-center lg:text-left">
+              <div className="inline-block mb-4 px-4 py-1.5 rounded-full border border-white/35 bg-white/15 text-white text-[11px] font-bold tracking-wider uppercase">
+                Contact Us
+              </div>
+              <h1 className="serif text-white text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4">
+                Let's Start a{" "}
+                <span className="text-[#F5C518] block">
+                  Conversation
+                </span>
+              </h1>
+              <p className="text-white/80 text-sm md:text-base leading-relaxed mb-6">
+                Our expert counsellors are ready to guide you every step of the
+                way — from course selection to visa approval.
               </p>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="px-6 py-3 bg-[#F5C518] text-[#7a4f00] font-bold text-sm rounded-xl cursor-pointer hover:bg-[#e0b315] transition-all shadow-lg"
+              >
+                Enquire Now →
+              </button>
             </div>
 
-            <div className="info-divider" />
-
-            {[
-              { icon: <PhoneIcon />, label: "Call Us", value: "90034 20057 | 72000 95846" },
-              { icon: <MailIcon />, label: "Email", value: "info@medviet.com" },
-              { icon: <LocationIcon />, label: "Office Address", value: "38, Eswaran Koil Street (Lane Side), Alandur, Chennai – 16" },
-            ].map(({ icon, label, value }) => (
-              <div key={label} className="info-row">
-                <div className="info-icon">{icon}</div>
-                <div>
-                  <p style={{ color: "rgba(255,255,255,0.55)", fontSize: "10.5px", textTransform: "uppercase", letterSpacing: "0.09em", fontWeight: 700, marginBottom: "3px" }}>{label}</p>
-                  <p style={{ color: "#fff", fontWeight: 600, fontSize: "0.875rem", lineHeight: 1.6 }}>{value}</p>
+            {/* Contact Cards */}
+            <div className="w-full lg:w-1/3 space-y-3">
+              {[
+                {
+                  icon: "📞",
+                  label: "Call Us",
+                  value: "+91 90034 20057 | +91 72000 95846",
+                  sub: "Mon – Sat, 9 AM – 6 PM",
+                },
+                {
+                  icon: "✉️",
+                  label: "Email Us",
+                  value: "admission@vietnambbs.com",
+                  sub: "We reply within 24 hours",
+                },
+                {
+                  icon: "📍",
+                  label: "Our Office",
+                  value: "Old No: 36 G, New No: 1/36-3, North Parade Road, St Thomas Mount, Chennai - 600016",
+                  sub: "India Headquarters",
+                },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-100 shadow-md hover:shadow-lg transition"
+                >
+                  <div className="w-11 h-11 rounded-lg bg-red-50 flex items-center justify-center text-xl flex-shrink-0">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <div className="text-[11px] font-bold text-[#CC1B1B] uppercase tracking-wider mb-0.5">
+                      {item.label}
+                    </div>
+                    <div className="text-sm font-bold text-gray-900 mb-0.5">
+                      {item.value}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {item.sub}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
-            <button className="wa-btn" onClick={() => window.open("https://wa.me/919003420057", "_blank")}>
-              <WhatsAppIcon />
-              Chat on WhatsApp
-            </button>
-          </div>  */}
-
-
-
-
-     {/* <div
-  style={{
-    background: "#fff",
-    borderRadius: "16px",
-    overflow: "hidden",
-    boxShadow:
-      "0 2px 8px rgba(0,0,0,0.06), 0 12px 40px rgba(204,27,27,0.10), 0 1px 2px rgba(0,0,0,0.04)",
-    border: "1px solid #f5f5f5",
-  }}
->
-  <iframe
-    title="Office Location"
-    src="https://maps.google.com/maps?q=38,Eswaran%20Koil%20Street,Alandur,Chennai&t=&z=15&ie=UTF8&iwloc=&output=embed"
-    width="100%"
-    height="350"
-    style={{ border: 0 }}
-    loading="lazy"
-  ></iframe>
-</div> */}
-
-
-
-
-<div
-  style={{
-    background: "#fff",
-    borderRadius: "16px",
-    overflow: "hidden",
-    boxShadow:
-      "0 2px 8px rgba(0,0,0,0.06), 0 12px 40px rgba(204,27,27,0.10)",
-    border: "1px solid #f5f5f5",
-    height: "100%", // important
-  }}
->
-  <iframe
-    title="Office Location"
-    src="https://maps.google.com/maps?q=38,Eswaran%20Koil%20Street,Alandur,Chennai&z=15&output=embed"
-    style={{
-      width: "100%",
-      height: "100%",
-      border: 0,
-    }}
-    loading="lazy"
-  ></iframe>
-</div>
-
-
-
-
-          {/* ── FORM CARD ── */}
-          <div className="form-card">
-            <div className="gold-bar" />
-            <h2 className="serif" style={{ fontSize: "1.75rem", fontWeight: 900, color: "#111", marginBottom: "4px" }}>
-              Send an Enquiry
-            </h2>
-            <p style={{ color: "#888", fontSize: "0.875rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              Fill in the details below and we'll be in touch within 24 hours.
-            </p>
-
-            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1.125rem" }}>
-              <div className="two-col">
-                <div>
-                  <label className="field-label">Full Name *</label>
-                  <input className="field-input" type="text" name="fullName" value={form.fullName} onChange={handleChange} required placeholder="Your full name" />
-                </div>
-                <div>
-                  <label className="field-label">Phone Number *</label>
-                  <input className="field-input" type="text" name="phone" value={form.phone} onChange={handleChange} required placeholder="Your phone number" />
-                </div>
-              </div>
-
-              <div>
-                <label className="field-label">Email Address *</label>
-                <input className="field-input" type="email" name="email" value={form.email} onChange={handleChange} required placeholder="Your email address" />
-              </div>
-
-              <div>
-                <label className="field-label">Message</label>
-                <textarea className="field-input" name="message" value={form.message} onChange={handleChange} rows={4} placeholder="Tell us about your query..." style={{ resize: "none" }} />
-              </div>
-
-              <button type="submit" className="submit-btn">
-                <SendIcon />
-                Submit
-              </button>
-
-              {submitted && (
-                <div style={{ background: "rgba(245,197,24,0.12)", border: "1.5px solid #F5C518", borderRadius: "10px", padding: "0.875rem", textAlign: "center", fontSize: "0.875rem", fontWeight: 600, color: "#111" }}>
-                  ✓ Enquiry submitted! We'll be in touch soon.
-                </div>
-              )}
-            </form>
+            {/* Illustration - Hidden on mobile, visible on desktop */}
+            <div className="hidden lg:block w-full lg:w-1/3">
+              <img
+                src={Contact}
+                alt="Contact illustration"
+                className="w-full max-w-md mx-auto object-contain"
+              />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* ── TRUST BAR ── 
-        <div style={{ maxWidth: "1000px", margin: "2rem auto 0" }}>
-          <div className="trust-bar">
-            {[
-              { stat: "500+", label: "Students Enrolled" },
-              { stat: "10+", label: "Partner Universities" },
-              { stat: "98%", label: "Visa Success Rate" },
-              { stat: "24/7", label: "Student Support" },
-            ].map(({ stat, label }) => (
-              <div key={label} className="trust-stat">
-                <p className="serif" style={{ color: "#F5C518", fontSize: "1.75rem", fontWeight: 900, lineHeight: 1 }}>{stat}</p>
-                <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.75rem", marginTop: "4px", fontWeight: 500 }}>{label}</p>
+      {/* Main Content */}
+      <main className="flex-1 py-12 md:py-16 px-5">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Map Section */}
+            <div className="w-full lg:w-1/2">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 h-[300px] md:h-[400px] lg:h-full min-h-[350px]">
+                <iframe
+  title="Office Location"
+  src="https://maps.google.com/maps?q=1/36-3,North+Parade+Road,St+Thomas+Mount,Chennai+600016&z=15&output=embed"
+  className="w-full h-full border-0"
+  loading="lazy"
+></iframe>
               </div>
-            ))}
-          </div>
-        </div> */}
+            </div>
 
+            {/* Form Section */}
+            <div className="w-full lg:w-1/2">
+              <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-lg">
+                <div className="w-11 h-1 bg-[#F5C518] rounded-full mb-5"></div>
+                <h2 className="serif text-2xl md:text-3xl font-black text-gray-900 mb-2">
+                  Send an Enquiry
+                </h2>
+                <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                  Fill in the details below and we'll be in touch within 24 hours.
+                </p>
+
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1.5">
+                        Full Name *
+                      </label>
+                      <input
+                        className="w-full border-2 border-gray-200 bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-900 focus:border-[#CC1B1B] focus:bg-white outline-none transition"
+                        type="text"
+                        name="fullName"
+                        value={form.fullName}
+                        onChange={handleChange}
+                        required
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1.5">
+                        Phone Number *
+                      </label>
+                      <input
+                        className="w-full border-2 border-gray-200 bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-900 focus:border-[#CC1B1B] focus:bg-white outline-none transition"
+                        type="text"
+                        name="phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        required
+                        placeholder="Your phone number"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1.5">
+                      Email Address *
+                    </label>
+                    <input
+                      className="w-full border-2 border-gray-200 bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-900 focus:border-[#CC1B1B] focus:bg-white outline-none transition"
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
+                      placeholder="Your email address"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[11px] font-bold uppercase tracking-wider text-gray-700 mb-1.5">
+                      Message
+                    </label>
+                    <textarea
+                      className="w-full border-2 border-gray-200 bg-gray-50 rounded-xl px-4 py-3 text-sm text-gray-900 focus:border-[#CC1B1B] focus:bg-white outline-none transition resize-none"
+                      name="message"
+                      value={form.message}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="Tell us about your query..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-[#CC1B1B] text-white py-3.5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-[#b01616] transition-all"
+                  >
+                    <SendIcon />
+                    Submit
+                  </button>
+
+                  {submitted && (
+                    <div className="bg-yellow-50 border-2 border-[#F5C518] rounded-xl p-3 text-center text-sm font-semibold text-gray-900">
+                      ✓ Enquiry submitted! We'll be in touch soon.
+                    </div>
+                  )}
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
-
-      
-      
-
       <Footer />
+
+      {/* Add custom CSS for diagonal clip */}
+      <style>{`
+        .clip-diagonal {
+          clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+        }
+        @media (max-width: 768px) {
+          .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+        }
+      `}</style>
     </div>
   );
 }
