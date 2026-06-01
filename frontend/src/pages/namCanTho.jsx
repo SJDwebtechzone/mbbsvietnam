@@ -605,10 +605,10 @@ import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
 
 // ── Assets ──────────────────────────────────────────────
-import NCTUStudent  from "../assets/DSC02197.jpg";
+import NCTUStudent  from "../assets/DJI.jpg";
 import HeroImage1   from "../assets/DSC02283.jpg";
 import HeroImage2   from "../assets/DSC02256.jpg";
-import PharmacyImg  from "../assets/DSC02228.jpg";
+import PharmacyImg  from "../assets/3.jpg";
 import GenMedImg    from "../assets/DSC08785.jpg";
 import NursingImg   from "../assets/DSC06843.jpg";
 import CollegeImg   from "../assets/namCanPic.webp";

@@ -360,10 +360,10 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
-import HeroImg from "../assets/6I4A3707.jpg";
-import ClinicalImg from "../assets/6I4A3712.jpg";
-import HanoiImg1 from "../assets/6I4A3744.jpg";
-import HanoiImg2 from "../assets/6I4A3745.jpg";
+import HeroImg from "../assets/dnu.jpeg";
+import ClinicalImg from "../assets/A6400013-Edit.jpg";
+import HanoiImg1 from "../assets/uclg8.jpeg";
+import HanoiImg2 from "../assets/DSC02199.jpg";
 
 const DaiNamUniversity = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

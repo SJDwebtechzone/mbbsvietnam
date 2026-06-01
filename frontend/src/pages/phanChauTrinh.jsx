@@ -407,11 +407,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
 import PhanBanner from "../assets/phan-banner.webp";
-import USMLEImg from "../assets/3.jpg";
-import DoctorsImg from "../assets/4.jpg";
+import USMLEImg from "../assets/students.webp";
+import DoctorsImg from "../assets/uclg9.jpeg";
 import HostelImg from "../assets/_DSC9355.JPG";
 import IndianFoodImg from "../assets/_DSC9356.JPG";
-import DaNangImg from "../assets/5.jpg";
+import DaNangImg from "../assets/phan.webp";
 
 const PhanChauTrinhUniversity = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

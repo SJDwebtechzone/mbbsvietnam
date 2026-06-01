@@ -9,7 +9,7 @@ import Students from "../assets/students.webp";
 import BMTMU from "../assets/uclg6.jpeg";
 import DNU from "../assets/dnu.jpeg";
 import HSU from "../assets/uclg1.jpeg";
-import DONG from "../assets/donga1.jfif";
+import DONG from "../assets/dong.jpg";
 
 const universities = [
   {
@@ -26,7 +26,7 @@ const universities = [
     name: "Nam Can Tho University",
     location: "Can Tho, Vietnam",
     est: "Est. 2013",
-    fees: "$4,200 / Yr",
+    fees: "$5,250 / Yr",
     course: "6 Years",
     desc: "Offering modern infrastructure and a curriculum aligned with global healthcare standards and technology.",
     img: NamCan,
@@ -36,7 +36,7 @@ const universities = [
     name: "Buon Ma Thuot Medical University",
     location: "Buon Ma Thuot, Dak Lak, Vietnam",
     est: "Est. 2007",
-    fees: "$3,800 / Yr",
+    fees: "$5,000 / Yr",
     course: "6 Years",
     desc: "Located in the Central Highlands of Vietnam, this university provides quality medical education with strong regional hospital affiliations for clinical exposure.",
     img: BMTMU,
@@ -56,7 +56,7 @@ const universities = [
     name: "Phan Chau Trinh University",
     location: "Hoi An, Quang Nam, Vietnam",
     est: "Est. 2008",
-    fees: "$4,000 / Yr",
+    fees: "$5,500 / Yr",
     course: "6 Years",
     desc: "A growing private university offering MBBS with a focus on community medicine and modern clinical training facilities in central Vietnam.",
     img: Phan,
@@ -66,17 +66,17 @@ const universities = [
     name: "Dai Nam University",
     location: "Hanoi, Vietnam",
     est: "Est. 2008",
-    fees: "$4,100 / Yr",
+    fees: "$4,150 / Yr",
     course: "6 Years",
     desc: "A well-established private university in Hanoi offering an English-medium MBBS program with state-of-the-art laboratories and hospital tie-ups across the capital.",
     img: DNU,
   },
 
   {
-    name: "Dong_A University",
+    name: "Dong A University",
     location: "Hanoi, Vietnam",
     est: "Est. 2008",
-    fees: "$4,100 / Yr",
+    fees: "$4,500 / Yr",
     course: "6 Years",
     desc: "A well-established private university in Hanoi offering an English-medium MBBS program with state-of-the-art laboratories and hospital tie-ups across the capital.",
     img: DONG,

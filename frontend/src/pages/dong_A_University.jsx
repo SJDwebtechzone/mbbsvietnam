@@ -384,21 +384,21 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
 
-import Slide1 from "../assets/6I4A3707.jpg";
-import Slide2 from "../assets/6I4A3712.jpg";
-import Slide3 from "../assets/6I4A3741.jpg";
-import About1 from "../assets/6I4A3643.jpg";
-import About2 from "../assets/6I4A3742.jpg";
-import Gallery1 from "../assets/6I4A3649.jpg";
-import Gallery2 from "../assets/6I4A3650.jpg";
-import Gallery3 from "../assets/6I4A3651.jpg";
-import Gallery4 from "../assets/6I4A3652.jpg";
-import Gallery5 from "../assets/6I4A3653.jpg";
-import Campus1 from "../assets/6I4A3743.jpg";
-import Campus2 from "../assets/6I4A3744.jpg";
-import Campus3 from "../assets/6I4A3745.jpg";
-import Campus4 from "../assets/6I4A3746.jpg";
-import Campus5 from "../assets/6I4A3747.jpg";
+import Slide1 from "../assets/dong.jpg";
+import Slide2 from "../assets/dong1.png";
+import Slide3 from "../assets/dongu.jpg";
+import About1 from "../assets/dong.jpg";
+import About2 from "../assets/don1.jpg";
+import Gallery1 from "../assets/26.jpg";
+import Gallery2 from "../assets/don.jpg";
+import Gallery3 from "../assets/07.jpg";
+import Gallery4 from "../assets/04.jpg";
+import Gallery5 from "../assets/555.jpg";
+import Campus1 from "../assets/444.jpg";
+import Campus2 from "../assets/333.jpg";
+import Campus3 from "../assets/222.jpg";
+import Campus4 from "../assets/111.jpg";
+import Campus5 from "../assets/dongu.jpg";
 
 const slides = [Slide1, Slide2, Slide3];
 
@@ -455,8 +455,8 @@ const DongAUniversity = () => {
                 className="absolute inset-0 transition-opacity duration-1000"
                 style={{ opacity: currentSlide === i ? 1 : 0 }}
               >
-                <img src={src} alt={`slide-${i}`} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+
+<img src={src} alt={`slide-${i}`} className="w-full h-full object-contain" />            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
               </div>
             ))}
 

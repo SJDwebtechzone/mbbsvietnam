@@ -531,10 +531,10 @@ import EnquiryModal from "../components/EnquiryModal";
 import heroImg from "../assets/6I4A3772.jpg";
 import aboutImg1 from "../assets/6I4A3773.jpg";
 import aboutImg2 from "../assets/6I4A3774.jpg";
-import facilitiesResearchLab from "../assets/DSC02334.jpg";
-import facilitiesLibrary from "../assets/DINH9473.JPG";
-import facilitiesLectureHall from "../assets/DSC02189.jpg";
-import facilitiesCampus from "../assets/DJI_0312.JPG";
+import facilitiesResearchLab from "../assets/uclg6.jpeg";
+import facilitiesLibrary from "../assets/6I4A3772.jpg";
+import facilitiesLectureHall from "../assets/6I4A3742.jpg";
+import facilitiesCampus from "../assets/uclg5.jpeg";
 import clinicalImg from "../assets/6I4A3783.jpg";
 import locationImg from "../assets/6I4A3784.jpg";
 

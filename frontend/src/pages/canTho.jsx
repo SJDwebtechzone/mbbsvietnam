@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import CanPic1 from '../assets/1.jpg';
-import CanPic2 from '../assets/4.jpg';
-import CanPic3 from '../assets/3.jpg';
+import CanPic1 from '../assets/DSC02197.jpg';
+import CanPic2 from '../assets/DSC02334.jpg';
+import CanPic3 from '../assets/DSC02391.jpg';
 import HeroImage from '../assets/Drone_1.15.1.jpg';
-import HeroImage1 from '../assets/10.jpg';
+import HeroImage1 from '../assets/DSC02503.jpg';
 import EnquiryModal from "../components/EnquiryModal";
 
 const UniversityProfile = () => {

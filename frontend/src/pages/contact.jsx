@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Contact from "../assets/Professional-contact.png";
+import Contact from "../assets/contact-us.png";
 
 const PhoneIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">

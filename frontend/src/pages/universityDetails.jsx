@@ -95,7 +95,7 @@ function HeroSection({ isModalOpen, setIsModalOpen }) {
             </div>
 
             <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 leading-tight">
-              Health Sciences-Vietnam National University
+              University of Health & Sciences-Vietnam National University
             </h1>
             <h2 className="font-headline text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-yellow-400 mb-6 sm:mb-7">
               Vietnam National University — Ho Chi Minh City
