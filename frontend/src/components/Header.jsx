@@ -22,15 +22,18 @@ export default function Header() {
   const [uniDropOpen, setUniDropOpen] = useState(false);
 const [admDropOpen, setAdmDropOpen] = useState(false);
 
+
   // ✅ Dynamic universities from API
   const [universities, setUniversities] = useState([]);
+  const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/universities/navbar")
+    fetch(`${BASE_URL}/api/universities/navbar`)
       .then((res) => res.json())
       .then((data) => setUniversities(data))
       .catch((err) => console.error("Failed to fetch universities:", err));
   }, []);
+  
 useEffect(() => {
     const handleClickOutside = (e) => {
       if (!e.target.closest("nav")) {
