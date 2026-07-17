@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 // ✅ Uploaded images imported
 import UHSBanner from "../assets/uclg3.jpeg";
@@ -20,6 +21,26 @@ export default function UHSVNUUniversity() {
 
   return (
     <>
+    <SEO
+  title="University of Health Sciences Vietnam National University | MBBS 2026"
+  description="Vietnam's No.1 Government Medical University. NMC recognised, WHO listed, 960+ Indian students. Fees from ₹5.1 lakhs. Apply now for 2026."
+  keywords="UHS VNU MBBS, Vietnam National University medical, MBBS Ho Chi Minh City, government medical university Vietnam"
+  canonical="https://www.vietnambbs.com/universities/university-of-health-and-sciences-vietnam-national-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "University of Health Sciences - Vietnam National University",
+    "url": "https://www.vietnambbs.com/universities/university-of-health-and-sciences-vietnam-national-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ho Chi Minh City",
+      "addressCountry": "VN"
+    },
+    "description": "Vietnam's No.1 Government Medical University, NMC and WHO recognised.",
+    "telephone": "+91-90034-20057",
+    "numberOfStudents": "960"
+  }}
+/>
       <Header />
       
       {/* Tailwind CSS + Custom Styles */}
@@ -383,7 +404,7 @@ function StudentLifeSection() {
           {[
             { icon: "groups", value: "960+", label: "Indian Students" },
             { icon: "calendar_month", value: "6 Years", label: "Full MBBS Program" },
-            { icon: "local_hospital", value: "15+", label: "Affiliated Hospitals" },
+            { icon: "local_hospital", value: "5+", label: "Affiliated Hospitals" },
             { icon: "verified", value: "NMC", label: "India Recognised" },
           ].map((stat) => (
             <div key={stat.label} className="bg-teal-50 rounded-xl p-4 sm:p-5 text-center border border-teal-200">
@@ -495,7 +516,7 @@ function ServicesSection() {
   const services = [
     "Application Form", "Registration Fee", "Immigration Clearance", "Legalization from MEA, India",
     "Document Support", "Visa Stamping – Study Visa 6 Years", "NMC Eligibility Certificate",
-    "6.5 Years Local Support & Guidance", "Medical Clearance", "NEXT/FMGE/USMLE & PLAB Coaching (1st Yr)",
+    "6 Years Local Support & Guidance", "Medical Clearance", "NEXT/FMGE/USMLE & PLAB Coaching (1st Yr)",
     "One Way Flight Ticket", "Consularization by Embassy of Vietnam", "Medical Insurance Processing",
     "North/South & North East Indian Food", "Student Caretaker/Manager/Warden", "Agreement Undertaking by Students & Parents",
   ];
@@ -555,12 +576,9 @@ function HostelSection() {
               <div className="rounded-xl overflow-hidden h-36 sm:h-40">
                 <img src={Hero1} alt="MBBS Student Life" className="w-full h-full object-cover" />
               </div>
-              <div className="bg-gradient-to-r from-red-700 to-red-600 rounded-xl p-5 text-center">
-                <div className="font-headline text-3xl sm:text-4xl font-extrabold text-white">₹2,63,000</div>
-                <div className="text-white/80 text-xs sm:text-sm mt-1">Initial Processing Fee (1st Year)</div>
-              </div>
+              
               <div className="bg-white rounded-xl p-5 text-center border-2 border-red-600">
-                <div className="font-headline text-3xl sm:text-4xl font-extrabold text-red-600">6.5 Yrs</div>
+                <div className="font-headline text-3xl sm:text-4xl font-extrabold text-red-600">6 Yrs</div>
                 <div className="text-gray-500 text-xs sm:text-sm mt-1">Local Support & Guidance</div>
               </div>
             </div>
@@ -640,7 +658,7 @@ function CTASection({ isModalOpen, setIsModalOpen }) {
             { value: "960+", label: "Indian Students" },
             { value: "100%", label: "Visa Support" },
             { value: "₹0", label: "Counselling Fee" },
-            { value: "6.5 Yrs", label: "Local Support" },
+            { value: "6 Yrs", label: "Local Support" },
           ].map((item) => (
             <div key={item.label} className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-gray-200">
               <div className="font-headline text-xl sm:text-2xl font-extrabold text-teal-700">{item.value}</div>

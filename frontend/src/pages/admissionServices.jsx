@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import docImage from "../assets/doc.jpeg"; // adjust path
 import CTA from "../components/CTA_section";
 import Admission from "../assets/admission1.webp";
+import SEO from "../components/SEO";
 
 const services = [
   {
@@ -143,19 +144,35 @@ const whyItems = [
 
 export default function AdmissionServices() {
   const [activeCard, setActiveCard] = useState(null);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div style={{ minHeight: "100vh", background: "#f5f5f5", display: "flex", flexDirection: "column", fontFamily: "'DM Sans', sans-serif", color: "#111" }}>
+       <SEO
+  title="MBBS Admission Services Vietnam | Visa, Documentation | VietnamBBS"
+  description="Complete MBBS admission services for Vietnam universities. Visa processing, documentation, airport pickup, hostel arrangement and post-landing support."
+  keywords="MBBS admission services Vietnam, Vietnam student visa, MBBS documentation Vietnam, Vietnam university admission India"
+  canonical="https://www.vietnambbs.com/admissionServices"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "MBBS Admission Services for Vietnam",
+    "provider": {
+      "@type": "Organization",
+      "name": "VietnamBBS",
+      "url": "https://www.vietnambbs.com"
+    },
+    "description": "End-to-end MBBS admission services including visa, documentation, hostel and post-landing support.",
+    "areaServed": "India",
+    "serviceType": "MBBS Admission Consulting"
+  }}
+/>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap');
         .serif { font-family: 'Playfair Display', Georgia, serif; }
-
-
-
+<Header />
 
 
 
@@ -388,17 +405,13 @@ export default function AdmissionServices() {
 
       {/* Hero — image only */}
 <section style={{ width: "100%", overflow: "hidden" }}>
-  <img
-    src={Admission}
-    alt="Indian doctors"
-    style={{
-      width: "100%",
-      height: "100vh",        // fits exactly one screen height
-      display: "block",
-      objectFit: "cover",
-      objectPosition: "center top",
-      marginTop: "-60px",       // shifts up to keep faces visible
-    }}
+  // In admissionServices.jsx hero image
+<img
+  src={Admission}
+  alt="Indian doctors"
+  loading="eager"
+  fetchPriority="high"
+  style={{ width: "100%", height: "100vh", objectFit: "cover" }}
     loading="eager"
   />
 </section>

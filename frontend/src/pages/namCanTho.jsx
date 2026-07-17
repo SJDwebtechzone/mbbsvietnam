@@ -603,6 +603,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 // ── Assets ──────────────────────────────────────────────
 import NCTUStudent  from "../assets/DJI.JPG";
@@ -693,6 +694,25 @@ const Icon = ({ name, style }) => (
 export default function NCTUMedical() {
   return (
     <>
+      <SEO
+        title="Nam Can Tho University MBBS 2026 | Fees, Admission | VietnamBBS"
+        description="Study MBBS at Nam Can Tho University Vietnam. NMC recognised, fees from ₹3.9 lakhs, English medium. Located in Can Tho city. Apply now for 2026 admissions."
+        keywords="Nam Can Tho University MBBS, NCTU Vietnam, Nam Can Tho University fees, MBBS Can Tho Vietnam"
+        canonical="https://www.vietnambbs.com/universities/nam-can-tho-university"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollegeOrUniversity",
+          "name": "Nam Can Tho University",
+          "url": "https://www.vietnambbs.com/universities/nam-can-tho-university",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Can Tho",
+            "addressCountry": "VN"
+          },
+          "description": "NMC recognised medical university in Can Tho, Vietnam offering 6-year MBBS program in English medium.",
+          "telephone": "+91-90034-20057"
+        }}
+      />
       <Header />
       <div className="nctu-page-container">
         <style>{styles}</style>
@@ -1155,16 +1175,7 @@ function FeeStructure() {
             </div>
 
             {/* Processing Fee highlight */}
-            <div style={{
-              background: "linear-gradient(135deg, #9e001f 0%, #c8102e 100%)",
-              borderRadius: 16, padding: "24px 28px", textAlign: "center",
-            }}>
-              <div style={{ color: "rgba(255,255,255,0.75)", fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 6 }}>
-                Initial Processing Fee (1st Year Only)
-              </div>
-              <div style={{ fontSize: 36, fontWeight: 800, color: "#fecc00" }}>₹2,63,000</div>
-              <div style={{ color: "rgba(255,255,255,0.7)", fontSize: 12, marginTop: 4 }}>Before departure from India</div>
-            </div>
+            
 
           </div>
         </div>
@@ -1190,7 +1201,7 @@ function ServicesSection() {
     "Document Support",
     "Visa Stamping – Study Visa 6 Years",
     "NMC Eligibility Certificate",
-    "6.5 Years Local Support & Guidance",
+    "6 Years Local Support & Guidance",
     "Medical Clearance",
     "NEXT/FMGE/USMLE & PLAB Coaching (1st Yr)",
     "One Way Flight Ticket",
@@ -1402,10 +1413,10 @@ function CTASection() {
             gap: 18, maxWidth: 900, margin: "0 auto",
           }}>
             {[
-              { value: "150+", label: "Indian Students" },
+              { value: "950+", label: "Indian Students" },
               { value: "100%", label: "Visa Support" },
               { value: "₹0",   label: "Counselling Fee" },
-              { value: "6.5 Yrs", label: "Local Support" },
+              { value: "6 Yrs", label: "Local Support" },
             ].map(item => (
               <div key={item.label} style={{ background: "#f9fafb", padding: 20, borderRadius: 18, border: "1px solid #e5e7eb" }}>
                 <div style={{ fontSize: 28, fontWeight: 800, color: "#171b74", marginBottom: 6 }}>{item.value}</div>

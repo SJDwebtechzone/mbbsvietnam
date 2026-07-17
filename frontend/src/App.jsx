@@ -18,6 +18,8 @@ import BUHMedicalUniversity from "./pages/buonMaThuot";
 import CanThoMedicalUniversity from "./pages/canTho";
 import TimeBasedPopup from "./components/TimeBasedPopup";
 import DongAUniversity from "./pages/dong_A_University";
+import NewUniversity from "./pages/newUniversity";
+import CuuLongUniversity from "./pages/cuuLong";
 
 // ── Dynamic Admission Guide — handles both State & City pages ──
 import AdmissionGuide from "./pages/states";
@@ -38,14 +40,18 @@ function App() {
         <Route path="/admissionServices" element={<AdmissionServices />} />
         <Route path="/mbbsInVietnam" element={<MbbsVietnam />} />
 
-        {/* ── Universities ── */}
-        <Route path="/universities/nam-can-tho-university" element={<NamCanThoUniversity />} />
-        <Route path="/universities/dai-nam-university" element={<DaiNamUniversity />} />
-        <Route path="/universities/phan-chau-trinh-university" element={<PhanChauTrinhUniversity />} />
-        <Route path="/universities/buon-ma-thuot-medical-university" element={<BUHMedicalUniversity />} />
-        <Route path="/universities/can-tho-university" element={<CanThoMedicalUniversity />} />
-        <Route path="/universities/:slug" element={<UniversityDetails />} />
-        <Route path="/universities/dong-a-university" element={<DongAUniversity />} />
+       {/* ── Universities - existing static pages ── */}
+<Route path="/universities/nam-can-tho-university" element={<NamCanThoUniversity />} />
+<Route path="/universities/dai-nam-university" element={<DaiNamUniversity />} />
+<Route path="/universities/phan-chau-trinh-university" element={<PhanChauTrinhUniversity />} />
+<Route path="/universities/buon-ma-thuot-medical-university" element={<BUHMedicalUniversity />} />
+<Route path="/universities/can-tho-university" element={<CanThoMedicalUniversity />} />
+<Route path="/universities/dong-a-university" element={<DongAUniversity />} />
+<Route path="/universities/cuu-long-university" element={<CuuLongUniversity />} />
+<Route path="/universities/university-of-health-and-sciences-vietnam-national-university" element={<UniversityDetails />} />
+
+{/* ✅ Dynamic - for NEW universities added by client */}
+<Route path="/universities/:slug" element={<NewUniversity />} />
 
         {/* ── Admission Guides — State pages ──
             URL examples:

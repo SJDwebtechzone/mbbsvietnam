@@ -526,6 +526,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 // ✅ Local image imports from src/assets
 import heroImg from "../assets/6I4A3772.jpg";
@@ -628,6 +629,25 @@ export default function BUHMedical() {
 
   return (
     <>
+    <SEO
+  title="Buon Ma Thuot Medical University MBBS 2026 | VietnamBBS"
+  description="Study MBBS at Buon Ma Thuot Medical University Vietnam. NMC recognised, fees from ₹3.8 lakhs, English medium. Apply now for 2026 admissions."
+  keywords="Buon Ma Thuot Medical University MBBS, BMU Vietnam, Buon Ma Thuot fees, MBBS Vietnam 2026"
+  canonical="https://www.vietnambbs.com/universities/buon-ma-thuot-medical-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Buon Ma Thuot Medical University",
+    "url": "https://www.vietnambbs.com/universities/buon-ma-thuot-medical-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buon Ma Thuot",
+      "addressCountry": "VN"
+    },
+    "description": "NMC recognised medical university in Buon Ma Thuot, Vietnam.",
+    "telephone": "+91-90034-20057"
+  }}
+/>
       <Header />
       <div className="buh-page-container">
         <style>{styles}</style>
@@ -881,19 +901,7 @@ export default function BUHMedical() {
                     </div>
 
                     {/* Initial Processing Fee highlight */}
-                    <div className="bg-white border-2 border-[#CC1B1B] rounded-2xl p-5 sm:p-6 shadow-sm">
-                      <div className="flex items-center gap-3 mb-3">
-                        <MaterialIcon name="info" className="text-[#CC1B1B] text-2xl" />
-                        <h3 className="font-headline font-bold text-sm sm:text-base text-gray-900">
-                          Initial Processing Fee
-                        </h3>
-                      </div>
-                      <div className="text-3xl sm:text-4xl font-extrabold text-[#CC1B1B] mb-1">₹2,63,000</div>
-                      <div className="text-gray-500 text-xs sm:text-sm">Only for 1st Year (before departure from India)</div>
-                      <div className="mt-3 text-[11px] sm:text-xs text-gray-500 leading-relaxed">
-                        Includes: Invitation Letter, Professional Admission Letter, International Student Card, Bank Account Opening, Medical Health Insurance, Visa Processing, One Way Flight, Airport Transportation, Immigration Clearance, NMC Eligibility Certificate & more.
-                      </div>
-                    </div>
+                    
                   </div>
                 </div>
 

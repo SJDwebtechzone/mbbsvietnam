@@ -10,6 +10,8 @@ import BMTMU from "../assets/uclg6.jpeg";
 import DNU from "../assets/dnu.jpeg";
 import HSU from "../assets/uclg1.jpeg";
 import DONG from "../assets/dong.jpg";
+import UCL from "../assets/cuu_long.jpg";
+import SEO from "../components/SEO";
 
 const universities = [
   {
@@ -40,6 +42,16 @@ const universities = [
     course: "6 Years",
     desc: "Located in the Central Highlands of Vietnam, this university provides quality medical education with strong regional hospital affiliations for clinical exposure.",
     img: BMTMU,
+  },
+
+  {
+    name: "Cuu Long University",
+    location: "Vinh Long City, Vietnam",
+    est: "Est. 2000",
+    fees: "$4,500 / Yr",
+    course: "6 Years",
+    desc: "Cuu Long University (Department of Health Sciences) is a top medical university in Vietnam, offering an English-medium medical education designed for Indian students with an NMC-aligned MBBS curriculum and attached teaching hospital for practical clinical training.",
+    img: UCL,
   },
 
   {
@@ -97,6 +109,42 @@ export default function MbbsVietnam() {
 
   return (
     <>
+    <SEO
+  title="MBBS in Vietnam 2026 | Complete Guide for Indian Students | VietnamBBS"
+  description="Complete guide to studying MBBS in Vietnam. NMC recognised universities, affordable fees, English medium, WHO listed. Everything Indian students need to know."
+  keywords="MBBS in Vietnam guide, why study MBBS Vietnam, Vietnam MBBS eligibility, Vietnam MBBS fees structure, MBBS Vietnam NMC"
+  canonical="https://www.vietnambbs.com/mbbsInVietnam"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is MBBS in Vietnam recognised by NMC India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, multiple universities in Vietnam are NMC recognised including UHS VNU, Nam Can Tho University, Dong A University and others."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the fee for MBBS in Vietnam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MBBS fees in Vietnam start from ₹3.5 lakhs per year depending on the university."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is MBBS in Vietnam taught in English?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, MBBS programs in Vietnam are conducted in English medium for international students."
+        }
+      }
+    ]
+  }}
+/>
       <Header />
       <div className="bg-[#f8f9fa] text-[#191c1d] font-[Work_Sans] selection:bg-[#fdcc22] selection:text-[#6e5700]">
         <style>{`

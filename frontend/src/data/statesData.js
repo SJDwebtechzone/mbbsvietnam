@@ -1618,7 +1618,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Arunachal%20Pradesh%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "5,000+", sub: "from Arunachal Pradesh annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "3–4 Hrs", sub: "from Guwahati" },
@@ -1894,7 +1894,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Chhattisgarh%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "20,000+", sub: "from Chhattisgarh annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Raipur / Nagpur" },
@@ -1985,7 +1985,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Goa%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "3,500+", sub: "from Goa annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "6 Hrs", sub: "from Goa Dabolim" },
@@ -2077,7 +2077,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Gujarat%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "55,000+", sub: "from Gujarat annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Ahmedabad" },
@@ -2261,7 +2261,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Himachal%20Pradesh%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "10,000+", sub: "from Himachal Pradesh annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Delhi / Chandigarh" },
@@ -2443,7 +2443,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Karnataka%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "60,000+", sub: "from Karnataka annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "4–5 Hrs", sub: "from Bangalore" },
@@ -2629,7 +2629,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Madhya%20Pradesh%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "65,000+", sub: "from MP annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Bhopal / Indore" },
@@ -2904,7 +2904,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Meghalaya%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "3,000+", sub: "from Meghalaya annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "3–4 Hrs", sub: "from Guwahati / Shillong" },
@@ -2995,7 +2995,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Mizoram%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "2,000+", sub: "from Mizoram annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "3–4 Hrs", sub: "from Aizawl / Guwahati" },
@@ -3086,7 +3086,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Nagaland%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "3,000+", sub: "from Nagaland annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "3–4 Hrs", sub: "from Dimapur / Guwahati" },
@@ -3177,7 +3177,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Odisha%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "30,000+", sub: "from Odisha annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "4–5 Hrs", sub: "from Bhubaneswar" },
@@ -3268,7 +3268,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Punjab%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "35,000+", sub: "from Punjab annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Amritsar / Delhi" },
@@ -3360,7 +3360,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Rajasthan%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "60,000+", sub: "from Rajasthan annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "5–6 Hrs", sub: "from Jaipur / Delhi" },
@@ -3637,7 +3637,7 @@ const statesData = {
     whatsappMessage: "Hi%2C%20I%20am%20from%20Tripura%20and%20interested%20in%20MBBS%20in%20Vietnam%202026.",
     heroTrustItems: ["NMC & WHO Approved", "English Medium", "₹2.63L Processing Fee", "6-Year MBBS Program"],
     stats: [
-      { label: "NEET Qualifiers", value: "5,000+", sub: "from Tripura annually" },
+      
       { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
       { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
       { label: "Flight Time", value: "3–4 Hrs", sub: "from Agartala / Guwahati" },
@@ -3836,7 +3836,7 @@ const statesData = {
     "6-Year MBBS Program",
   ],
   stats: [
-    { label: "NEET Qualifiers", value: "15,000+", sub: "from Uttarakhand annually" },
+    
     { label: "Lowest Package", value: "₹28.8L", sub: "total 6-year MBBS" },
     { label: "Indian Students", value: "960+", sub: "studying in Vietnam" },
     { label: "Flight Time", value: "5–6 Hrs", sub: "from Dehradun / Delhi" },

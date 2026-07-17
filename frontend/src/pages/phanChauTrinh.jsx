@@ -412,11 +412,31 @@ import DoctorsImg from "../assets/uclg9.jpeg";
 import HostelImg from "../assets/_DSC9355.JPG";
 import IndianFoodImg from "../assets/_DSC9356.JPG";
 import DaNangImg from "../assets/phan.webp";
+import SEO from "../components/SEO";
 
 const PhanChauTrinhUniversity = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
+    <SEO
+  title="Phan Chau Trinh University MBBS 2026 | Da Nang | VietnamBBS"
+  description="Study MBBS at Phan Chau Trinh University Da Nang Vietnam. NMC recognised, fees from ₹7.2 lakhs, English medium. Apply now for 2026 admissions."
+  keywords="Phan Chau Trinh University MBBS, PCTU Vietnam, Phan Chau Trinh fees, Da Nang medical university"
+  canonical="https://www.vietnambbs.com/universities/phan-chau-trinh-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Phan Chau Trinh University",
+    "url": "https://www.vietnambbs.com/universities/phan-chau-trinh-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Da Nang",
+      "addressCountry": "VN"
+    },
+    "description": "NMC recognised medical university in Da Nang, Vietnam.",
+    "telephone": "+91-90034-20057"
+  }}
+/>
       <Header />
       <div className="bg-gray-50 text-gray-900 font-sans min-h-screen">
         <style>{`

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Contact from "../assets/contact-us.png";
+import Contact from "../assets/medical_doctor.jpg";
+import SEO from "../components/SEO";
 
 const PhoneIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -41,7 +42,7 @@ export default function ContactPage() {
   const BASE_URL = import.meta.env.VITE_API_URL || "https://mbbs-vietnam.onrender.com";
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -62,8 +63,36 @@ export default function ContactPage() {
   };
 
   return (
+    
     <div className="min-h-screen bg-gray-50 flex flex-col font-['DM_Sans']">
-      <style>{`
+      <SEO
+  title="Contact Us | MBBS Vietnam Admission Enquiry | VietnamBBS"
+  description="Contact VietnamBBS for MBBS admission enquiries in Vietnam. Call +91 90034 20057. Located in Chennai. Free counselling for Indian students."
+  keywords="contact VietnamBBS, MBBS Vietnam enquiry, Vietnam MBBS counselling, MBBS admission contact Chennai"
+  canonical="https://www.vietnambbs.com/contact"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact VietnamBBS",
+    "url": "https://www.vietnambbs.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "VietnamBBS",
+      "telephone": "+91-90034-20057",
+      "email": "admission@vietnambbs.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Old No: 36 G, New No: 1/36-3, North Parade Road, St Thomas Mount",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "600016",
+        "addressCountry": "IN"
+      },
+      "openingHours": "Mo-Sa 09:00-18:00"
+    }
+  }}
+/>
+<style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap');
         .serif { font-family: 'Playfair Display', Georgia, serif; }
       `}</style>
@@ -153,8 +182,8 @@ export default function ContactPage() {
             <div className="hidden lg:block w-full lg:w-1/3">
               <img
                 src={Contact}
-                alt="Contact illustration"
-                className="w-full max-w-md mx-auto object-contain"
+                alt="Medical Advisor"
+                className="w-full max-w-sm mx-auto object-cover rounded-3xl shadow-2xl border-4 border-white"
               />
             </div>
           </div>

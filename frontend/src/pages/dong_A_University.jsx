@@ -383,9 +383,10 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 import Slide1 from "../assets/dong.jpg";
-import Slide2 from "../assets/dong1.png";
+import Slide2 from "../assets/dong1.webp";
 import Slide3 from "../assets/dongu.jpg";
 import About1 from "../assets/dong.jpg";
 import About2 from "../assets/don1.jpg";
@@ -415,6 +416,25 @@ const DongAUniversity = () => {
 
   return (
     <>
+    <SEO
+  title="Dong A University MBBS 2026 | Da Nang Vietnam | VietnamBBS"
+  description="Study MBBS at Dong A University Da Nang Vietnam. NMC recognised, fees from ₹4.5 lakhs, English medium. Beautiful coastal city. Apply now for 2026."
+  keywords="Dong A University MBBS, DAU Vietnam, Dong A fees, MBBS Da Nang Vietnam, Dong A admission 2026"
+  canonical="https://www.vietnambbs.com/universities/dong-a-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Dong A University",
+    "url": "https://www.vietnambbs.com/universities/dong-a-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Da Nang",
+      "addressCountry": "VN"
+    },
+    "description": "NMC recognised private university in Da Nang, Vietnam offering MBBS in English medium.",
+    "telephone": "+91-90034-20057"
+  }}
+/>
       <Header />
       <div className="bg-gray-50 font-sans text-gray-900 min-h-screen">
         <style>{`
@@ -524,9 +544,9 @@ const DongAUniversity = () => {
           <section className="py-16 px-6 bg-white">
             <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
               {[
-                { icon: "groups", value: "15,000+", label: "Students Enrolled" },
-                { icon: "public", value: "30+", label: "Countries Represented" },
-                { icon: "school", value: "500+", label: "Expert Faculty" },
+                { icon: "groups", value: "950+", label: "Students Enrolled" },
+                { icon: "public", value: "15+", label: "Countries Represented" },
+                { icon: "school", value: "200+", label: "Expert Faculty" },
                 { icon: "verified", value: "NMC", label: "Recognised" },
               ].map((stat) => (
                 <div key={stat.label} className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 hover:shadow-md transition-all">

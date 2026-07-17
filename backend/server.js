@@ -52,20 +52,37 @@ pool
 ========================= */
 async function createTables() {
   try {
-    // Universities table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS universities (
-        id          SERIAL PRIMARY KEY,
-        name        VARCHAR(255) NOT NULL,
-        short_name  VARCHAR(255),
-        fee         VARCHAR(255),
-        image       TEXT,
-        highlights  TEXT DEFAULT '[]',
-        created_at  TIMESTAMP DEFAULT NOW()
+        id             SERIAL PRIMARY KEY,
+        name           VARCHAR(255) NOT NULL,
+        short_name     VARCHAR(255),
+        fee            VARCHAR(255),
+        image          TEXT,
+        highlights     TEXT DEFAULT '[]',
+        slug           TEXT,
+        location       TEXT,
+        founded        TEXT,
+        duration       TEXT DEFAULT '6 Years',
+        description    TEXT,
+        stats          JSONB,
+        is_active      BOOLEAN DEFAULT true,
+        display_order  INTEGER,
+        created_at     TIMESTAMP DEFAULT NOW()
       );
     `);
-    console.log("✅ Universities table ready");
 
+    // ✅ Add missing columns for existing databases
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS slug TEXT`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS location TEXT`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS founded TEXT`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS duration TEXT DEFAULT '6 Years'`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS description TEXT`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS stats JSONB`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS is_active BOOLEAN DEFAULT true`);
+    await pool.query(`ALTER TABLE universities ADD COLUMN IF NOT EXISTS display_order INTEGER`);
+
+    console.log("✅ Universities table ready");
     // Reviews table
     await pool.query(`
       CREATE TABLE IF NOT EXISTS reviews (
@@ -305,6 +322,112 @@ app.delete("/universities/:id", verifyAdmin, async (req, res) => {
   } catch (err) {
     console.error("DELETE UNIVERSITY ERROR:", err);
     res.status(500).json({ error: "Delete failed" });
+  }
+});
+
+/* ===== UNIVERSITIES BY SLUG (Dynamic Pages) ===== */
+
+// GET all universities for navbar dropdown
+app.get("/api/universities/navbar", async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT id, name, slug, display_order 
+      FROM universities 
+      WHERE is_active = true 
+      ORDER BY display_order ASC NULLS LAST
+    `);
+    res.json(result.rows);
+  } catch (err) {
+    console.error("GET NAVBAR UNIS ERROR:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// GET single university by slug (for dynamic page)
+app.get("/api/universities/slug/:slug", async (req, res) => {
+  try {
+    const result = await pool.query(
+      "SELECT * FROM universities WHERE slug = $1 AND is_active = true",
+      [req.params.slug]
+    );
+    if (result.rows.length === 0)
+      return res.status(404).json({ error: "University not found" });
+    const row = result.rows[0];
+    res.json({
+      ...row,
+      highlights: parseHighlights(row.highlights),
+      stats: row.stats || [],
+      image: normalizeImageUrl(req, row.image),
+    });
+  } catch (err) {
+    console.error("GET UNI BY SLUG ERROR:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// POST — add new university (admin)
+app.post("/api/universities/add", verifyAdmin, async (req, res) => {
+  try {
+    const {
+      name, short_name, fee, image, slug, location,
+      founded, duration, description, highlights,
+      stats, display_order
+    } = req.body;
+
+    if (!name || !slug)
+      return res.status(400).json({ error: "Name and slug are required" });
+
+    const result = await pool.query(
+      `INSERT INTO universities 
+        (name, short_name, fee, image, slug, location, founded, duration, 
+         description, highlights, stats, display_order, is_active)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,true) RETURNING *`,
+      [
+        name, short_name || null, fee || null, image || null,
+        slug, location || null, founded || null,
+        duration || "6 Years", description || null,
+        JSON.stringify(highlights || []),
+        JSON.stringify(stats || []),
+        display_order || null,
+      ]
+    );
+    res.status(201).json(result.rows[0]);
+  } catch (err) {
+    console.error("ADD UNIVERSITY ERROR:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// PUT — edit university (admin)
+app.put("/api/universities/edit/:id", verifyAdmin, async (req, res) => {
+  try {
+    const {
+      name, short_name, fee, image, slug, location,
+      founded, duration, description, highlights,
+      stats, display_order, is_active
+    } = req.body;
+
+    const result = await pool.query(
+      `UPDATE universities SET
+        name=$1, short_name=$2, fee=$3, image=$4, slug=$5,
+        location=$6, founded=$7, duration=$8, description=$9,
+        highlights=$10, stats=$11, display_order=$12, is_active=$13
+       WHERE id=$14 RETURNING *`,
+      [
+        name, short_name, fee, image, slug, location,
+        founded, duration, description,
+        JSON.stringify(highlights || []),
+        JSON.stringify(stats || []),
+        display_order, is_active !== false,
+        req.params.id,
+      ]
+    );
+    if (result.rowCount === 0)
+      return res.status(404).json({ error: "University not found" });
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error("EDIT UNIVERSITY ERROR:", err);
+    res.status(500).json({ error: err.message });
   }
 });
 

@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import BlogImg from "../assets/MBBS-in-Vietnam-blog.png";
-import Blog from "../assets/blog.png";
-import MBBSVietnam from "../assets/MBBS-in-Vietnam-blog.png";
+import Blog from "../assets/blog.webp";
+import MBBSVietnam from "../assets/blog_banner.jpg";
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 export default function BlogPage() {
   const navigate = useNavigate();
@@ -35,6 +36,24 @@ export default function BlogPage() {
 
   return (
     <>
+    <SEO
+  title="MBBS Vietnam Blogs | News, Updates & Guides | VietnamBBS"
+  description="Read latest blogs about MBBS in Vietnam. Admission updates, university news, student guides and fee structures for Indian medical aspirants."
+  keywords="MBBS Vietnam blog, Vietnam medical university news, MBBS abroad updates, Vietnam MBBS guide 2026"
+  canonical="https://www.vietnambbs.com/blog"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "VietnamBBS Blog",
+    "url": "https://www.vietnambbs.com/blog",
+    "description": "Latest news and guides about MBBS in Vietnam for Indian students.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "VietnamBBS",
+      "url": "https://www.vietnambbs.com"
+    }
+  }}
+/>
       <Header />
 
       {/* Hero Image Section */}

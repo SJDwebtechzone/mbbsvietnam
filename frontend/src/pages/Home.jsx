@@ -530,6 +530,7 @@ import Header from "../components/Header";
 import UniversityCard from "../components/UniversityCard";
 import Footer from "../components/Footer";
 import CTA from "../components/CTA_section";
+import SEO from "../components/SEO";
 
 // ── Hero slides ──
 import Hero1 from "../assets/hero1.webp";
@@ -544,10 +545,11 @@ import ImgCTU   from "../assets/canTho.webp";
 import ImgPCTU  from "../assets/phan.webp";
 import ImgDNU   from "../assets/dnu.jpeg";
 import DONG from "../assets/donga1.jfif";
+import ImgUCL from "../assets/cuu_long.jpg";
 
 const heroStats = [
   { num: 960, suffix: "+", label: "Students placed" },
-  { num: 7,   suffix: "",  label: "Top universities" },
+  { num: 8,   suffix: "",  label: "Top universities" },
   { num: 25,  prefix: "₹", suffix: "L", label: "Average Tuition Fees" },
   { num: 98,  suffix: "%", label: "Visa success" },
 ];
@@ -589,6 +591,15 @@ const UNIVERSITIES = [
     fee: "20 Lakhs",
     image: ImgBMTMU,
     highlights: ["NMC Approved", "Low Cost", "English Medium", "Good Infrastructure"],
+  },
+  {
+    id: 8,
+    slug: "cuu-long-university",
+    name: "Cuu Long University",
+    short_name: "UCL",
+    fee: "27 Lakhs",
+    image: ImgUCL,
+    highlights: ["NMC Approved", "Attached Hospital", "English Medium", "Vinh Long City"],
   },
   {
     id: 4,
@@ -674,6 +685,30 @@ export default function Home() {
 
   return (
     <>
+          <SEO
+        title="MBBS in Vietnam 2026 | NMC Recognised Universities | VietnamBBS"
+        description="Study MBBS in Vietnam at NMC recognised universities. Fees starting from ₹3.5 lakhs. English medium, WHO listed, 960+ Indian students. Apply for 2026 admissions."
+        keywords="MBBS in Vietnam, study medicine Vietnam, NMC recognised Vietnam universities, MBBS abroad India, Vietnam medical colleges"
+        canonical="https://www.vietnambbs.com/"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "VietnamBBS - MBBS in Vietnam",
+          "url": "https://www.vietnambbs.com",
+          "logo": "https://www.vietnambbs.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-90034-20057",
+            "contactType": "admissions",
+            "availableLanguage": "English"
+          },
+          "sameAs": [
+            "https://www.facebook.com/vietnammbbs",
+            "https://www.instagram.com/vietnammbbs",
+            "https://www.youtube.com/@vietnammbbs"
+          ]
+        }}
+      />
       <div className="min-h-screen bg-white font-sans overflow-x-hidden">
         <Header />
         <EnquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

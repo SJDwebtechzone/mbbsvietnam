@@ -364,11 +364,31 @@ import HeroImg from "../assets/dnu.jpeg";
 import ClinicalImg from "../assets/A6400013-Edit.jpg";
 import HanoiImg1 from "../assets/uclg8.jpeg";
 import HanoiImg2 from "../assets/DSC02199.jpg";
+import SEO from "../components/SEO";
 
 const DaiNamUniversity = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
+    <SEO
+  title="Dai Nam University MBBS 2026 | Hanoi Vietnam | VietnamBBS"
+  description="Study MBBS at Dai Nam University Hanoi Vietnam. NMC recognised, fees from ₹3.5 lakhs, English medium. Apply now for 2026 admissions."
+  keywords="Dai Nam University MBBS, DNU Vietnam, Dai Nam fees, MBBS Hanoi Vietnam, Dai Nam admission 2026"
+  canonical="https://www.vietnambbs.com/universities/dai-nam-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Dai Nam University",
+    "url": "https://www.vietnambbs.com/universities/dai-nam-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hanoi",
+      "addressCountry": "VN"
+    },
+    "description": "NMC recognised medical university in Hanoi, Vietnam.",
+    "telephone": "+91-90034-20057"
+  }}
+/>
       <Header />
       <div className="bg-gray-50 font-sans text-gray-900 min-h-screen">
         <style>{`

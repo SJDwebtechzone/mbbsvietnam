@@ -31,10 +31,10 @@ export default function AdminLogin() {
 });
       const data = await res.json();
 
-      if (res.ok) {
-        localStorage.setItem("token", data.token);
-        navigate("/admin/dashboard", { replace: true });
-      } else {
+     if (res.ok) {
+  localStorage.setItem("token", data.token);
+  window.location.href = "/admin/dashboard";
+} else {
         setError(data.error || "Login failed");
       }
     } catch (err) {

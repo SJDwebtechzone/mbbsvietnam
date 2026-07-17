@@ -260,7 +260,7 @@ export default function Footer() {
             </span>
           </NavLink>
           <p className="text-sm text-gray-700 leading-relaxed">
-            MedViet helps Indian students pursue MBBS in Vietnam with direct
+            MBBS in Vietnam helps Indian students pursue MBBS in Vietnam with direct
             admissions, affordable fees, and recognized universities.
           </p>
         </div>
@@ -329,9 +329,12 @@ export default function Footer() {
       </div>
 
       {/* ══ Bottom Bar ══ */}
-      <div className="bg-[#CC1B1B] text-white text-xs text-center py-3">
-        © {new Date().getFullYear()} DevSpectra. All rights reserved.
-      </div>
-    </footer>
+<div 
+  className="bg-[#CC1B1B] text-white text-xs text-center py-3 cursor-pointer hover:opacity-80 transition-opacity"
+  onClick={() => window.open('https://devspectra.in/', '_blank')}
+>
+  © {new Date().getFullYear()} DevSpectra. All rights reserved.
+</div>
+ </footer>
   );
 }

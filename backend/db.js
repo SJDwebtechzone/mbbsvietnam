@@ -5,11 +5,12 @@ dotenv.config();
 
 const { Pool } = pkg;
 
+// ✅ Fixed - works for both local and Render
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ssl: process.env.DATABASE_URL.includes("render.com") 
+    ? { rejectUnauthorized: false } 
+    : false,
   connectionTimeoutMillis: 15000,
   idleTimeoutMillis: 30000,
   max: 10,

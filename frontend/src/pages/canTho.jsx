@@ -8,6 +8,7 @@ import CanPic3 from '../assets/DSC02391.jpg';
 import HeroImage from '../assets/Drone_1.15.1.jpg';
 import HeroImage1 from '../assets/DSC02503.jpg';
 import EnquiryModal from "../components/EnquiryModal";
+import SEO from "../components/SEO";
 
 const UniversityProfile = () => {
   const styles = `
@@ -130,6 +131,25 @@ const UniversityProfile = () => {
 
   return (
     <>
+    <SEO
+  title="Can Tho University MBBS 2026 | Fees, Admission | VietnamBBS"
+  description="Study MBBS at Can Tho University Vietnam. NMC recognised, fees from ₹4 lakhs, English medium. Located in Can Tho city. Apply now for 2026 admissions."
+  keywords="Can Tho University MBBS, CTUMP Vietnam, Can Tho University fees, MBBS Can Tho Vietnam"
+  canonical="https://www.vietnambbs.com/universities/can-tho-university"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Can Tho University of Medicine and Pharmacy",
+    "url": "https://www.vietnambbs.com/universities/can-tho-university",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Can Tho",
+      "addressCountry": "VN"
+    },
+    "description": "NMC recognised medical university in Can Tho, Vietnam offering 6-year MBBS program.",
+    "telephone": "+91-90034-20057"
+  }}
+/>
       <Header />
       <div className="ctu-page-container">
         <style>{styles}</style>
@@ -352,7 +372,7 @@ const UniversityProfile = () => {
                       }}>
                         <span className="material-symbols-outlined" style={{ color: '#B3261E', fontSize: '24px' }}>groups</span>
                       </div>
-                      <h3 style={{ fontSize: '36px', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800, color: '#B3261E', marginBottom: '4px' }}>50,000+</h3>
+                      <h3 style={{ fontSize: '36px', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800, color: '#B3261E', marginBottom: '4px' }}>960+</h3>
                       <p style={{ color: '#49454F', fontWeight: 600, fontSize: '13px' }}>Students Currently Enrolled</p>
                     </div>
 
@@ -422,7 +442,7 @@ const UniversityProfile = () => {
                       }}>
                         <span className="material-symbols-outlined" style={{ color: '#FFFFFF', fontSize: '24px' }}>school</span>
                       </div>
-                      <h3 style={{ fontSize: '36px', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800, marginBottom: '4px' }}>2,000+</h3>
+                      <h3 style={{ fontSize: '36px', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800, marginBottom: '4px' }}>200+</h3>
                       <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 600, fontSize: '13px' }}>Expert Faculty Members</p>
                     </div>
 
@@ -444,70 +464,7 @@ const UniversityProfile = () => {
                     </div>
                   </div>
 
-                  {/* Card 3 - Global */}
-                  <div style={{
-                    background: 'linear-gradient(135deg, #E8DEF8 0%, #D4C5E8 100%)',
-                    padding: '28px',
-                    borderRadius: '24px',
-                    border: '1px solid rgba(98, 91, 113, 0.1)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    minHeight: '200px',
-                    color: '#1D192B',
-                    position: 'relative',
-                    overflow: 'hidden',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                    boxShadow: '0 8px 24px rgba(98, 91, 113, 0.12)'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-8px)';
-                    e.currentTarget.style.boxShadow = '0 16px 48px rgba(98, 91, 113, 0.2)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(98, 91, 113, 0.12)';
-                  }}>
-                    <div style={{
-                      position: 'absolute',
-                      top: '50%',
-                      right: '-80px',
-                      width: '200px',
-                      height: '200px',
-                      background: 'rgba(98, 91, 113, 0.08)',
-                      borderRadius: '50%'
-                    }}></div>
-
-                    <div style={{ position: 'relative', zIndex: 1 }}>
-                      <div style={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: '44px',
-                        height: '44px',
-                        background: 'rgba(125, 82, 96, 0.15)',
-                        borderRadius: '12px',
-                        marginBottom: '12px'
-                      }}>
-                        <span className="material-symbols-outlined" style={{ color: '#625B71', fontSize: '24px' }}>public</span>
-                      </div>
-                      <h3 style={{ fontSize: '36px', fontFamily: 'Plus Jakarta Sans, sans-serif', fontWeight: 800, marginBottom: '4px' }}>45+</h3>
-                      <p style={{ color: '#49454F', fontWeight: 600, fontSize: '13px' }}>Countries Connected</p>
-                    </div>
-
-                    <div style={{
-                      marginTop: '16px',
-                      padding: '12px 16px',
-                      background: 'rgba(255, 255, 255, 0.5)',
-                      borderRadius: '12px',
-                      fontSize: '13px',
-                      fontWeight: 600,
-                      color: '#625B71'
-                    }}>
-                      🌍 Global partnerships & collaborations
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </section>
@@ -543,7 +500,7 @@ const UniversityProfile = () => {
                     Academic Excellence &amp; Multidisciplinary Growth
                   </h3>
                   <p style={{ color: '#49454F', lineHeight: 1.5, fontSize: '15px' }}>
-                    As a comprehensive public institution, Can Tho University (CTU) offers a diverse range of undergraduate and postgraduate programs. While widely recognized for its agricultural and environmental research, it stands as a <span style={{ color: '#B3261E', fontWeight: 700 }}>critical multidisciplinary hub</span> in Vietnam's educational ecosystem.
+                    As a comprehensive public institution, Can Tho University (CTUMP) offers a diverse range of undergraduate and postgraduate programs. While widely recognized for its agricultural and environmental research, it stands as a <span style={{ color: '#B3261E', fontWeight: 700 }}>critical multidisciplinary hub</span> in Vietnam's educational ecosystem.
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                     <div style={{ display: 'flex', gap: '16px', padding: '16px', borderRadius: '16px', transition: 'background 0.2s', cursor: 'pointer' }}>
@@ -573,7 +530,7 @@ const UniversityProfile = () => {
                     fontStyle: 'italic',
                     color: '#49454F'
                   }}>
-                    "CTU is not a specialized medical university, but its role in producing world-class researchers and multidisciplinary professionals makes it an essential partner for medical aspirants in Vietnam."
+                    "CTUMP is not a specialized medical university, but its role in producing world-class researchers and multidisciplinary professionals makes it an essential partner for medical aspirants in Vietnam."
                   </div>
                 </div>
               </div>
@@ -593,7 +550,7 @@ const UniversityProfile = () => {
                       <span className="material-symbols-outlined" style={{ color: '#B3261E', fontSize: '24px' }}>public</span>
                     </div>
                     <p style={{ color: '#49454F', lineHeight: 1.5, fontSize: '14px' }}>
-                      Hosting students from the USA, Japan, and Europe, CTU maintains active collaborations with top-tier universities globally, ensuring our research standards meet international benchmarks.
+                      Hosting students from the USA, Japan, and Europe, CTUMP maintains active collaborations with top-tier universities globally, ensuring our research standards meet international benchmarks.
                     </p>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                       <span style={{ padding: '8px 16px', background: 'rgba(125, 82, 96, 0.1)', color: '#7D5260', fontSize: '12px', fontWeight: 700, borderRadius: '9999px' }}>USA COLLABS</span>
