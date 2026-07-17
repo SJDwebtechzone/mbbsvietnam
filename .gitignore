@@ -17,3 +17,5 @@ backend/backend.out.log
 
 # Build
 frontend/dist/
+# Local Netlify folder
+.netlify
