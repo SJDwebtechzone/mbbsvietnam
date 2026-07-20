@@ -220,7 +220,7 @@ useEffect(() => {
       </nav>
 
       {/* ── Mobile drawer ── */}
-      <div className={`lg:hidden bg-white border-b border-gray-100 shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${menuOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"}`}>
+      <div className={`lg:hidden bg-white border-b border-gray-100 shadow-lg overflow-y-auto transition-all duration-300 ease-in-out ${menuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="px-4 py-3 flex flex-col gap-1">
           {[
             { label: "About Us", to: "/about" },
@@ -275,7 +275,7 @@ useEffect(() => {
    <a
     key={s.href}
     href={s.href}
-    onClick={() => setAdmDropOpen(false)}
+    onClick={closeMenu}
     className="block px-4 py-1.5 text-sm text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition"
     >
     {s.label}

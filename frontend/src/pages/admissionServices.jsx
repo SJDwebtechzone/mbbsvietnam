@@ -405,7 +405,7 @@ export default function AdmissionServices() {
 
       {/* Hero — image only */}
 <section style={{ width: "100%", overflow: "hidden" }}>
-  // In admissionServices.jsx hero image
+
 <img
   src={Admission}
   alt="Indian doctors"
