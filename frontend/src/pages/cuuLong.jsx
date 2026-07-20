@@ -106,31 +106,31 @@ const CuuLongUniversity = () => {
               </div>
 
               <div>
-                <div className="glass-card p-8 rounded-3xl border border-white/20 shadow-2xl space-y-6 text-slate-800">
+                <div className="glass-card p-4 sm:p-8 rounded-3xl border border-white/20 shadow-2xl space-y-4 sm:space-y-6 text-slate-800">
                   <div className="flex justify-between items-start">
                     <div>
-                      <p className="text-[#CC1B1B] font-bold text-xs uppercase tracking-widest mb-1">Mekong Delta Hub</p>
-                      <h3 className="font-headline text-2xl font-bold text-slate-900">Vinh Long City</h3>
+                      <p className="text-[#CC1B1B] font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1">Mekong Delta Hub</p>
+                      <h3 className="font-headline text-xl sm:text-2xl font-bold text-slate-900">Vinh Long City</h3>
                     </div>
-                    <span className="material-symbols-outlined text-4xl text-[#CC1B1B]">school</span>
+                    <span className="material-symbols-outlined text-3xl sm:text-4xl text-[#CC1B1B]">school</span>
                   </div>
                   <div className="h-px bg-slate-200"></div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 bg-white/70 rounded-2xl">
-                      <p className="text-xs text-slate-500 font-medium uppercase">Tuition Fee</p>
-                      <p className="text-xl font-extrabold text-slate-900">$4,500/Yr</p>
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
+                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Tuition Fee</p>
+                      <p className="text-base sm:text-xl font-extrabold text-slate-900 whitespace-nowrap">$4,500/Yr</p>
                     </div>
-                    <div className="p-4 bg-white/70 rounded-2xl">
-                      <p className="text-xs text-slate-500 font-medium uppercase">Course</p>
-                      <p className="text-xl font-extrabold text-slate-900">6 Years</p>
+                    <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
+                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Course</p>
+                      <p className="text-base sm:text-xl font-extrabold text-slate-900">6 Years</p>
                     </div>
-                    <div className="p-4 bg-white/70 rounded-2xl">
-                      <p className="text-xs text-slate-500 font-medium uppercase">Hostel</p>
-                      <p className="text-xl font-extrabold text-slate-900">Indian Food</p>
+                    <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
+                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Hostel</p>
+                      <p className="text-base sm:text-xl font-extrabold text-slate-900">Indian Food</p>
                     </div>
-                    <div className="p-4 bg-white/70 rounded-2xl">
-                      <p className="text-xs text-slate-500 font-medium uppercase">Flight Time</p>
-                      <p className="text-xl font-extrabold text-slate-900">~4 Hours</p>
+                    <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
+                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Flight Time</p>
+                      <p className="text-base sm:text-xl font-extrabold text-slate-900">~4 Hours</p>
                     </div>
                   </div>
                 </div>

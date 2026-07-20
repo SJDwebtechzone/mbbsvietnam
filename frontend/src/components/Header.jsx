@@ -104,9 +104,9 @@ useEffect(() => {
 
       {/* ── Main nav ── */}
       <nav className="bg-white px-6 py-3 flex items-center justify-between shadow-md border-b-4 border-[#F5C518] relative z-40">
-        <Link to="/" className="flex items-center gap-4" onClick={closeMenu}>
-          <img src="/logo.png" alt="MedViet Logo" className="w-16 h-16 rounded-xl object-cover" />
-          <div className="text-xl font-bold tracking-widest text-[#CC1B1B] uppercase">MBBS in Vietnam</div>
+        <Link to="/" className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink" onClick={closeMenu}>
+          <img src="/logo.png" alt="MedViet Logo" className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl object-cover flex-shrink-0" />
+          <div className="text-xs sm:text-lg md:text-xl font-bold tracking-widest text-[#CC1B1B] uppercase leading-tight min-w-0">MBBS in Vietnam</div>
         </Link>
 
         <ul className="hidden lg:flex items-center gap-1">
@@ -204,17 +204,17 @@ useEffect(() => {
           Enquiry
         </button>
 
-        <div className="flex lg:hidden items-center gap-3">
+        <div className="flex lg:hidden items-center gap-1.5 xs:gap-3 flex-shrink-0">
           <button onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-2 bg-[#CC1B1B] text-white text-xs font-bold rounded-lg border-2 border-[#CC1B1B]">
+            className="flex items-center gap-1 px-2 py-1.5 xs:px-3 xs:py-2 bg-[#CC1B1B] text-white text-[10px] xs:text-xs font-bold rounded-lg border-2 border-[#CC1B1B]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#F5C518] animate-pulse" />
             Enquiry
           </button>
           <button onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu"
-            className="flex flex-col justify-center items-center w-9 h-9 rounded-lg border border-gray-200 gap-1.5 hover:bg-red-50 transition">
-            <span className={`block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
-            <span className={`block w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 origin-center ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            className="flex flex-col justify-center items-center w-8 h-8 xs:w-9 xs:h-9 rounded-lg border border-gray-200 gap-1.5 hover:bg-red-50 transition">
+            <span className={`block w-4 xs:w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 origin-center ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-4 xs:w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`} />
+            <span className={`block w-4 xs:w-5 h-0.5 bg-gray-700 rounded transition-all duration-300 origin-center ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </div>
       </nav>
