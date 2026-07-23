@@ -25,7 +25,7 @@ const [admDropOpen, setAdmDropOpen] = useState(false);
 
   // ✅ Dynamic universities from API
   const [universities, setUniversities] = useState([]);
-  const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+  const BASE_URL = import.meta.env.VITE_API_URL || "https://mbbs-vietnam.onrender.com";
 
   useEffect(() => {
     fetch(`${BASE_URL}/api/universities/navbar`)
