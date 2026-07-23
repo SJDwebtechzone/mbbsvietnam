@@ -207,10 +207,11 @@ function normalizeImageUrl(req, image) {
 function createEmailTransporter() {
   return nodemailer.createTransport({
     host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    family: 4, // forces IPv4 — fixes ENETUNREACH on Render
+    port: 587,
+    secure: false, // STARTTLS, not implicit SSL
+    family: 4,
     auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
+    connectionTimeout: 10000, // 10s instead of default, fails faster if still blocked
   });
 }
 /* =========================
