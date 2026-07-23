@@ -71,13 +71,12 @@ const CuuLongUniversity = () => {
         `}</style>
 
         <main>
-          {/* Hero Section */}
-          <section className="relative min-h-[650px] flex items-center overflow-hidden bg-slate-900">
+          <section className="relative min-h-[751px] flex items-center overflow-hidden bg-slate-900">
             <div className="absolute inset-0 z-0">
               <img
                 src={CuuLongHeroImg}
                 alt="Cuu Long University Campus"
-                className="w-full h-full object-cover opacity-45"
+                className="w-full h-full object-cover object-center opacity-45"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
             </div>
@@ -86,13 +85,13 @@ const CuuLongUniversity = () => {
               <div className="space-y-6 text-white">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#CC1B1B]/80 backdrop-blur-md rounded-full border border-red-500/30">
                   <span className="material-symbols-filled text-yellow-400 text-sm">verified</span>
-                  <span className="text-xs font-bold text-white tracking-widest uppercase">NMC ALIGNED & APPROVED</span>
+                  <span className="text-xs font-black text-white tracking-widest uppercase">NMC ALIGNED & APPROVED</span>
                 </div>
-                <h1 className="font-headline text-5xl md:text-6xl font-extrabold leading-tight tracking-tight text-white">
+                <h1 className="font-headline text-5xl md:text-6xl lg:text-7xl font-black leading-tight tracking-tight text-white">
                   Cuu Long <br />
                   <span className="text-yellow-400">University</span>
                 </h1>
-                <p className="text-lg text-slate-200 font-body max-w-lg">
+                <p className="text-lg text-white font-semibold font-body max-w-lg">
                   Become a Doctor Beyond Your Dreams. Offering world-class MBBS education at the Department of Health Sciences in Vinh Long City, Vietnam.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-4">
@@ -109,28 +108,28 @@ const CuuLongUniversity = () => {
                 <div className="glass-card p-4 sm:p-8 rounded-3xl border border-white/20 shadow-2xl space-y-4 sm:space-y-6 text-slate-800">
                   <div className="flex justify-between items-start">
                     <div>
-                      <p className="text-[#CC1B1B] font-bold text-[10px] sm:text-xs uppercase tracking-widest mb-1">Mekong Delta Hub</p>
-                      <h3 className="font-headline text-xl sm:text-2xl font-bold text-slate-900">Vinh Long City</h3>
+                      <p className="text-[#CC1B1B] font-black text-[10px] sm:text-xs uppercase tracking-widest mb-1">Mekong Delta Hub</p>
+                      <h3 className="font-headline text-xl sm:text-2xl font-black text-slate-900">Vinh Long City</h3>
                     </div>
                     <span className="material-symbols-outlined text-3xl sm:text-4xl text-[#CC1B1B]">school</span>
                   </div>
                   <div className="h-px bg-slate-200"></div>
                   <div className="grid grid-cols-2 gap-3 sm:gap-4">
                     <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
-                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Tuition Fee</p>
-                      <p className="text-base sm:text-xl font-extrabold text-slate-900 whitespace-nowrap">$4,500/Yr</p>
+                      <p className="text-[10px] sm:text-xs text-slate-600 font-bold uppercase">Tuition Fee</p>
+                      <p className="text-base sm:text-xl font-black text-slate-900 whitespace-nowrap">$4,500/Yr</p>
                     </div>
                     <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
-                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Course</p>
-                      <p className="text-base sm:text-xl font-extrabold text-slate-900">6 Years</p>
+                      <p className="text-[10px] sm:text-xs text-slate-600 font-bold uppercase">Course</p>
+                      <p className="text-base sm:text-xl font-black text-slate-900">6 Years</p>
                     </div>
                     <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
-                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Hostel</p>
-                      <p className="text-base sm:text-xl font-extrabold text-slate-900">Indian Food</p>
+                      <p className="text-[10px] sm:text-xs text-slate-600 font-bold uppercase">Hostel</p>
+                      <p className="text-base sm:text-xl font-black text-slate-900">Indian Food</p>
                     </div>
                     <div className="p-3 sm:p-4 bg-white/70 rounded-2xl">
-                      <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase">Flight Time</p>
-                      <p className="text-base sm:text-xl font-extrabold text-slate-900">~4 Hours</p>
+                      <p className="text-[10px] sm:text-xs text-slate-600 font-bold uppercase">Flight Time</p>
+                      <p className="text-base sm:text-xl font-black text-slate-900">~4 Hours</p>
                     </div>
                   </div>
                 </div>
@@ -142,8 +141,8 @@ const CuuLongUniversity = () => {
           <section className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center max-w-2xl mx-auto mb-16">
-                <h2 className="font-headline text-4xl font-extrabold text-[#CC1B1B] mb-4">Why Choose Cuu Long University?</h2>
-                <p className="text-slate-500">Key highlights and advantages for Indian students pursuing their medical dream in Vietnam.</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-4">Why Choose Cuu Long University?</h2>
+                <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-2xl mx-auto mb-8">Key highlights and advantages for Indian students pursuing their medical dream in Vietnam.</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -159,8 +158,8 @@ const CuuLongUniversity = () => {
                 ].map((item, idx) => (
                   <div key={idx} className="bg-slate-50 rounded-2xl p-6 border border-slate-100 hover:shadow-lg hover:bg-white transition duration-300">
                     <span className="material-symbols-outlined text-[#CC1B1B] text-3xl mb-4 bg-red-50 p-3 rounded-xl">{item.icon}</span>
-                    <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-2.5">{item.title}</h3>
+                    <p className="text-slate-600 text-xs sm:text-sm font-semibold leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -171,8 +170,8 @@ const CuuLongUniversity = () => {
           <section className="py-20 bg-slate-50 border-t border-b border-slate-100">
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center max-w-2xl mx-auto mb-16">
-                <h2 className="font-headline text-4xl font-extrabold text-slate-900 mb-4">Flow of Admission Process</h2>
-                <p className="text-slate-500">Step-by-step roadmap from your local registration to arriving at the campus.</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Flow of Admission Process</h2>
+                <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-2xl mx-auto mb-8">Step-by-step roadmap from your local registration to arriving at the campus.</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
@@ -188,8 +187,8 @@ const CuuLongUniversity = () => {
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white p-6 rounded-2xl shadow-sm border border-slate-150 relative">
                     <div className="absolute top-4 right-4 text-3xl font-extrabold text-slate-200">{item.step}</div>
-                    <h3 className="text-md font-bold text-[#CC1B1B] mb-2 pr-6">{item.title}</h3>
-                    <p className="text-slate-500 text-xs leading-relaxed">{item.desc}</p>
+                    <h3 className="text-base sm:text-lg font-black text-[#CC1B1B] mb-2 pr-6">{item.title}</h3>
+                    <p className="text-slate-600 text-xs sm:text-sm font-semibold leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -200,36 +199,36 @@ const CuuLongUniversity = () => {
           <section className="py-20 bg-white">
             <div className="max-w-5xl mx-auto px-6">
               <div className="text-center mb-12">
-                <h2 className="font-headline text-4xl font-extrabold text-[#CC1B1B] mb-4">Cuu Long University Fee Structure</h2>
-                <p className="text-slate-500">6 Years English-Medium MBBS Program Fee Breakdown</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-4">Cuu Long University Fee Structure</h2>
+                <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-2xl mx-auto mb-8">6 Years English-Medium MBBS Program Fee Breakdown</p>
               </div>
 
               <div className="overflow-x-auto bg-white rounded-2xl border border-slate-200 shadow-md">
                 <table className="min-w-full divide-y divide-slate-200">
                   <thead className="bg-[#CC1B1B] text-white">
                     <tr>
-                      <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider">Fee Category</th>
-                      <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">USD</th>
-                      <th className="px-6 py-4 text-center text-xs font-bold uppercase tracking-wider">INR (Approx)</th>
+                      <th className="px-6 py-4 text-left text-xs font-black uppercase tracking-wider">Fee Category</th>
+                      <th className="px-6 py-4 text-center text-xs font-black uppercase tracking-wider">USD</th>
+                      <th className="px-6 py-4 text-center text-xs font-black uppercase tracking-wider">INR (Approx)</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-150 text-sm text-slate-800">
                     <tr>
-                      <td className="px-6 py-4 font-semibold">University Registration Fees (One-time)</td>
-                      <td className="px-6 py-4 text-center font-bold text-slate-900">$1,500</td>
-                      <td className="px-6 py-4 text-center text-slate-600">₹1,30,000</td>
+                      <td className="px-6 py-4 font-extrabold text-slate-900">University Registration Fees (One-time)</td>
+                      <td className="px-6 py-4 text-center font-extrabold text-slate-900">$1,500</td>
+                      <td className="px-6 py-4 text-center text-slate-600 font-semibold">₹1,30,000</td>
                     </tr>
                     <tr className="bg-slate-50">
-                      <td className="px-6 py-4 font-semibold">Tuition Fees per Semester (1st to 12th Sem)</td>
-                      <td className="px-6 py-4 text-center font-bold text-slate-900">$2,250</td>
-                      <td className="px-6 py-4 text-center text-slate-600">₹2,13,750</td>
+                      <td className="px-6 py-4 font-extrabold text-slate-900">Tuition Fees per Semester (1st to 12th Sem)</td>
+                      <td className="px-6 py-4 text-center font-extrabold text-slate-900">$2,250</td>
+                      <td className="px-6 py-4 text-center text-slate-600 font-semibold">₹2,13,750</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 font-semibold">Food & Accommodation per Year</td>
-                      <td className="px-6 py-4 text-center font-bold text-slate-900">$2,600</td>
-                      <td className="px-6 py-4 text-center text-slate-600">₹2,40,000</td>
+                      <td className="px-6 py-4 font-extrabold text-slate-900">Food & Accommodation per Year</td>
+                      <td className="px-6 py-4 text-center font-extrabold text-slate-900">$2,600</td>
+                      <td className="px-6 py-4 text-center text-slate-600 font-semibold">₹2,40,000</td>
                     </tr>
-                    <tr className="bg-red-50 text-red-900 font-extrabold">
+                    <tr className="bg-red-50 text-red-900 font-black">
                       <td className="px-6 py-4 text-left">Total 6-Year Course Tuition</td>
                       <td className="px-6 py-4 text-center">$28,500</td>
                       <td className="px-6 py-4 text-center">₹26,95,000</td>
@@ -243,36 +242,36 @@ const CuuLongUniversity = () => {
                 <div className="absolute right-0 bottom-0 translate-x-12 translate-y-12 opacity-5 pointer-events-none">
                   <span className="material-symbols-outlined text-[15rem]">account_balance_wallet</span>
                 </div>
-                <h3 className="font-headline text-2xl font-bold mb-6 text-yellow-400">Estimated Initial Payment Before Departure</h3>
+                <h3 className="font-headline text-2xl sm:text-3xl font-black mb-6 text-yellow-400">Estimated Initial Payment Before Departure</h3>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div className="space-y-3">
-                    <div className="flex justify-between text-slate-300 text-sm">
+                    <div className="flex justify-between text-slate-300 text-sm font-semibold">
                       <span>University Registration Fee:</span>
-                      <span className="font-bold text-white">₹1,30,000</span>
+                      <span className="font-extrabold text-white">₹1,30,000</span>
                     </div>
-                    <div className="flex justify-between text-slate-300 text-sm">
+                    <div className="flex justify-between text-slate-300 text-sm font-semibold">
                       <span>Initial Processing Fee (1st Year):</span>
-                      <span className="font-bold text-white">₹2,63,000</span>
+                      <span className="font-extrabold text-white">₹2,63,000</span>
                     </div>
-                    <div className="flex justify-between text-slate-300 text-sm">
+                    <div className="flex justify-between text-slate-300 text-sm font-semibold">
                       <span>Tuition Fee for 1st Semester:</span>
-                      <span className="font-bold text-white">₹2,13,750</span>
+                      <span className="font-extrabold text-white">₹2,13,750</span>
                     </div>
-                    <div className="flex justify-between text-slate-300 text-sm">
+                    <div className="flex justify-between text-slate-300 text-sm font-semibold">
                       <span>Hostel Accommodation Fee (1st Year):</span>
-                      <span className="font-bold text-white">₹2,40,000</span>
+                      <span className="font-extrabold text-white">₹2,40,000</span>
                     </div>
                     <div className="h-px bg-white/20 my-4"></div>
                     <div className="flex justify-between text-lg font-bold text-white">
                       <span>Grand Total:</span>
-                      <span className="text-yellow-400">₹8,46,000</span>
+                      <span className="text-yellow-400 font-black text-xl sm:text-2xl">₹8,46,000</span>
                     </div>
                   </div>
 
                   <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/10 space-y-4">
-                    <h4 className="text-sm font-bold uppercase tracking-wider text-yellow-400">1st Year Processing Covers (₹2,63,000)</h4>
-                    <ul className="text-xs text-slate-200 space-y-2">
+                    <h4 className="text-sm sm:text-base font-black uppercase tracking-wider text-yellow-400">1st Year Processing Covers (₹2,63,000)</h4>
+                    <ul className="text-xs sm:text-sm text-slate-200 font-semibold space-y-2">
                       <li className="flex items-center gap-2">✓ Student Visa processing, MoFA authentication</li>
                       <li className="flex items-center gap-2">✓ One-way flight ticket & airport transfers</li>
                       <li className="flex items-center gap-2">✓ Medical health insurance, local bank account setup</li>
@@ -289,8 +288,8 @@ const CuuLongUniversity = () => {
           <section className="py-20 px-6 bg-slate-50 border-t border-slate-150">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold font-headline text-[#CC1B1B] mb-4">Life at Cuu Long University </h2>
-                <p className="text-slate-500 max-w-xl mx-auto">Explore the facilities, hostels, laboratories, and dynamic student experience at the University of Cuu Long.</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-[#CC1B1B] tracking-tight mb-4">Life at Cuu Long University </h2>
+                <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-xl mx-auto mb-8">Explore the facilities, hostels, laboratories, and dynamic student experience at the University of Cuu Long.</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="relative group overflow-hidden rounded-2xl h-56">
@@ -357,11 +356,21 @@ const CuuLongUniversity = () => {
           {/* Call to Action */}
           <section className="bg-gradient-to-r from-red-800 to-red-900 text-white py-16 text-center">
             <div className="max-w-4xl mx-auto px-6 space-y-6">
-              <h2 className="font-headline text-3xl md:text-4xl font-extrabold">Begin Your Doctor Career at Cuu Long</h2>
-              <p className="text-white/80 max-w-lg mx-auto">Get free professional guidance from expert counselors about fee payment installments, document translations, and study visa processing.</p>
-              <button type="button" onClick={() => setIsModalOpen(true)} className="bg-yellow-400 text-slate-900 px-10 py-4 rounded-xl font-bold hover:bg-yellow-300 transition shadow-lg active:scale-95 text-lg">
-                Get Free Counselling
-              </button>
+              <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4">Begin Your Doctor Career at Cuu Long</h2>
+              <p className="text-white/95 text-base sm:text-lg max-w-2xl mx-auto font-semibold leading-relaxed mb-6">Get free professional guidance from expert counselors about fee payment installments, document translations, and study visa processing.</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button type="button" onClick={() => setIsModalOpen(true)} className="bg-yellow-400 text-slate-900 px-10 py-4 rounded-xl font-bold hover:bg-yellow-300 transition shadow-lg active:scale-95 text-lg border-none">
+                  Apply Now
+                </button>
+                <a
+                  href="https://mku.edu.vn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border-2 border-white text-white hover:bg-white/10 px-10 py-4 rounded-xl font-bold transition shadow-lg text-lg text-center"
+                >
+                  Visit University
+                </a>
+              </div>
             </div>
           </section>
         </main>

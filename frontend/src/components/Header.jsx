@@ -113,35 +113,34 @@ useEffect(() => {
       </div>
 
       {/* ── Main nav ── */}
-      <nav className="bg-white px-6 py-3 flex items-center justify-between shadow-md border-b-4 border-[#F5C518] relative z-40">
-        <Link to="/" className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink" onClick={closeMenu}>
-          <img src="/logo.png" alt="MedViet Logo" className="w-10 h-10 sm:w-16 sm:h-16 rounded-xl object-cover flex-shrink-0" />
-          <div className="text-xs sm:text-lg md:text-xl font-bold tracking-widest text-[#CC1B1B] uppercase leading-tight min-w-0">MBBS in Vietnam</div>
+      <nav className="bg-white px-6 py-3.5 sm:py-4 flex items-center justify-between shadow-md border-b-4 border-[#F5C518] relative z-40">
+        <Link to="/" className="flex items-center gap-2 sm:gap-4 min-w-0 flex-shrink animate-fade-in" onClick={closeMenu}>
+          <img src="/logo.png" alt="MedViet Logo" className="w-16 h-16 sm:w-24 sm:h-24 rounded-xl object-cover flex-shrink-0 transition-transform duration-300 hover:scale-105" />
+          <div className="text-sm sm:text-xl md:text-2xl font-extrabold tracking-widest text-[#CC1B1B] uppercase leading-tight min-w-0">MBBS in Vietnam</div>
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-2">
           {[
             { label: "About Us", to: "/about" },
             { label: "MBBS in Vietnam", to: "/mbbsInVietnam" },
           ].map((item) => (
             <li key={item.to}>
-              <Link to={item.to} className="px-3 py-2 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              <Link to={item.to} className="px-3.5 py-2 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition duration-200">
                 {item.label}
               </Link>
             </li>
           ))}
 
           {/* ✅ Universities dropdown - now dynamic */}
-        
-<li className="relative">
-  <span onClick={() => { setUniDropOpen(!uniDropOpen); setAdmDropOpen(false); }}
-    className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition cursor-pointer">
-    Universities
-    <svg className={`w-4 h-4 transition-transform duration-200 ${uniDropOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
-      <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  </span>
-  <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-red-100 border-t-2 border-t-[#CC1B1B] rounded-b-xl shadow-xl min-w-[260px] z-50 py-2 transition-all duration-200 ${uniDropOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+          <li className="relative">
+            <span onClick={() => { setUniDropOpen(!uniDropOpen); setAdmDropOpen(false); }}
+              className="flex items-center gap-1 px-3.5 py-2 text-base font-bold text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition duration-200 cursor-pointer">
+              Universities
+              <svg className={`w-4 h-4 transition-transform duration-200 ${uniDropOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
+                <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+            <div className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-white border border-red-100 border-t-4 border-t-[#CC1B1B] rounded-b-xl shadow-xl min-w-[280px] z-50 py-2 transition-all duration-200 ${uniDropOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
               <p className="text-[10px] font-bold tracking-widest text-[#CC1B1B] uppercase px-3 py-1">
                 Top Medical Universities
               </p>
@@ -152,6 +151,7 @@ useEffect(() => {
                   <Link
                     key={university.slug}
                     to={`/universities/${university.slug}`}
+                    onClick={closeMenu}
                     className="flex items-center gap-2 px-3 py-2 text-sm text-gray-600 hover:bg-red-50 hover:text-[#CC1B1B] transition"
                   >
                     <span className="w-5 h-5 rounded bg-red-50 text-[#CC1B1B] text-xs font-bold flex items-center justify-center flex-shrink-0">
@@ -161,8 +161,8 @@ useEffect(() => {
                   </Link>
                 ))
               )}
-              <div className="border-t border-gray-100 mt-1 pt-1 px-3">
-                <Link to="/universities" className="text-xs font-semibold text-[#CC1B1B]">
+              <div className="border-t border-gray-100 mt-1 pt-2 px-3">
+                <Link to="/universities" onClick={closeMenu} className="text-xs font-bold text-[#CC1B1B] hover:underline">
                   View all universities →
                 </Link>
               </div>
@@ -170,29 +170,29 @@ useEffect(() => {
           </li>
 
           {/* Admission Services dropdown */}
-         
-<li className="relative">
-  <div className="flex items-center">
-    <Link to="/admissionServices" className="px-3 py-1 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition cursor-pointer flex items-center gap-1">
-      Admission Services
-    </Link>
-    <span onClick={() => { setAdmDropOpen(!admDropOpen); setUniDropOpen(false); }}
-      className="px-1 py-1.5 text-gray-700 cursor-pointer hover:text-[#CC1B1B]">
-      <svg className={`w-4 h-4 transition-transform duration-200 ${admDropOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
-        <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    </span>
-  </div>
-  <div className={`absolute top-full left-0 mt-1 bg-white border border-red-100 border-t-2 border-t-[#CC1B1B] rounded-xl shadow-xl min-w-[220px] z-50 py-1 transition-all duration-200 ${admDropOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-             {admissionServices.map((s) => (
-  <a
-    key={s.href}
-    href={s.href}
-    onClick={() => setAdmDropOpen(false)}
-    className="block px-4 py-1.5 text-sm text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition">
-    {s.label}
-  </a>
-))}
+          <li className="relative">
+            <div className="flex items-center">
+              <Link to="/admissionServices" className="px-3.5 py-1 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition cursor-pointer flex items-center gap-1">
+                Admission Services
+              </Link>
+              <span onClick={() => { setAdmDropOpen(!admDropOpen); setUniDropOpen(false); }}
+                className="px-1.5 py-2 text-gray-700 cursor-pointer hover:text-[#CC1B1B]">
+                <svg className={`w-4 h-4 transition-transform duration-200 ${admDropOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </div>
+            <div className={`absolute top-full left-0 mt-2 bg-white border border-red-100 border-t-4 border-t-[#CC1B1B] rounded-xl shadow-xl min-w-[240px] z-50 py-2 transition-all duration-200 ${admDropOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}`}>
+              {admissionServices.map((s) => (
+                <a
+                  key={s.href}
+                  href={s.href}
+                  onClick={() => setAdmDropOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition"
+                >
+                  {s.label}
+                </a>
+              ))}
             </div>
           </li>
 
@@ -201,7 +201,7 @@ useEffect(() => {
             { label: "Contact Us", to: "/contact" },
           ].map((item) => (
             <li key={item.to}>
-              <Link to={item.to} className="px-3 py-2 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              <Link to={item.to} className="px-3.5 py-2 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition duration-200">
                 {item.label}
               </Link>
             </li>
@@ -209,14 +209,14 @@ useEffect(() => {
         </ul>
 
         <button onClick={() => setIsModalOpen(true)}
-          className="hidden lg:flex items-center gap-2 px-5 py-2.5 bg-[#CC1B1B] text-white text-sm font-bold rounded-xl hover:bg-white hover:text-[#CC1B1B] transition border-2 border-[#CC1B1B]">
-          <span className="w-2 h-2 rounded-full bg-[#F5C518] animate-pulse" />
+          className="hidden lg:flex items-center gap-2 px-6 py-3 bg-[#CC1B1B] text-white text-base font-extrabold rounded-xl hover:bg-white hover:text-[#CC1B1B] transition duration-300 border-2 border-[#CC1B1B] shadow-md">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#F5C518] animate-pulse" />
           Enquiry
         </button>
 
         <div className="flex lg:hidden items-center gap-1.5 xs:gap-3 flex-shrink-0">
           <button onClick={() => setIsModalOpen(true)}
-            className="flex items-center gap-1 px-2 py-1.5 xs:px-3 xs:py-2 bg-[#CC1B1B] text-white text-[10px] xs:text-xs font-bold rounded-lg border-2 border-[#CC1B1B]">
+            className="flex items-center gap-1 px-2.5 py-2 xs:px-3.5 xs:py-2 bg-[#CC1B1B] text-white text-[10px] xs:text-xs font-bold rounded-lg border-2 border-[#CC1B1B]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#F5C518] animate-pulse" />
             Enquiry
           </button>
@@ -237,7 +237,7 @@ useEffect(() => {
             { label: "MBBS in Vietnam", to: "/mbbsInVietnam" },
           ].map((item) => (
             <Link key={item.to} to={item.to} onClick={closeMenu}
-              className="block px-3 py-2.5 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              className="block px-3 py-2.5 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
               {item.label}
             </Link>
           ))}
@@ -245,7 +245,7 @@ useEffect(() => {
           {/* ✅ Mobile Universities accordion - dynamic */}
           <div>
             <button onClick={() => setUniOpen(!uniOpen)}
-              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              className="w-full flex items-center justify-between px-3 py-2.5 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
               Universities
               <svg className={`w-4 h-4 transition-transform duration-200 ${uniOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
                 <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -272,7 +272,7 @@ useEffect(() => {
           {/* Admission Services accordion */}
           <div>
             <button onClick={() => setAdmOpen(!admOpen)}
-              className="w-full flex items-center justify-between px-3 py-2.5 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              className="w-full flex items-center justify-between px-3 py-2.5 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
               Admission Services
               <svg className={`w-4 h-4 transition-transform duration-200 ${admOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 16 16">
                 <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
@@ -280,18 +280,16 @@ useEffect(() => {
             </button>
             <div className={`overflow-hidden transition-all duration-300 ${admOpen ? "max-h-96" : "max-h-0"}`}>
               <div className="ml-3 border-l-2 border-[#F5C518] pl-3 py-1 flex flex-col gap-0.5">
-
-{admissionServices.map((s) => (
-   <a
-    key={s.href}
-    href={s.href}
-    onClick={closeMenu}
-    className="block px-4 py-1.5 text-sm text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition"
-    >
-    {s.label}
-  </a>
-))}
-
+                {admissionServices.map((s) => (
+                  <a
+                    key={s.href}
+                    href={s.href}
+                    onClick={closeMenu}
+                    className="block px-4 py-1.5 text-sm text-gray-700 hover:text-[#CC1B1B] hover:bg-red-50 transition"
+                  >
+                    {s.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -301,7 +299,7 @@ useEffect(() => {
             { label: "Contact Us", to: "/contact" },
           ].map((item) => (
             <Link key={item.to} to={item.to} onClick={closeMenu}
-              className="block px-3 py-2.5 text-sm font-semibold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
+              className="block px-3 py-2.5 text-base font-bold text-gray-700 rounded-lg hover:text-[#CC1B1B] hover:bg-red-50 transition">
               {item.label}
             </Link>
           ))}

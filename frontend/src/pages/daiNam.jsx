@@ -1,361 +1,3 @@
-
-// import React, { useState } from "react";
-// import Header from "../components/Header";
-// import Footer from "../components/Footer";
-// import EnquiryModal from "../components/EnquiryModal";
-// import HeroImg from "../assets/6I4A3707.jpg";
-// import ClinicalImg from "../assets/6I4A3712.jpg";
-// import HanoiImg1 from "../assets/6I4A3744.jpg";
-// import HanoiImg2 from "../assets/6I4A3745.jpg";
-
-// const DaiNamUniversity = () => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
-//   return (
-//     <>
-//       <Header />
-//       <div className="bg-gray-50 font-sans text-gray-900 min-h-screen">
-//         <style>{`
-//           @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
-//           @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
-//           .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
-//           .font-body { font-family: 'Inter', sans-serif; }
-//           .material-symbols-outlined {
-//             font-family: 'Material Symbols Outlined';
-//             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-//             font-style: normal;
-//             display: inline-block;
-//             line-height: 1;
-//             text-transform: none;
-//             letter-spacing: normal;
-//             word-wrap: normal;
-//             white-space: nowrap;
-//             direction: ltr;
-//           }
-//           .material-symbols-filled {
-//             font-family: 'Material Symbols Outlined';
-//             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-//             font-style: normal;
-//             display: inline-block;
-//             line-height: 1;
-//           }
-//           .glass-nav {
-//             background: rgba(255, 255, 255, 0.7);
-//             backdrop-filter: blur(12px);
-//           }
-//         `}</style>
-
-//         <main className="pb-24">
-
-//           {/* Hero Section */}
-//           <section className="relative px-6 py-12 md:py-20 max-w-7xl mx-auto">
-//             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-//               {/* Left Content */}
-//               <div className="lg:col-span-7 z-10">
-//                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-widest mb-6">
-//                   <span className="material-symbols-outlined text-sm">location_on</span>
-//                   Hanoi, Vietnam
-//                 </div>
-//                 <h1 className="text-5xl md:text-7xl font-extrabold font-headline text-gray-900 tracking-tight mb-6 leading-tight">
-//                   Dai Nam <br />
-//                   <span className="text-red-800">University (DNU)</span>
-//                 </h1>
-//                 <p className="text-lg md:text-xl text-slate-500 max-w-xl mb-10 leading-relaxed">
-//                   Excellence in Medical Education at the heart of Vietnam's capital. A premier destination for
-//                   international students pursuing a global career in medicine.
-//                 </p>
-//                 <div className="flex flex-wrap gap-4">
-//                   <button type="button" onClick={() => setIsModalOpen(true)} className="bg-red-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
-//                     Apply Now
-//                     <span className="material-symbols-outlined">arrow_forward</span>
-//                   </button>
-//                   <button type="button" onClick={() => setIsModalOpen(true)} className="bg-yellow-100 text-yellow-800 px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-md transition-all active:scale-95">
-//                     Download Brochure
-//                     <span className="material-symbols-outlined">download</span>
-//                   </button>
-//                 </div>
-//               </div>
-
-//               {/* Right Image */}
-//               <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-//                 <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative">
-//                   <img
-//                     src={HeroImg}
-//                     alt="Dai Nam University Campus"
-//                     className="w-full h-full object-cover"
-//                   />
-//                   <div className="absolute inset-0 bg-gradient-to-t from-red-900/40 to-transparent"></div>
-//                 </div>
-//                 <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-[200px] hidden md:block">
-//                   <div className="text-3xl font-bold text-red-800 font-headline">$5,000</div>
-//                   <div className="text-xs uppercase font-bold text-slate-500 tracking-wider">Annual Tuition Starts At</div>
-//                 </div>
-//               </div>
-//             </div>
-//           </section>
-
-//           {/* Global Education Bento Grid */}
-//           <section className="bg-gray-50 py-20 px-6">
-//             <div className="max-w-7xl mx-auto">
-//               <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-//                 <div className="max-w-2xl">
-//                   <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-[#CC1B1B]">A Truly Global Education</h2>
-//                   <p className="text-slate-500">
-//                     Tailored for the next generation of international medical practitioners, DNU provides a seamless
-//                     transition into the professional world.
-//                   </p>
-//                 </div>
-//                 <div className="bg-teal-50 border border-teal-100 px-6 py-3 rounded-xl">
-//                   <span className="text-teal-700 font-bold flex items-center gap-2">
-//                     <span className="material-symbols-filled">verified</span>
-//                     NMC RECOGNISED
-//                   </span>
-//                 </div>
-//               </div>
-
-//               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-//                 {/* Feature 1 - English Medium */}
-//                 <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm border-l-4 border-red-700">
-//                   <div className="flex items-start gap-6">
-//                     <div className="bg-red-50 p-4 rounded-full">
-//                       <span className="material-symbols-outlined text-red-700 text-3xl">translate</span>
-//                     </div>
-//                     <div>
-//                       <h3 className="text-2xl font-bold font-headline mb-3">100% English Medium</h3>
-//                       <p className="text-slate-500 leading-relaxed mb-6">
-//                         All medical programs for international students are conducted entirely in English. From lectures
-//                         and clinical rotations to assessments and textbooks, we ensure zero language barriers in your
-//                         academic journey.
-//                       </p>
-//                       <div className="flex flex-wrap gap-3">
-//                         <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">English Textbooks</span>
-//                         <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">Foreign Faculty</span>
-//                         <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">Global Standards</span>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Feature 2 - 80% International */}
-//                 <div className="bg-red-100 p-8 rounded-xl text-red-900 flex flex-col justify-between">
-//                   <span className="material-symbols-outlined text-5xl opacity-50">public</span>
-//                   <div>
-//                     <h3 className="text-4xl font-extrabold font-headline mb-2 tracking-tighter">80%</h3>
-//                     <p className="font-medium">International student body in Medical Sciences Program.</p>
-//                   </div>
-//                 </div>
-
-//                 {/* Feature 3 - Affordable */}
-//                 <div className="bg-white p-8 rounded-xl shadow-sm">
-//                   <div className="mb-6">
-//                     <span className="material-symbols-outlined text-yellow-600 text-3xl">payments</span>
-//                   </div>
-//                   <h3 className="text-xl font-bold font-headline mb-2">Affordable Excellence</h3>
-//                   <p className="text-slate-500 text-sm leading-relaxed mb-4">
-//                     Premium medical education without the premium debt.
-//                   </p>
-//                   <div className="text-2xl font-bold text-red-800 font-headline">$5,000 – $6,500</div>
-//                   <div className="text-xs text-slate-500 font-medium">Per academic year</div>
-//                 </div>
-
-//                 {/* Feature 4 - Clinical Exposure */}
-//                 <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm relative overflow-hidden">
-//                   <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
-//                     <div className="w-full md:w-1/3">
-//                       <img
-//                         src={ClinicalImg}
-//                         alt="Medical Students"
-//                         className="rounded-lg w-full h-48 object-cover"
-//                       />
-//                     </div>
-//                     <div className="w-full md:w-2/3">
-//                       <h3 className="text-xl font-bold font-headline mb-3">Clinical Exposure</h3>
-//                       <p className="text-slate-500 text-sm leading-relaxed">
-//                         DNU maintains partnerships with top-tier hospitals in Hanoi, offering students intensive
-//                         hands-on clinical training from the third year onwards.
-//                       </p>
-//                     </div>
-//                   </div>
-//                   <div className="absolute top-0 right-0 p-4 opacity-5">
-//                     <span className="material-symbols-outlined text-9xl">medical_services</span>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </section>
-
-//           {/* Capital Advantage Section */}
-//           <section className="py-24 px-6 max-w-7xl mx-auto">
-//             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-//               {/* Images */}
-//               <div className="order-2 lg:order-1">
-//                 <div className="grid grid-cols-2 gap-4">
-//                   <img
-//                     src={HanoiImg1}
-//                     alt="Hanoi Landscape"
-//                     className="rounded-xl w-full h-64 object-cover"
-//                   />
-//                   <img
-//                     src={HanoiImg2}
-//                     alt="Hanoi Culture"
-//                     className="rounded-xl w-full h-64 object-cover mt-8"
-//                   />
-//                 </div>
-//               </div>
-
-//               {/* Text Content */}
-//               <div className="order-1 lg:order-2">
-//                 <span className="text-yellow-600 font-bold uppercase tracking-widest text-xs block mb-4">
-//                   Location: Hanoi Capital
-//                 </span>
-//                 <h2 className="text-4xl font-bold font-headline mb-6 leading-tight text-[#CC1B1B]">
-//                   The Capital Advantage: <br />Studying in the Heart of Vietnam
-//                 </h2>
-//                 <p className="text-slate-500 text-lg mb-8 leading-relaxed">
-//                   Hanoi is not just a city; it's a living classroom. As the political and cultural capital, students
-//                   benefit from the country's most advanced medical infrastructure and a vibrant international community.
-//                 </p>
-//                 <ul className="space-y-4">
-//                   {[
-//                     {
-//                       title: "Safe & Welcoming",
-//                       desc: "Hanoi consistently ranks as one of the safest cities in Southeast Asia for students.",
-//                     },
-//                     {
-//                       title: "Low Cost of Living",
-//                       desc: "Modern lifestyle with affordable housing and world-renowned cuisine.",
-//                     },
-//                     {
-//                       title: "Connectivity",
-//                       desc: "Centrally located with an international airport connecting you to the world.",
-//                     },
-//                   ].map((item) => (
-//                     <li key={item.title} className="flex items-start gap-3">
-//                       <span className="material-symbols-outlined text-red-800">check_circle</span>
-//                       <div>
-//                         <strong className="text-gray-900 block">{item.title}</strong>
-//                         <span className="text-slate-500 text-sm">{item.desc}</span>
-//                       </div>
-//                     </li>
-//                   ))}
-//                 </ul>
-//               </div>
-//             </div>
-//           </section>
-
-//           {/* Admission Requirements */}
-//           <section className="bg-gray-50 py-20 px-6">
-//             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
-//               <div className="bg-red-800 px-8 py-10 text-white">
-//                 <h2 className="text-3xl font-bold font-headline mb-2">Admission Requirements</h2>
-//                 <p className="opacity-80">Streamlined process for international applicants to Dai Nam University.</p>
-//               </div>
-//               <div className="p-8 md:p-12 space-y-12">
-//                 {/* Academic Record */}
-//                 <div className="flex flex-col md:flex-row gap-8">
-//                   <div className="md:w-1/3">
-//                     <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Academic Record</h3>
-//                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
-//                   </div>
-//                   <div className="md:w-2/3">
-//                     <h4 className="font-bold mb-2">High School Certification</h4>
-//                     <p className="text-slate-500 leading-relaxed">
-//                       Applicants must have successfully completed 12th Grade (or equivalent) with a minimum of 50%
-//                       aggregate in Physics, Chemistry, and Biology.
-//                     </p>
-//                   </div>
-//                 </div>
-
-//                 {/* Entrance Exams */}
-//                 <div className="flex flex-col md:flex-row gap-8">
-//                   <div className="md:w-1/3">
-//                     <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Entrance Exams</h3>
-//                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
-//                   </div>
-//                   <div className="md:w-2/3">
-//                     <div className="bg-gray-100 p-6 rounded-xl border-l-4 border-yellow-400">
-//                       <h4 className="font-bold mb-2 flex items-center gap-2">
-//                         <span className="material-symbols-filled text-yellow-600">info</span>
-//                         For Indian Applicants
-//                       </h4>
-//                       <p className="text-slate-500 leading-relaxed">
-//                         Qualifying NEET (National Eligibility cum Entrance Test) marks are mandatory as per the
-//                         guidelines of the National Medical Commission (NMC).
-//                       </p>
-//                     </div>
-//                   </div>
-//                 </div>
-
-//                 {/* Language */}
-//                 <div className="flex flex-col md:flex-row gap-8">
-//                   <div className="md:w-1/3">
-//                     <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Language</h3>
-//                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
-//                   </div>
-//                   <div className="md:w-2/3">
-//                     <h4 className="font-bold mb-2">English Proficiency</h4>
-//                     <p className="text-slate-500 leading-relaxed">
-//                       Since the medium of instruction is 100% English, students must demonstrate proficiency. No
-//                       IELTS/TOEFL required if previous education was in English medium.
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </section>
-
-//           {/* Full Width CTA Section */}
-//           <section className="w-full bg-gradient-to-r from-red-50 via-yellow-50 to-white py-8 px-6">
-//             <div className="max-w-7xl mx-auto text-center">
-//               <span className="inline-block px-5 py-2 rounded-full bg-red-100 text-red-700 text-sm font-bold uppercase tracking-wider mb-3">
-//                 Admissions Open 2026
-//               </span>
-//               <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-gray-900 leading-tight mb-3">
-//                 Start Your Medical Career <br />
-//                 with <span className="text-[#CC1B1B]">Dai Nam University</span>
-//               </h2>
-//               <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6 text-justify md:text-center">
-//                 Experience world-class medical education in Hanoi with affordable tuition,
-//                 modern hospital training, and a globally recognized degree pathway for
-//                 aspiring international doctors.
-//               </p>
-//               <div className="flex flex-wrap justify-center gap-4">
-//                 <button
-//                   type="button"
-//                   onClick={() => setIsModalOpen(true)}
-//                   className="bg-[#CC1B1B] hover:bg-red-800 text-white px-8 py-4 rounded-xl font-bold shadow-lg transition-all duration-300"
-//                 >
-//                   Apply Now
-//                 </button>
-//                 <button
-//                   type="button"
-//                   onClick={() => setIsModalOpen(true)}
-//                   className="border-2 border-[#CC1B1B] text-[#CC1B1B] hover:bg-red-50 px-8 py-4 rounded-xl font-bold transition-all duration-300"
-//                 >
-//                   Get Free Counselling
-//                 </button>
-//               </div>
-//             </div>
-//           </section>
-
-//         </main>
-//       </div>
-
-//       <EnquiryModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-//       <Footer />
-//     </>
-//   );
-// };
-
-// export default DaiNamUniversity;
-
-
-
-
-
-
-
-
-
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -370,25 +12,25 @@ const DaiNamUniversity = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-    <SEO
-  title="Dai Nam University MBBS 2026 | Hanoi Vietnam | VietnamBBS"
-  description="Study MBBS at Dai Nam University Hanoi Vietnam. NMC recognised, fees from ₹3.5 lakhs, English medium. Apply now for 2026 admissions."
-  keywords="Dai Nam University MBBS, DNU Vietnam, Dai Nam fees, MBBS Hanoi Vietnam, Dai Nam admission 2026"
-  canonical="https://www.vietnambbs.com/universities/dai-nam-university"
-  schema={{
-    "@context": "https://schema.org",
-    "@type": "CollegeOrUniversity",
-    "name": "Dai Nam University",
-    "url": "https://www.vietnambbs.com/universities/dai-nam-university",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hanoi",
-      "addressCountry": "VN"
-    },
-    "description": "NMC recognised medical university in Hanoi, Vietnam.",
-    "telephone": "+91-90034-20057"
-  }}
-/>
+      <SEO
+        title="Dai Nam University MBBS 2026 | Hanoi Vietnam | VietnamBBS"
+        description="Study MBBS at Dai Nam University Hanoi Vietnam. NMC recognised, fees from ₹3.5 lakhs, English medium. Apply now for 2026 admissions."
+        keywords="Dai Nam University MBBS, DNU Vietnam, Dai Nam fees, MBBS Hanoi Vietnam, Dai Nam admission 2026"
+        canonical="https://www.vietnambbs.com/universities/dai-nam-university"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CollegeOrUniversity",
+          "name": "Dai Nam University",
+          "url": "https://www.vietnambbs.com/universities/dai-nam-university",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hanoi",
+            "addressCountry": "VN"
+          },
+          "description": "NMC recognised medical university in Hanoi, Vietnam.",
+          "telephone": "+91-90034-20057"
+        }}
+      />
       <Header />
       <div className="bg-gray-50 font-sans text-gray-900 min-h-screen">
         <style>{`
@@ -430,42 +72,48 @@ const DaiNamUniversity = () => {
         <main className="pb-24">
 
           {/* ── Hero Section ── */}
-          <section className="relative px-6 py-12 md:py-20 max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-7 z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-xs font-bold uppercase tracking-widest mb-6">
+          <section className="relative min-h-[500px] flex items-end overflow-hidden bg-[#1a1a1a]">
+            {/* Background Banner Image */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src={HeroImg}
+                alt="Dai Nam University Campus Banner"
+                className="w-full h-full object-cover opacity-80"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/45 to-transparent"></div>
+            </div>
+
+            <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 w-full flex flex-col lg:flex-row justify-between items-end gap-8">
+              {/* Left Content */}
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400 text-yellow-950 text-xs font-black uppercase tracking-widest mb-4">
                   <span className="material-symbols-outlined text-sm">location_on</span>
                   Hanoi, Vietnam
                 </div>
-                <h1 className="text-5xl md:text-7xl font-extrabold font-headline text-gray-900 tracking-tight mb-6 leading-tight">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black font-headline text-white tracking-tight mb-4 leading-tight">
                   Dai Nam <br />
-                  <span className="text-red-800">University (DNU)</span>
+                  <span className="text-yellow-400">University (DNU)</span>
                 </h1>
-                <p className="text-lg md:text-xl text-slate-500 max-w-xl mb-10 leading-relaxed">
+                <p className="text-lg text-white font-semibold max-w-xl mb-6 leading-relaxed">
                   Excellence in Medical Education at the heart of Vietnam's capital. A premier destination for
                   international students pursuing a global career in medicine.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <button type="button" onClick={() => setIsModalOpen(true)} className="bg-red-700 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                  <button type="button" onClick={() => setIsModalOpen(true)} className="bg-[#CC1B1B] text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:bg-red-800 transition-all shadow-lg">
                     Apply Now
                     <span className="material-symbols-outlined">arrow_forward</span>
                   </button>
-                  <button type="button" onClick={() => setIsModalOpen(true)} className="bg-yellow-100 text-yellow-800 px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-md transition-all active:scale-95">
+                  <button type="button" onClick={() => setIsModalOpen(true)} className="bg-white/20 text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 border border-white/30 hover:bg-white/30 transition-all">
                     Download Brochure
                     <span className="material-symbols-outlined">download</span>
                   </button>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-                <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative">
-                  <img src={HeroImg} alt="Dai Nam University Campus" className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-red-900/40 to-transparent"></div>
-                </div>
-                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-[200px] hidden md:block">
-                  <div className="text-3xl font-bold text-red-800 font-headline">$4,100</div>
-                  <div className="text-xs uppercase font-bold text-slate-500 tracking-wider">Annual Tuition Fee</div>
-                </div>
+              {/* Right Stats badge */}
+              <div className="bg-white p-5 rounded-2xl shadow-xl max-w-[200px] border border-gray-100 flex flex-col justify-center items-center text-center">
+                <div className="text-4xl font-black text-[#CC1B1B] font-headline">$4,100</div>
+                <div className="text-[10px] uppercase font-black text-slate-500 tracking-wider mt-1">Annual Tuition Fee</div>
               </div>
             </div>
           </section>
@@ -475,14 +123,14 @@ const DaiNamUniversity = () => {
             <div className="max-w-7xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div className="max-w-2xl">
-                  <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4 text-[#CC1B1B]">A Truly Global Education</h2>
-                  <p className="text-slate-500">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline mb-4 text-[#CC1B1B] tracking-tight">A Truly Global Education</h2>
+                  <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-2xl">
                     Tailored for the next generation of international medical practitioners, DNU provides a seamless
                     transition into the professional world.
                   </p>
                 </div>
-                <div className="bg-teal-50 border border-teal-100 px-6 py-3 rounded-xl">
-                  <span className="text-teal-700 font-bold flex items-center gap-2">
+                <div className="bg-red-50 border border-red-100 px-6 py-3 rounded-xl">
+                  <span className="text-[#CC1B1B] font-black flex items-center gap-2">
                     <span className="material-symbols-filled">verified</span>
                     NMC RECOGNISED
                   </span>
@@ -496,16 +144,16 @@ const DaiNamUniversity = () => {
                       <span className="material-symbols-outlined text-red-700 text-3xl">translate</span>
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold font-headline mb-3">100% English Medium</h3>
-                      <p className="text-slate-500 leading-relaxed mb-6">
+                      <h3 className="text-2xl sm:text-3xl font-black font-headline mb-3.5">100% English Medium</h3>
+                      <p className="text-slate-600 leading-relaxed mb-6 font-semibold">
                         All medical programs for international students are conducted entirely in English. From lectures
                         and clinical rotations to assessments and textbooks, we ensure zero language barriers in your
                         academic journey.
                       </p>
                       <div className="flex flex-wrap gap-3">
-                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">English Textbooks</span>
-                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">Foreign Faculty</span>
-                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-semibold text-slate-700">Global Standards</span>
+                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-slate-700">English Textbooks</span>
+                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-slate-700">Foreign Faculty</span>
+                        <span className="bg-gray-100 px-3 py-1 rounded-full text-xs font-bold text-slate-700">Global Standards</span>
                       </div>
                     </div>
                   </div>
@@ -514,8 +162,8 @@ const DaiNamUniversity = () => {
                 <div className="bg-red-100 p-8 rounded-xl text-red-900 flex flex-col justify-between">
                   <span className="material-symbols-outlined text-5xl opacity-50">public</span>
                   <div>
-                    <h3 className="text-4xl font-extrabold font-headline mb-2 tracking-tighter">80%</h3>
-                    <p className="font-medium">International student body in Medical Sciences Program.</p>
+                    <h3 className="text-5xl font-black font-headline mb-2">80%</h3>
+                    <p className="font-bold">International student body in Medical Sciences Program.</p>
                   </div>
                 </div>
 
@@ -523,12 +171,12 @@ const DaiNamUniversity = () => {
                   <div className="mb-6">
                     <span className="material-symbols-outlined text-yellow-600 text-3xl">payments</span>
                   </div>
-                  <h3 className="text-xl font-bold font-headline mb-2">Affordable Excellence</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                  <h3 className="text-xl sm:text-2xl font-black font-headline mb-2.5">Affordable Excellence</h3>
+                  <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 font-semibold">
                     Premium medical education without the premium debt.
                   </p>
-                  <div className="text-2xl font-bold text-red-800 font-headline">$4,100 / Year</div>
-                  <div className="text-xs text-slate-500 font-medium">Per academic year (6 years)</div>
+                  <div className="text-2xl sm:text-3xl font-black text-red-800 font-headline">$4,100 / Year</div>
+                  <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1">Per academic year (6 years)</div>
                 </div>
 
                 <div className="md:col-span-2 bg-white p-8 rounded-xl shadow-sm relative overflow-hidden">
@@ -537,8 +185,8 @@ const DaiNamUniversity = () => {
                       <img src={ClinicalImg} alt="Medical Students" className="rounded-lg w-full h-48 object-cover" />
                     </div>
                     <div className="w-full md:w-2/3">
-                      <h3 className="text-xl font-bold font-headline mb-3">Clinical Exposure</h3>
-                      <p className="text-slate-500 text-sm leading-relaxed">
+                      <h3 className="text-xl sm:text-2xl font-black font-headline mb-3.5">Clinical Exposure</h3>
+                      <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-semibold">
                         DNU maintains partnerships with top-tier hospitals in Hanoi, offering students intensive
                         hands-on clinical training from the third year onwards.
                       </p>
@@ -562,13 +210,13 @@ const DaiNamUniversity = () => {
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <span className="text-yellow-600 font-bold uppercase tracking-widest text-xs block mb-4">
+                <span className="text-yellow-600 font-black uppercase tracking-widest text-xs sm:text-sm block mb-4">
                   Location: Hanoi Capital
                 </span>
-                <h2 className="text-4xl font-bold font-headline mb-6 leading-tight text-[#CC1B1B]">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline mb-6 leading-tight text-[#CC1B1B] tracking-tight">
                   The Capital Advantage: <br />Studying in the Heart of Vietnam
                 </h2>
-                <p className="text-slate-500 text-lg mb-8 leading-relaxed">
+                <p className="text-slate-700 text-lg font-semibold mb-8 leading-relaxed">
                   Hanoi is not just a city; it's a living classroom. As the political and cultural capital, students
                   benefit from the country's most advanced medical infrastructure and a vibrant international community.
                 </p>
@@ -581,8 +229,8 @@ const DaiNamUniversity = () => {
                     <li key={item.title} className="flex items-start gap-3">
                       <span className="material-symbols-outlined text-red-800">check_circle</span>
                       <div>
-                        <strong className="text-gray-900 block">{item.title}</strong>
-                        <span className="text-slate-500 text-sm">{item.desc}</span>
+                        <strong className="text-gray-900 block text-base sm:text-lg font-bold">{item.title}</strong>
+                        <span className="text-slate-600 text-sm sm:text-base font-semibold">{item.desc}</span>
                       </div>
                     </li>
                   ))}
@@ -598,20 +246,20 @@ const DaiNamUniversity = () => {
 
           {/* ── Admission Requirements ── */}
           <section className="bg-gray-50 py-20 px-6">
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden">
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-200/60">
               <div className="bg-red-800 px-8 py-10 text-white">
-                <h2 className="text-3xl font-bold font-headline mb-2">Admission Requirements</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline mb-3">Admission Requirements</h2>
                 <p className="opacity-80">Streamlined process for international applicants to Dai Nam University.</p>
               </div>
               <div className="p-8 md:p-12 space-y-12">
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/3">
-                    <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Academic Record</h3>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline text-red-800 mb-2.5">Academic Record</h3>
                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
                   </div>
                   <div className="md:w-2/3">
                     <h4 className="font-bold mb-2">High School Certification</h4>
-                    <p className="text-slate-500 leading-relaxed">
+                    <p className="text-slate-600 leading-relaxed font-semibold">
                       Applicants must have successfully completed 12th Grade (or equivalent) with a minimum of 50%
                       aggregate in Physics, Chemistry, and Biology.
                     </p>
@@ -620,7 +268,7 @@ const DaiNamUniversity = () => {
 
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/3">
-                    <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Entrance Exams</h3>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline text-red-800 mb-2.5">Entrance Exams</h3>
                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
                   </div>
                   <div className="md:w-2/3">
@@ -629,7 +277,7 @@ const DaiNamUniversity = () => {
                         <span className="material-symbols-filled text-yellow-600">info</span>
                         For Indian Applicants
                       </h4>
-                      <p className="text-slate-500 leading-relaxed">
+                      <p className="text-slate-600 leading-relaxed font-semibold">
                         Qualifying NEET (National Eligibility cum Entrance Test) marks are mandatory as per the
                         guidelines of the National Medical Commission (NMC).
                       </p>
@@ -639,12 +287,12 @@ const DaiNamUniversity = () => {
 
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/3">
-                    <h3 className="text-xl font-bold font-headline text-red-800 mb-2">Language</h3>
+                    <h3 className="text-xl sm:text-2xl font-black font-headline text-red-800 mb-2.5">Language</h3>
                     <div className="h-1 w-12 bg-yellow-400 rounded-full"></div>
                   </div>
                   <div className="md:w-2/3">
                     <h4 className="font-bold mb-2">English Proficiency</h4>
-                    <p className="text-slate-500 leading-relaxed">
+                    <p className="text-slate-600 leading-relaxed font-semibold">
                       Since the medium of instruction is 100% English, students must demonstrate proficiency. No
                       IELTS/TOEFL required if previous education was in English medium.
                     </p>
@@ -657,27 +305,31 @@ const DaiNamUniversity = () => {
           {/* ── CTA ── */}
           <section className="w-full bg-gradient-to-r from-red-50 via-yellow-50 to-white py-8 px-6">
             <div className="max-w-7xl mx-auto text-center">
-              <span className="inline-block px-5 py-2 rounded-full bg-red-100 text-red-700 text-sm font-bold uppercase tracking-wider mb-3">
+              <span className="inline-block px-5 py-2 rounded-full bg-red-100 text-red-700 text-sm font-black uppercase tracking-wider mb-4">
                 Admissions Open 2026
               </span>
-              <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-gray-900 leading-tight mb-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-headline text-gray-900 tracking-tight leading-tight mb-4">
                 Start Your Medical Career <br />
                 with <span className="text-[#CC1B1B]">Dai Nam University</span>
               </h2>
-              <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-6 text-justify md:text-center">
+              <p className="text-base sm:text-lg text-slate-700 max-w-3xl mx-auto leading-relaxed mb-8 text-justify md:text-center font-semibold">
                 Experience world-class medical education in Hanoi with affordable tuition,
                 modern hospital training, and a globally recognized degree pathway for
                 aspiring international doctors.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <button type="button" onClick={() => setIsModalOpen(true)}
-                  className="bg-[#CC1B1B] hover:bg-red-800 text-white px-8 py-4 rounded-xl font-bold shadow-lg transition-all duration-300">
+                  className="bg-[#CC1B1B] hover:bg-red-800 text-white px-8 py-4 rounded-xl font-bold shadow-lg transition-all duration-300 border-none">
                   Apply Now
                 </button>
-                <button type="button" onClick={() => setIsModalOpen(true)}
-                  className="border-2 border-[#CC1B1B] text-[#CC1B1B] hover:bg-red-50 px-8 py-4 rounded-xl font-bold transition-all duration-300">
-                  Get Free Counselling
-                </button>
+                <a
+                  href="https://dainam.edu.vn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center border-2 border-[#CC1B1B] text-[#CC1B1B] hover:bg-red-50 px-8 py-4 rounded-xl font-bold transition-all duration-300 text-center"
+                >
+                  Visit University
+                </a>
               </div>
             </div>
           </section>
@@ -694,10 +346,10 @@ const DaiNamUniversity = () => {
 export default DaiNamUniversity;
 
 
-/* ══════════════════════════════════════════════════════════
+/* ──────────────────────────────────────────────────────────
    FEE STRUCTURE COMPONENT
    Data source: WhatsApp image (Manivannan Rajamanickam)
-   ══════════════════════════════════════════════════════════ */
+   ────────────────────────────────────────────────────────── */
 function FeeStructure({ setIsModalOpen }) {
   const yearlyFees = [
     { year: "1st Year", usd: "$4,100 + $50", inr: "₹3,73,500" },
@@ -723,17 +375,17 @@ function FeeStructure({ setIsModalOpen }) {
         <div style={{ textAlign: "center", marginBottom: 56 }}>
           <span style={{
             display: "inline-block", background: "#fef3c7", color: "#92400e",
-            fontSize: 12, fontWeight: 700, padding: "8px 16px",
+            fontSize: 12, fontWeight: 900, padding: "8px 16px",
             borderRadius: 9999, marginBottom: 16, letterSpacing: "0.1em", textTransform: "uppercase",
           }}>Transparent & Affordable</span>
           <h2 style={{
-            fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 800,
+            fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 900,
             color: "#111827", marginBottom: 12,
             fontFamily: "'Plus Jakarta Sans', sans-serif",
           }}>
             Tuition <span style={{ color: "#CC1B1B" }}>Fee Structure</span>
           </h2>
-          <p style={{ color: "#64748b", fontSize: 15, maxWidth: 480, margin: "0 auto" }}>
+          <p style={{ color: "#334155", fontSize: 15, maxWidth: 480, margin: "0 auto", fontWeight: 600 }}>
             Year-wise fee breakdown for the complete 6-year MBBS program at Dai Nam University, Hanoi.
           </p>
         </div>
@@ -746,10 +398,10 @@ function FeeStructure({ setIsModalOpen }) {
             {/* Header */}
             <div style={{ background: "#b91c1c", padding: "20px 28px" }}>
               <h3 style={{
-                color: "#fff", fontWeight: 700, fontSize: 15, margin: 0,
+                color: "#fff", fontWeight: 800, fontSize: 15, margin: 0,
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
               }}>
-                Nam Can Tho University — Fee Structure (6 Years)
+                Dai Nam University — Fee Structure (6 Years)
               </h3>
             </div>
 
@@ -757,7 +409,7 @@ function FeeStructure({ setIsModalOpen }) {
             <div style={{
               display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
               background: "#fff5f5", padding: "12px 28px",
-              fontSize: 11, fontWeight: 700, color: "#b91c1c",
+              fontSize: 11, fontWeight: 900, color: "#b91c1c",
               textTransform: "uppercase", letterSpacing: "0.08em",
               borderBottom: "1px solid #fecaca",
             }}>
@@ -773,9 +425,9 @@ function FeeStructure({ setIsModalOpen }) {
                 borderBottom: "1px solid #f1f5f9",
                 alignItems: "center",
               }}>
-                <span style={{ fontWeight: 700, fontSize: 13, color: "#1e293b" }}>{row.year}</span>
-                <span style={{ fontWeight: 700, color: "#b91c1c", fontSize: 13 }}>{row.usd}</span>
-                <span style={{ fontSize: 13, color: "#64748b" }}>{row.inr}</span>
+                <span style={{ fontWeight: 800, fontSize: 13, color: "#1e293b" }}>{row.year}</span>
+                <span style={{ fontWeight: 800, color: "#b91c1c", fontSize: 13 }}>{row.usd}</span>
+                <span style={{ fontSize: 13, color: "#334155", fontWeight: 600 }}>{row.inr}</span>
               </div>
             ))}
 
@@ -784,9 +436,9 @@ function FeeStructure({ setIsModalOpen }) {
               display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
               padding: "18px 28px", background: "#b91c1c",
             }}>
-              <span style={{ fontWeight: 800, color: "#fff", fontSize: 14 }}>TOTAL</span>
-              <span style={{ fontWeight: 800, color: "#fde68a", fontSize: 15 }}>$24,650</span>
-              <span style={{ fontWeight: 800, color: "#fde68a", fontSize: 15 }}>₹22,18,500</span>
+              <span style={{ fontWeight: 900, color: "#fff", fontSize: 14 }}>TOTAL</span>
+              <span style={{ fontWeight: 900, color: "#fde68a", fontSize: 15 }}>$24,650</span>
+              <span style={{ fontWeight: 900, color: "#fde68a", fontSize: 15 }}>₹22,18,500</span>
             </div>
 
             {/* Note */}
@@ -812,7 +464,7 @@ function FeeStructure({ setIsModalOpen }) {
               }}>
                 <span className="material-symbols-outlined" style={{ color: "#fbbf24", fontSize: 20 }}>flight_takeoff</span>
                 <h3 style={{
-                  color: "#fff", fontWeight: 700, fontSize: 14, margin: 0,
+                  color: "#fff", fontWeight: 900, fontSize: 15, margin: 0,
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                 }}>
                   Before Departure Payables
@@ -827,8 +479,8 @@ function FeeStructure({ setIsModalOpen }) {
                     borderBottom: i < departurePayments.length - 1 ? "1px solid #f1f5f9" : "none",
                     gap: 12,
                   }}>
-                    <span style={{ color: "#475569", fontSize: 13, lineHeight: 1.4, flex: 1 }}>{item.label}</span>
-                    <span style={{ fontWeight: 700, color: "#b91c1c", fontSize: 14, whiteSpace: "nowrap" }}>{item.amount}</span>
+                    <span style={{ color: "#334155", fontSize: 13, lineHeight: 1.4, flex: 1, fontWeight: 600 }}>{item.label}</span>
+                    <span style={{ fontWeight: 800, color: "#b91c1c", fontSize: 14, whiteSpace: "nowrap" }}>{item.amount}</span>
                   </div>
                 ))}
 
@@ -838,7 +490,7 @@ function FeeStructure({ setIsModalOpen }) {
                   padding: "16px 20px", display: "flex", justifyContent: "space-between", alignItems: "center",
                 }}>
                   <span style={{ color: "#fff", fontWeight: 700, fontSize: 14 }}>TOTAL</span>
-                  <span style={{ color: "#fde68a", fontWeight: 800, fontSize: 22 }}>₹6,94,500</span>
+                  <span style={{ color: "#fde68a", fontWeight: 900, fontSize: 22 }}>₹6,94,500</span>
                 </div>
               </div>
             </div>
@@ -849,11 +501,11 @@ function FeeStructure({ setIsModalOpen }) {
               border: "1px solid #bbf7d0", borderRadius: 16, padding: "24px",
             }}>
               <span className="material-symbols-outlined" style={{ color: "#15803d", fontSize: 30, display: "block", marginBottom: 10 }}>hotel</span>
-              <h4 style={{ fontWeight: 700, fontSize: 14, marginBottom: 4, color: "#14532d", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              <h4 style={{ fontWeight: 900, fontSize: 15, marginBottom: 4, color: "#14532d", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                 Hostel & Accommodation
               </h4>
-              <div style={{ fontSize: 24, fontWeight: 800, color: "#15803d", marginBottom: 4 }}>₹1,60,000</div>
-              <p style={{ fontSize: 12, color: "#166534", lineHeight: 1.6, margin: 0 }}>
+              <div style={{ fontSize: 24, fontWeight: 900, color: "#15803d", marginBottom: 4 }}>₹1,60,000</div>
+              <p style={{ fontSize: 12, color: "#166534", lineHeight: 1.6, margin: 0, fontWeight: 600 }}>
                 Separate hostel for Boys and Girls. Indian food available. Safe and secure campus accommodation.
               </p>
             </div>

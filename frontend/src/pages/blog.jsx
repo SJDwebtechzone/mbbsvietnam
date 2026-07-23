@@ -56,34 +56,33 @@ export default function BlogPage() {
 />
       <Header />
 
-      {/* Hero Image Section */}
+      {/* Hero Image Section — full height, no crop */}
       <section className="w-full overflow-hidden">
         <img
           src={MBBSVietnam}
           alt="Blog hero"
-          className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen object-cover object-center"
+          className="w-full h-auto"
+          style={{ width: "100%", height: "auto", display: "block" }}
         />
       </section>
 
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 md:py-12">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 mb-4 sm:mb-5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-yellow-400/45 bg-yellow-400/12 text-yellow-700 text-[10px] sm:text-xs font-bold tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-yellow-400/45 bg-yellow-400/12 text-yellow-700 text-[10px] sm:text-xs font-bold tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-yellow-500" />
             MBBS Vietnam · Knowledge Hub
           </div>
 
           {/* Heading */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 leading-tight mb-3 sm:mb-4">
-            Insights, Guides &{" "}
-            <span className="text-[#CC1B1B]">Expert Advice</span>
-            <br className="hidden sm:block" />
-            for MBBS Aspirants
+          <h1 className="font-headline text-2xl sm:text-3.5xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight mb-2 sm:mb-3 max-w-5xl">
+            Insights, Guides & <span className="text-[#CC1B1B] whitespace-nowrap">Expert Advice</span>
+            <br /> for MBBS Aspirants
           </h1>
 
           {/* Subtext */}
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mb-5 sm:mb-6">
+          <p className="text-slate-700 text-sm sm:text-base leading-relaxed max-w-2xl mb-4 sm:mb-5 font-semibold">
             Stay informed with the latest updates on MBBS admissions in Vietnam
             — university rankings, fee structures, visa tips, student experiences,
             and everything you need to make the right decision.
@@ -94,7 +93,7 @@ export default function BlogPage() {
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gray-200 bg-gray-50 text-gray-700 text-[10px] sm:text-xs font-medium hover:bg-gray-100 hover:border-gray-300 transition cursor-pointer"
+                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-gray-200 bg-gray-50 text-slate-800 text-[10px] sm:text-xs font-bold hover:bg-gray-100 hover:border-gray-300 transition cursor-pointer"
               >
                 {tag}
               </span>
@@ -124,11 +123,11 @@ export default function BlogPage() {
                   />
                 </div>
                 <div className="p-4 sm:p-5">
-                  <h2 className="text-base sm:text-lg font-semibold text-[#1a2f5e] leading-snug group-hover:text-[#CC1B1B] transition line-clamp-2">
+                  <h2 className="text-base sm:text-lg font-bold font-headline text-slate-900 leading-snug group-hover:text-[#CC1B1B] transition line-clamp-2">
                     {blog.title}
                   </h2>
                   {blog.excerpt && (
-                    <p className="text-gray-500 text-xs sm:text-sm mt-2 line-clamp-2">
+                    <p className="text-slate-700 text-xs sm:text-sm mt-2 line-clamp-2 font-semibold">
                       {blog.excerpt}
                     </p>
                   )}
@@ -161,13 +160,13 @@ export default function BlogPage() {
             📚 Featured Resources
           </span>
 
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-800 mb-3 sm:mb-4">
+          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight text-slate-900 mb-3 sm:mb-4">
             Master Your MBBS Journey
             <br />
             <span className="text-[#CC1B1B]">with Expert Insights</span>
           </h2>
 
-          <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8">
+          <p className="text-slate-700 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto mb-6 sm:mb-8 font-semibold">
             Join 2,000+ students receiving weekly tips on university selection,
             admission strategies, visa processes, and life in Vietnam. Get exclusive
             guides and success stories directly in your inbox.

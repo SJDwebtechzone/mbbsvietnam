@@ -109,42 +109,42 @@ export default function MbbsVietnam() {
 
   return (
     <>
-    <SEO
-  title="MBBS in Vietnam 2026 | Complete Guide for Indian Students | VietnamBBS"
-  description="Complete guide to studying MBBS in Vietnam. NMC recognised universities, affordable fees, English medium, WHO listed. Everything Indian students need to know."
-  keywords="MBBS in Vietnam guide, why study MBBS Vietnam, Vietnam MBBS eligibility, Vietnam MBBS fees structure, MBBS Vietnam NMC"
-  canonical="https://www.vietnambbs.com/mbbsInVietnam"
-  schema={{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is MBBS in Vietnam recognised by NMC India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, multiple universities in Vietnam are NMC recognised including UHS VNU, Nam Can Tho University, Dong A University and others."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the fee for MBBS in Vietnam?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "MBBS fees in Vietnam start from ₹3.5 lakhs per year depending on the university."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is MBBS in Vietnam taught in English?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, MBBS programs in Vietnam are conducted in English medium for international students."
-        }
-      }
-    ]
-  }}
-/>
+      <SEO
+        title="MBBS in Vietnam 2026 | Complete Guide for Indian Students | VietnamBBS"
+        description="Complete guide to studying MBBS in Vietnam. NMC recognised universities, affordable fees, English medium, WHO listed. Everything Indian students need to know."
+        keywords="MBBS in Vietnam guide, why study MBBS Vietnam, Vietnam MBBS eligibility, Vietnam MBBS fees structure, MBBS Vietnam NMC"
+        canonical="https://www.vietnambbs.com/mbbsInVietnam"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is MBBS in Vietnam recognised by NMC India?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, multiple universities in Vietnam are NMC recognised including UHS VNU, Nam Can Tho University, Dong A University and others."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the fee for MBBS in Vietnam?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "MBBS fees in Vietnam start from ₹3.5 lakhs per year depending on the university."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is MBBS in Vietnam taught in English?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, MBBS programs in Vietnam are conducted in English medium for international students."
+              }
+            }
+          ]
+        }}
+      />
       <Header />
       <div className="bg-[#f8f9fa] text-[#191c1d] font-[Work_Sans] selection:bg-[#fdcc22] selection:text-[#6e5700]">
         <style>{`
@@ -159,18 +159,18 @@ export default function MbbsVietnam() {
           .step-circle:hover { background: #a4000b !important; color: #fff !important; border-color: #a4000b !important; }
         `}</style>
 
-        <main className="pt-20">
+        <main className="pt-0">
           {/* Hero - extra compact */}
-          <section className="relative min-h-[480px] flex items-center overflow-hidden bg-[#f8f9fa]">
+          <section className="relative min-h-[480px] flex items-center overflow-hidden bg-[#f8f9fa] py-8">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
               <div className="z-10 py-4">
-                <span className="inline-block px-4 py-1 rounded-full bg-[#fdcc22] text-[#6e5700] font-label text-xs font-bold uppercase tracking-widest mb-4">
+                <span className="inline-block px-4 py-2 rounded-full bg-[#fdcc22] text-[#6e5700] font-label text-xs sm:text-sm font-black uppercase tracking-widest mb-4">
                   World Class Medical Education
                 </span>
-                <h1 className="font-headline text-5xl md:text-6xl font-extrabold text-[#191c1d] leading-[1.1] tracking-tight mb-4">
+                <h1 className="font-headline text-5xl sm:text-6xl md:text-7xl font-black text-[#191c1d] leading-[1.1] tracking-tight mb-4">
                   Study MBBS in <span className="text-[#a4000b]">Vietnam</span>
                 </h1>
-                <p className="font-body text-base md:text-lg text-[#5c403c] leading-relaxed max-w-xl mb-6 text-justify">
+                <p className="font-body text-base sm:text-lg text-slate-700 leading-relaxed max-w-xl mb-8 text-justify font-semibold">
                   Experience a globally recognized medical curriculum, English-medium instructions, and high-quality clinical exposure at a fraction of the cost.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -192,8 +192,8 @@ export default function MbbsVietnam() {
                       <img key={i} src={src} alt="student" className="w-10 h-10 rounded-full border-4 border-[#f8f9fa] object-cover" />
                     ))}
                   </div>
-                  <p className="font-label text-xs text-[#5c403c]">
-                    <span className="font-bold text-[#191c1d]">500+ Students</span> applied this session
+                  <p className="font-label text-xs sm:text-sm text-slate-700 font-semibold">
+                    <span className="font-extrabold text-[#191c1d]">500+ Students</span> applied this session
                   </p>
                 </div>
               </div>
@@ -205,54 +205,56 @@ export default function MbbsVietnam() {
                   alt="Medical university"
                   className="rounded-[2rem] editorial-shadow w-full h-[420px] object-cover"
                 />
-                <div className="absolute -bottom-5 -left-5 bg-white p-4 rounded-2xl editorial-shadow max-w-xs">
+                <div className="absolute -bottom-5 -left-5 bg-white p-5 rounded-2xl editorial-shadow max-w-xs border border-slate-200">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="material-symbols-outlined text-[#745b00] text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
-                    <span className="font-headline font-bold text-[#191c1d] text-sm">WHO Recognized</span>
+                    <span className="material-symbols-outlined text-[#745b00] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+                    <span className="font-headline font-black text-[#191c1d] text-sm sm:text-base">WHO Recognized</span>
                   </div>
-                  <p className="text-[11px] font-body text-[#5c403c]">Globally valid including MCI/NMC, ECFMG, GMC.</p>
+                  <p className="text-xs font-body text-slate-600 font-semibold mt-0.5">Globally valid including MCI/NMC, ECFMG, GMC.</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Why Vietnam - compact */}
-          <section className="py-10 bg-[#f3f4f5]" id="why">
+          <section className="py-12 bg-[#f3f4f5]" id="why">
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center mb-8">
-                <h2 className="font-headline text-3xl font-extrabold text-[#CC1B1B] mb-2">Why Vietnam for MBBS?</h2>
-                <p className="font-body text-base text-[#5c403c] max-w-2xl mx-auto">Discover the strategic advantages of pursuing your medical degree in Southeast Asia.</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-3">Why Vietnam for MBBS?</h2>
+                <p className="font-body text-base sm:text-lg font-semibold text-slate-600 max-w-2xl mx-auto">Discover the strategic advantages of pursuing your medical degree in Southeast Asia.</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div className="md:col-span-2 bg-white p-6 rounded-2xl editorial-shadow border border-[#e6bdb8]/15 flex flex-col justify-between">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="md:col-span-2 bg-white p-6 rounded-2xl editorial-shadow border border-slate-200 flex flex-col justify-between">
                   <div>
-                    <span className="material-symbols-outlined text-[#a4000b] text-3xl mb-4 block">monetization_on</span>
-                    <h3 className="font-headline text-xl font-bold text-[#191c1d] mb-2">Unbeatable Affordability</h3>
-                    <p className="font-body text-[#5c403c] text-base text-justify">Vietnam offers one of the most cost-effective MBBS programs globally. Tuition fees and cost of living are significantly lower than in Western nations and private colleges in India.</p>
+                    <span className="material-symbols-outlined text-[#a4000b] text-4xl mb-4 block">monetization_on</span>
+                    <h3 className="font-headline text-xl sm:text-2xl font-black text-[#191c1d] mb-2">Unbeatable Affordability</h3>
+                    <p className="font-body text-slate-700 text-sm sm:text-base leading-relaxed text-justify font-semibold">Vietnam offers one of the most cost-effective MBBS programs globally. Tuition fees and cost of living are significantly lower than in Western nations and private colleges in India.</p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-[#e7e8e9] flex items-center justify-between">
-                    <span className="font-label text-xs font-bold text-[#a4000b]">60% LOWER COSTS</span>
-                    <span className="text-[10px] font-label text-[#5c403c]">COMPARED TO PRIVATE INDIAN COLLEGES</span>
+                    <span className="font-label text-xs sm:text-sm font-black text-[#a4000b]">60% LOWER COSTS</span>
+                    <span className="text-[10px] sm:text-xs font-label text-slate-600 font-bold uppercase">COMPARED TO PRIVATE INDIAN COLLEGES</span>
                   </div>
                 </div>
-                <div className="bg-[#cc1b1b] text-white p-6 rounded-2xl editorial-shadow">
-                  <span className="material-symbols-outlined text-3xl mb-4 block">translate</span>
-                  <h3 className="font-headline text-xl font-bold mb-2">100% English Medium</h3>
-                  <p className="font-body text-sm opacity-90 text-justify">No language barrier. All courses conducted in English by international faculty.</p>
+                <div className="bg-[#cc1b1b] text-white p-6 rounded-2xl editorial-shadow flex flex-col justify-between">
+                  <div>
+                    <span className="material-symbols-outlined text-4xl mb-4 block">translate</span>
+                    <h3 className="font-headline text-xl sm:text-2xl font-black mb-2">100% English Medium</h3>
+                    <p className="font-body text-sm sm:text-base leading-relaxed opacity-95 text-justify font-semibold">No language barrier. All courses conducted in English by international faculty.</p>
+                  </div>
                 </div>
-                <div className="bg-white p-6 rounded-2xl editorial-shadow border border-[#e6bdb8]/15">
-                  <span className="material-symbols-outlined text-[#745b00] text-3xl mb-4 block">health_and_safety</span>
-                  <h3 className="font-headline text-xl font-bold text-[#191c1d] mb-2">Safety &amp; Culture</h3>
-                  <p className="font-body text-sm text-[#5c403c] text-justify">Vietnam is one of the safest countries for international students, with a welcoming culture.</p>
+                <div className="bg-white p-6 rounded-2xl editorial-shadow border border-slate-200">
+                  <span className="material-symbols-outlined text-[#745b00] text-4xl mb-4 block">health_and_safety</span>
+                  <h3 className="font-headline text-xl sm:text-2xl font-black text-[#191c1d] mb-2">Safety &amp; Culture</h3>
+                  <p className="font-body text-sm sm:text-base leading-relaxed text-slate-700 text-justify font-semibold">Vietnam is one of the safest countries for international students, with a welcoming culture.</p>
                 </div>
-                <div className="md:col-span-2 bg-white p-6 rounded-2xl editorial-shadow border border-[#e6bdb8]/15 flex flex-col md:flex-row gap-6 items-center">
+                <div className="md:col-span-2 bg-white p-6 rounded-2xl editorial-shadow border border-slate-200 flex flex-col md:flex-row gap-6 items-center">
                   <div className="flex-1">
-                    <span className="material-symbols-outlined text-[#a4000b] text-3xl mb-4 block">public</span>
-                    <h3 className="font-headline text-xl font-bold text-[#191c1d] mb-2">WHO &amp; WDOMS Recognized</h3>
-                    <p className="font-body text-sm text-[#5c403c] text-justify">Universities listed in World Directory of Medical Schools, recognized by WHO.</p>
+                    <span className="material-symbols-outlined text-[#a4000b] text-4xl mb-4 block">public</span>
+                    <h3 className="font-headline text-xl sm:text-2xl font-black text-[#191c1d] mb-2">WHO &amp; WDOMS Recognized</h3>
+                    <p className="font-body text-sm sm:text-base leading-relaxed text-slate-700 text-justify font-semibold">Universities listed in World Directory of Medical Schools, recognized by WHO.</p>
                   </div>
-                  <div className="w-full md:w-48 h-32 bg-[#f8f9fa] rounded-2xl flex items-center justify-center p-4 text-center">
-                    <p className="font-headline font-black text-[#a4000b] text-xl">GLOBAL STANDARDS</p>
+                  <div className="w-full md:w-48 h-32 bg-[#f8f9fa] rounded-2xl flex items-center justify-center p-4 border border-slate-200">
+                    <p className="font-headline font-black text-[#a4000b] text-xl tracking-wider">GLOBAL STANDARDS</p>
                   </div>
                 </div>
               </div>
@@ -260,11 +262,11 @@ export default function MbbsVietnam() {
           </section>
 
           {/* Eligibility - compact */}
-          <section className="py-10 bg-[#f8f9fa]">
+          <section className="py-12 bg-[#f8f9fa]">
             <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="font-headline text-3xl font-extrabold text-[#CC1B1B] mb-4">Eligibility Criteria</h2>
-                <p className="font-body text-base text-[#5c403c] mb-6">To secure your seat, students must meet the following baseline requirements.</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-4">Eligibility Criteria</h2>
+                <p className="font-body text-base sm:text-lg font-semibold text-slate-600 mb-6">To secure your seat, students must meet the following baseline requirements.</p>
                 <div className="space-y-5">
                   {[
                     { icon: "medical_information", title: "NEET Qualification", desc: "Valid NEET-UG score as per admission year." },
@@ -276,8 +278,8 @@ export default function MbbsVietnam() {
                         <span className="material-symbols-outlined text-[#6e5700] text-lg">{item.icon}</span>
                       </div>
                       <div>
-                        <h4 className="font-headline font-bold text-[#191c1d] mb-0.5">{item.title}</h4>
-                        <p className="font-body text-sm text-[#5c403c]">{item.desc}</p>
+                        <h4 className="font-headline font-extrabold text-[#191c1d] text-base sm:text-lg mb-1">{item.title}</h4>
+                        <p className="font-body text-sm sm:text-base text-slate-600 font-semibold">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -290,20 +292,20 @@ export default function MbbsVietnam() {
                   className="rounded-2xl editorial-shadow h-[380px] w-full object-cover"
                 />
                 <div className="absolute -top-4 -right-4 bg-[#cc1b1b] text-white p-6 rounded-2xl shadow-xl">
-                  <p className="font-headline font-black text-3xl mb-0.5">50%</p>
-                  <p className="font-label text-[10px] uppercase tracking-wider font-bold">Minimum PCB Score</p>
+                  <p className="font-headline font-black text-4xl mb-0.5">50%</p>
+                  <p className="font-label text-xs uppercase tracking-wider font-black">Minimum PCB Score</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Top Medical Universities - compact */}
-          <section className="py-10 bg-[#f3f4f5]" id="universities">
+          <section className="py-12 bg-[#f3f4f5]" id="universities">
             <div className="max-w-7xl mx-auto px-6">
               <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-4">
                 <div className="max-w-2xl">
-                  <h2 className="font-headline text-3xl font-extrabold text-[#CC1B1B] mb-2">Top Medical Universities</h2>
-                  <p className="font-body text-base text-[#5c403c]">We partner with the most prestigious medical institutions in Vietnam.</p>
+                  <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-3">Top Medical Universities</h2>
+                  <p className="font-body text-base sm:text-lg font-semibold text-slate-600">We partner with the most prestigious medical institutions in Vietnam.</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="w-10 h-10 rounded-full border border-[#e6bdb8] flex items-center justify-center hover:bg-[#e1e3e4] transition-colors">
@@ -316,32 +318,32 @@ export default function MbbsVietnam() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {universities.map((u) => (
-                  <div key={u.name} className="bg-white rounded-2xl overflow-hidden editorial-shadow flex flex-col sm:flex-row">
+                  <div key={u.name} className="bg-white rounded-2xl overflow-hidden editorial-shadow flex flex-col sm:flex-row border border-slate-200">
                     <div className="sm:w-2/5 relative">
                       <img src={u.img} alt={u.name} className="h-full w-full object-cover" />
                       <div className="absolute top-3 left-3 bg-[#fdcc22] text-[#6e5700] px-2 py-0.5 rounded-full text-[10px] font-bold font-label">{u.est}</div>
                     </div>
                     <div className="sm:w-3/5 p-5 flex flex-col justify-between">
                       <div>
-                        <h3 className="font-headline text-lg font-bold text-[#CC1B1B] mb-1">{u.name}</h3>
-                        <div className="flex items-center gap-1 text-[#5c403c] text-xs mb-3">
+                        <h3 className="font-headline text-lg sm:text-xl font-black text-[#CC1B1B] mb-1.5 leading-tight">{u.name}</h3>
+                        <div className="flex items-center gap-1 text-slate-600 text-xs sm:text-sm font-bold mb-3">
                           <span className="material-symbols-outlined text-xs">location_on</span>
                           {u.location}
                         </div>
-                        <p className="font-body text-xs text-[#5c403c] mb-4 text-justify line-clamp-2">{u.desc}</p>
+                        <p className="font-body text-xs sm:text-sm text-slate-700 mb-4 text-justify leading-relaxed font-semibold line-clamp-3">{u.desc}</p>
                         <div className="grid grid-cols-2 gap-3 mb-5">
-                          <div className="bg-[#f3f4f5] p-2 rounded-lg">
-                            <p className="text-[9px] font-label text-[#5c403c] uppercase tracking-tighter">Est. Fees</p>
-                            <p className="font-headline font-bold text-[#a4000b] text-sm">{u.fees}</p>
+                          <div className="bg-[#f3f4f5] p-2 rounded-lg border border-slate-200">
+                            <p className="text-[10px] font-label text-slate-600 uppercase tracking-tighter font-semibold">Est. Fees</p>
+                            <p className="font-headline font-extrabold text-[#a4000b] text-sm sm:text-base">{u.fees}</p>
                           </div>
-                          <div className="bg-[#f3f4f5] p-2 rounded-lg">
-                            <p className="text-[9px] font-label text-[#5c403c] uppercase tracking-tighter">Course</p>
-                            <p className="font-headline font-bold text-[#745b00] text-sm">{u.course}</p>
+                          <div className="bg-[#f3f4f5] p-2 rounded-lg border border-slate-200">
+                            <p className="text-[10px] font-label text-slate-600 uppercase tracking-tighter font-semibold">Course</p>
+                            <p className="font-headline font-extrabold text-[#745b00] text-sm sm:text-base">{u.course}</p>
                           </div>
                         </div>
                       </div>
                       <div className="flex gap-2">
-                        <button type="button" onClick={() => setIsModalOpen(true)} className="flex-1 py-2 bg-[#a4000b] text-white rounded-lg font-headline font-bold text-xs">Enquire Now</button>
+                        <button type="button" onClick={() => setIsModalOpen(true)} className="flex-1 py-2 bg-[#a4000b] text-white rounded-lg font-headline font-bold text-xs sm:text-sm">Enquire Now</button>
                       </div>
                     </div>
                   </div>
@@ -351,11 +353,11 @@ export default function MbbsVietnam() {
           </section>
 
           {/* Admission Process - minimal bottom space */}
-          <section className="pt-10 pb-4 bg-[#f8f9fa]" id="process">
+          <section className="pt-12 pb-4 bg-[#f8f9fa]" id="process">
             <div className="max-w-7xl mx-auto px-6">
               <div className="text-center mb-8">
-                <h2 className="font-headline text-3xl font-extrabold text-[#CC1B1B] mb-2">Admission Process</h2>
-                <p className="font-body text-base text-[#5c403c] max-w-2xl mx-auto">Your journey to becoming a doctor in Vietnam simplified in five steps.</p>
+                <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight mb-3">Admission Process</h2>
+                <p className="font-body text-base sm:text-lg font-semibold text-slate-600 max-w-2xl mx-auto">Your journey to becoming a doctor in Vietnam simplified in five steps.</p>
               </div>
               <div className="relative">
                 <div className="hidden md:block absolute top-7 left-0 w-full h-0.5 bg-[#e6bdb8]/30 -z-10" />
@@ -372,8 +374,8 @@ export default function MbbsVietnam() {
                       >
                         {s.n}
                       </div>
-                      <h4 className="font-headline font-bold text-[#191c1d] text-sm mb-1">{s.title}</h4>
-                      <p className="text-[10px] font-body text-[#5c403c] px-1">{s.desc}</p>
+                      <h4 className="font-headline font-extrabold text-[#191c1d] text-[15px] sm:text-base mb-1">{s.title}</h4>
+                      <p className="text-xs font-body text-slate-600 px-1 font-semibold leading-normal">{s.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -382,10 +384,10 @@ export default function MbbsVietnam() {
           </section>
 
           {/* CTA Section - compact */}
-          <section className="py-10 bg-[#f8f9fa] w-full">
+          <section className="py-12 bg-[#f8f9fa] w-full">
             <div className="w-full">
               <div
-                className="relative overflow-hidden text-center px-6 py-10"
+                className="relative overflow-hidden text-center px-6 py-12 border border-red-100"
                 style={{
                   background: "linear-gradient(135deg, #ffffff 0%, #fef2f2 100%)",
                 }}
@@ -394,13 +396,13 @@ export default function MbbsVietnam() {
                 <div className="absolute -bottom-16 -left-8 w-48 h-48 rounded-full bg-[#cc1b1b]/5 pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
-                  <span className="inline-block mb-3 px-3 py-1 rounded-full border border-[#cc1b1b]/20 bg-[#cc1b1b]/10 text-[#cc1b1b] font-label text-[10px] font-bold uppercase tracking-widest">
+                  <span className="inline-block mb-3 px-4 py-2 rounded-full border border-red-200 bg-red-50 text-[#cc1b1b] font-label text-[10px] sm:text-xs font-black uppercase tracking-widest">
                     Limited Seats — 2026 Intake Open
                   </span>
-                  <h2 className="font-headline text-3xl md:text-4xl font-extrabold leading-tight mb-3 max-w-2xl text-[#111827]">
+                  <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-4 max-w-2xl text-[#111827]">
                     Your Medical Career Starts Here
                   </h2>
-                  <p className="font-body text-base text-[#4b5563] max-w-xl leading-relaxed mb-6">
+                  <p className="font-body text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed mb-8 font-semibold">
                     Join hundreds of Indian students who have secured their MBBS seats in Vietnam.
                     Let our experts guide you from application to arrival — completely free.
                   </p>
@@ -408,7 +410,7 @@ export default function MbbsVietnam() {
                     <button
                       type="button"
                       onClick={onEnquire}
-                      className="bg-[#cc1b1b] text-white px-6 py-3 rounded-xl font-headline font-bold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 active:scale-95"
+                      className="bg-[#cc1b1b] text-white px-8 py-3 rounded-xl font-headline font-bold text-base flex items-center justify-center gap-2 transition-opacity hover:opacity-90 active:scale-95"
                     >
                       Apply Now
                       <span className="material-symbols-outlined text-base">arrow_forward</span>
@@ -416,7 +418,7 @@ export default function MbbsVietnam() {
                     <button
                       type="button"
                       onClick={onEnquire}
-                      className="border-2 border-[#cc1b1b]/30 text-[#cc1b1b] px-6 py-3 rounded-xl font-headline font-bold text-base transition-colors hover:bg-[#cc1b1b]/5 active:scale-95"
+                      className="border-2 border-[#cc1b1b]/30 text-[#cc1b1b] px-8 py-3 rounded-xl font-headline font-bold text-base transition-colors hover:bg-[#cc1b1b]/5 active:scale-95"
                     >
                       Talk to a Counsellor
                     </button>

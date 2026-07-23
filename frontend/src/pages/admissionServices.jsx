@@ -149,32 +149,31 @@ export default function AdmissionServices() {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f5f5f5", display: "flex", flexDirection: "column", fontFamily: "'DM Sans', sans-serif", color: "#111" }}>
-       <SEO
-  title="MBBS Admission Services Vietnam | Visa, Documentation | VietnamBBS"
-  description="Complete MBBS admission services for Vietnam universities. Visa processing, documentation, airport pickup, hostel arrangement and post-landing support."
-  keywords="MBBS admission services Vietnam, Vietnam student visa, MBBS documentation Vietnam, Vietnam university admission India"
-  canonical="https://www.vietnambbs.com/admissionServices"
-  schema={{
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "MBBS Admission Services for Vietnam",
-    "provider": {
-      "@type": "Organization",
-      "name": "VietnamBBS",
-      "url": "https://www.vietnambbs.com"
-    },
-    "description": "End-to-end MBBS admission services including visa, documentation, hostel and post-landing support.",
-    "areaServed": "India",
-    "serviceType": "MBBS Admission Consulting"
-  }}
-/>
+    <div style={{ minHeight: "100vh", background: "#f8f9fa", display: "flex", flexDirection: "column", fontFamily: "'Inter', sans-serif", color: "#191c1d" }}>
+      <SEO
+        title="MBBS Admission Services Vietnam | Visa, Documentation | VietnamBBS"
+        description="Complete MBBS admission services for Vietnam universities. Visa processing, documentation, airport pickup, hostel arrangement and post-landing support."
+        keywords="MBBS admission services Vietnam, Vietnam student visa, MBBS documentation Vietnam, Vietnam university admission India"
+        canonical="https://www.vietnambbs.com/admissionServices"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "MBBS Admission Services for Vietnam",
+          "provider": {
+            "@type": "Organization",
+            "name": "VietnamBBS",
+            "url": "https://www.vietnambbs.com"
+          },
+          "description": "End-to-end MBBS admission services including visa, documentation, hostel and post-landing support.",
+          "areaServed": "India",
+          "serviceType": "MBBS Admission Consulting"
+        }}
+      />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap');
-        .serif { font-family: 'Playfair Display', Georgia, serif; }
-<Header />
-
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap');
+        
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
 
         /* ── HERO ── */
         .hero-bg {
@@ -244,7 +243,7 @@ export default function AdmissionServices() {
         /* ── SERVICE CARDS ── */
         .service-card {
           background: #fff;
-          border: 1.5px solid #e5e5e5;
+          border: 1.5px solid #e2e8f0;
           border-radius: 16px;
           padding: 2rem;
           position: relative;
@@ -269,7 +268,7 @@ export default function AdmissionServices() {
         .service-card:hover::after { transform: scaleX(1); }
 
         .step-num {
-          font-family: 'Playfair Display', serif;
+          font-family: 'Plus Jakarta Sans', sans-serif;
           font-size: 3.75rem;
           font-weight: 900;
           color: rgba(204,27,27,0.07);
@@ -305,13 +304,13 @@ export default function AdmissionServices() {
           display: inline-flex;
           align-items: center;
           gap: 5px;
-          background: #f2f2f2;
-          border: 1px solid #e0e0e0;
+          background: #f1f5f9;
+          border: 1px solid #cbd5e1;
           border-radius: 100px;
-          padding: 3px 10px;
+          padding: 4px 12px;
           font-size: 11px;
-          font-weight: 500;
-          color: #555;
+          font-weight: 700;
+          color: #0f172a;
           white-space: nowrap;
         }
         .pill::before {
@@ -330,318 +329,131 @@ export default function AdmissionServices() {
           margin: 0.75rem auto 0;
         }
 
-        /* ── CTA SECTION ── */
-        .cta-wrap {
-          background: #CC1B1B;
-          border-radius: 20px;
-          overflow: hidden;
-          position: relative;
-        }
-        .cta-wrap::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background:
-            radial-gradient(ellipse 55% 90% at 100% 50%, rgba(245,197,24,0.18) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 60% at 0% 100%, rgba(0,0,0,0.2) 0%, transparent 55%);
-          pointer-events: none;
-        }
-
-        /* ── BUTTONS ── */
-        .btn-gold {
-          display: inline-flex; align-items: center; justify-content: center;
-          padding: 0.875rem 2rem;
-          background: #F5C518;
-          color: #111;
-          font-weight: 700;
-          font-size: 0.9375rem;
-          border-radius: 10px;
-          text-decoration: none;
-          transition: background 0.2s, transform 0.15s;
-          border: none;
-          cursor: pointer;
-        }
-        .btn-gold:hover { background: #e0b315; transform: translateY(-1px); }
-
-        .btn-wht {
-          display: inline-flex; align-items: center; justify-content: center;
-          padding: 0.875rem 2rem;
-          background: rgba(255,255,255,0.15);
-          color: #fff;
-          font-weight: 600;
-          font-size: 0.9375rem;
-          border-radius: 10px;
-          text-decoration: none;
-          border: 1.5px solid rgba(255,255,255,0.4);
-          transition: background 0.2s, border-color 0.2s;
-        }
-        .btn-wht:hover { background: rgba(255,255,255,0.25); border-color: rgba(255,255,255,0.7); }
-
-        /* ── SERVICE BADGE ── */
-        .badge-gold {
-          display: inline-flex; align-items: center; gap: 6px;
-          background: #F5C518;
-          color: #111;
-          border-radius: 100px;
-          padding: 5px 16px;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-        }
-
         /* ── SERVICES BG SECTION ── */
         .services-section {
-          background: #f5f5f5;
-          padding: 5rem 1.5rem;
+          background: #f8fafc;
+          padding: 3rem 1.5rem;
         }
       `}</style>
 
       <Header />
 
+      {/* Hero — full image height, no cropping */}
+      <section style={{ width: "100%", overflow: "hidden" }}>
+        <img
+          src={Admission}
+          alt="Indian doctors"
+          loading="eager"
+          fetchPriority="high"
+          style={{ width: "100%", height: "auto", display: "block" }}
+        />
+      </section>
 
-
-
-
-      {/* Hero — image only */}
-<section style={{ width: "100%", overflow: "hidden" }}>
-
-<img
-  src={Admission}
-  alt="Indian doctors"
-  loading="eager"
-  fetchPriority="high"
-  style={{ width: "100%", height: "100vh", objectFit: "cover" }}
-    loading="eager"
-  />
-</section>
-
-{/* Content — below the hero */}
-<div
-  style={{
-    maxWidth: "1200px",
-    width: "100%",
-    margin: "0 auto",
-    padding: "3rem clamp(1.5rem, 5vw, 4rem)",
-    textAlign: "center",        // centers all text
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",       // centers block elements
-  }}
->
-  {/* Badge */}
-  <div style={{
-    display: "inline-block",
-    padding: "5px 16px",
-    borderRadius: "999px",
-    border: "1px solid rgba(204,27,27,0.3)",
-    background: "rgba(204,27,27,0.07)",
-    color: "#CC1B1B",
-    fontSize: "0.7rem",
-    fontWeight: 700,
-    letterSpacing: "0.14em",
-    textTransform: "uppercase",
-    marginBottom: "1.2rem",
-  }}>
-    Our Services
-  </div>
-
-  {/* Heading */}
-  <h1 style={{
-    fontFamily: "'Playfair Display', serif",
-    color: "#111",
-    fontSize: "clamp(1.9rem, 4vw, 3rem)",
-    fontWeight: 900,
-    lineHeight: 1.15,
-    marginBottom: "1rem",
-  }}>
-    End-to-End{" "}
-    <span style={{ color: "#CC1B1B" }}>MBBS Admission</span>
-    <br />
-    Support for Indian Students
-  </h1>
-
-  {/* Description */}
-  <p style={{
-    color: "#444",
-    fontSize: "clamp(0.88rem, 1.4vw, 1rem)",
-    lineHeight: 1.8,
-    marginBottom: "2rem",
-    maxWidth: "600px",
-  }}>
-    From selecting the right NMC-recognised university in Vietnam to
-    settling you in on campus — comprehensive, transparent, and
-    personalised guidance at every stage.
-  </p>
-
-  {/* Stats */}
-  <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginBottom: "3rem", justifyContent: "center" }}>
-    {stats.map((s) => (
-      <div key={s.label} style={{
-        textAlign: "center",
-        padding: "12px 18px",
-        borderRadius: "10px",
-        border: "1px solid #e5e5e5",
-        background: "#fafafa",
-        minWidth: "110px",
-        marginBottom: "-40px",
-      }}>
+      {/* Content — below the hero */}
+      <div
+        style={{
+          maxWidth: "1200px",
+          width: "100%",
+          margin: "0 auto",
+          padding: "2rem clamp(1.5rem, 5vw, 4rem) 1rem",
+          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        {/* Badge */}
         <div style={{
-          fontFamily: "'Playfair Display', serif",
-          fontSize: "1.65rem",
-          fontWeight: 900,
+          display: "inline-block",
+          padding: "6px 18px",
+          borderRadius: "999px",
+          border: "1.5px solid rgba(204,27,27,0.3)",
+          background: "rgba(204,27,27,0.07)",
           color: "#CC1B1B",
-          lineHeight: 1,
-        }}>{s.value}</div>
-        <div style={{
-          fontSize: "0.62rem",
-          color: "#666",
-          marginTop: "5px",
-          fontWeight: 600,
-          letterSpacing: "0.07em",
+          fontSize: "0.75rem",
+          fontWeight: 900,
+          letterSpacing: "0.14em",
           textTransform: "uppercase",
-        }}>{s.label}</div>
+          marginBottom: "1.25rem",
+        }}>
+          Our Services
+        </div>
+
+        {/* Heading */}
+        <h1 className="font-headline" style={{
+          color: "#0f172a",
+          fontSize: "clamp(2rem, 5vw, 3.5rem)",
+          fontWeight: 900,
+          lineHeight: 1.15,
+          marginBottom: "1rem",
+        }}>
+          End-to-End <span style={{ color: "#CC1B1B" }}>MBBS Admission</span>
+          <br />
+          Support for Indian Students
+        </h1>
+
+        {/* Description */}
+        <p style={{
+          color: "#334155",
+          fontSize: "clamp(0.95rem, 1.6vw, 1.1rem)",
+          lineHeight: 1.8,
+          marginBottom: "2rem",
+          maxWidth: "700px",
+          fontWeight: 600,
+        }}>
+          From selecting the right NMC-recognised university in Vietnam to
+          settling you in on campus — comprehensive, transparent, and
+          personalised guidance at every stage.
+        </p>
+
+        {/* Stats */}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginBottom: "2rem", justifyContent: "center" }}>
+          {stats.map((s) => (
+            <div key={s.label} style={{
+              textAlign: "center",
+              padding: "16px 24px",
+              borderRadius: "14px",
+              border: "1.5px solid #e2e8f0",
+              background: "#ffffff",
+              minWidth: "150px",
+              boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05)"
+            }}>
+              <div className="font-headline" style={{
+                fontSize: "2rem",
+                fontWeight: 900,
+                color: "#CC1B1B",
+                lineHeight: 1,
+              }}>{s.value}</div>
+              <div style={{
+                fontSize: "0.68rem",
+                color: "#475569",
+                marginTop: "8px",
+                fontWeight: 700,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+              }}>{s.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-
-
-
-
-  {/*   <section style={{ position: "relative", width: "100%", overflow: "hidden" }}>
-  {/* Full image — no crop, object-position: top shows faces 
- <img
-  src="https://img.freepik.com/premium-photo/indian-doctors-smiling-front-indian-flag-indian-independence-day-indian-republic-day_244157-6762.jpg?w=1400"
-  alt="Indian doctors"
-  style={{
-    width: "100%",
-    height: "100vh",        // fits exactly one screen height
-    display: "block",
-    objectFit: "cover",     // fills without stretching
-    objectPosition: "center top",  // keeps faces visible
-  }}
-  loading="eager"
-/>
-
-  {/* Overlay 
-  <div style={{
-    position: "absolute",
-    inset: 0,
-    background: "linear-gradient(to right, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.10) 100%)",
-  }} />
-
-  {/* Content
-  <div style={{
-    position: "absolute",
-    inset: 0,
-    display: "flex",
-    alignItems: "center",
-    padding: "0 clamp(1.5rem, 6vw, 4rem)",
-  }}>
-    <div style={{ maxWidth: "620px" }}>
-
-      {/* Badge 
-      <div style={{
-        display: "inline-block",
-        padding: "5px 16px",
-        borderRadius: "999px",
-        border: "1px solid rgba(245,197,24,0.6)",
-        background: "rgba(245,197,24,0.12)",
-        color: "#F5C518",
-        fontSize: "0.7rem",
-        fontWeight: 600,
-        letterSpacing: "0.14em",
-        textTransform: "uppercase",
-        marginBottom: "1.2rem",
-      }}>
-        Our Services
-      </div>
-
-      {/* Heading 
-      <h1 style={{
-        fontFamily: "'Playfair Display', serif",
-        color: "#fff",
-        fontSize: "clamp(1.9rem, 4vw, 3rem)",
-        fontWeight: 900,
-        lineHeight: 1.15,
-        marginBottom: "1rem",
-        textShadow: "0 2px 16px rgba(0,0,0,0.5)",
-      }}>
-        End-to-End{" "}
-        <span style={{ color: "#F5C518" }}>MBBS Admission</span>
-        <br />
-        Support for Indian Students
-      </h1>
-
-      {/* Description 
-      <p style={{
-        color: "rgba(255,255,255,0.85)",
-        fontSize: "clamp(0.88rem, 1.4vw, 1rem)",
-        lineHeight: 1.8,
-        marginBottom: "2rem",
-        maxWidth: "480px",
-      }}>
-        From selecting the right NMC-recognised university in Vietnam to
-        settling you in on campus — comprehensive, transparent, and
-        personalised guidance at every stage.
-      </p>
-
-      {/* Stats 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-        {stats.map((s) => (
-          <div key={s.label} style={{
-            textAlign: "center",
-            padding: "12px 18px",
-            borderRadius: "10px",
-            border: "1px solid rgba(255,255,255,0.15)",
-            background: "rgba(0,0,0,0.30)",
-            minWidth: "110px",
-          }}>
-            <div style={{
-              fontFamily: "'Playfair Display', serif",
-              fontSize: "1.65rem",
-              fontWeight: 900,
-              color: "#F5C518",
-              lineHeight: 1,
-            }}>{s.value}</div>
-            <div style={{
-              fontSize: "0.62rem",
-              color: "rgba(255,255,255,0.78)",
-              marginTop: "5px",
-              fontWeight: 600,
-              letterSpacing: "0.07em",
-              textTransform: "uppercase",
-            }}>{s.label}</div>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  </div>
-</section>  */}
-
-
-
-      
 
       {/* ─── SERVICES GRID ─── */}
       <main className="services-section">
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-            <p style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#CC1B1B", marginBottom: "0.5rem" }}>
+          <div className="text-center" style={{ marginBottom: "2.5rem" }}>
+            <p style={{ fontSize: "0.75rem", fontWeight: 900, letterSpacing: "0.12em", textTransform: "uppercase", color: "#CC1B1B", marginBottom: "0.75rem" }}>
               What We Offer
             </p>
-            <h2 className="serif" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 900, color: "#CC1B1B", marginBottom: "0.5rem", lineHeight: 1.2 }}>
+            <h2 className="font-headline" style={{ fontSize: "clamp(1.85rem, 4vw, 2.8rem)", fontWeight: 900, color: "#CC1B1B", marginBottom: "0.75rem", lineHeight: 1.2 }}>
               9 Steps to Your MBBS in Vietnam
             </h2>
             <div className="gold-bar" />
-            <p style={{ color: "#666", fontSize: "1rem", maxWidth: "500px", margin: "1rem auto 0", lineHeight: 1.75 }}>
+            <p style={{ color: "#334155", fontSize: "1.05rem", maxWidth: "600px", margin: "1.25rem auto 0", lineHeight: 1.75, fontWeight: 600 }}>
               A structured, proven process — from your first enquiry to your first day on campus.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
             {services.map((service) => (
               <div
                 key={service.id}
@@ -651,13 +463,13 @@ export default function AdmissionServices() {
               >
                 <span className="step-num">{service.step}</span>
                 <div className="icon-box">{service.icon}</div>
-                <h3 className="serif" style={{ fontSize: "1.125rem", fontWeight: 700, color: "#111", marginBottom: "0.625rem", lineHeight: 1.35, paddingRight: "2.5rem" }}>
+                <h3 className="font-headline" style={{ fontSize: "1.25rem", fontWeight: 900, color: "#0f172a", marginBottom: "0.75rem", lineHeight: 1.35, paddingRight: "2.5rem" }}>
                   {service.title}
                 </h3>
-                <p style={{ fontSize: "0.875rem", color: "#555", lineHeight: 1.8, marginBottom: "1.25rem" }}>
+                <p style={{ fontSize: "0.9rem", color: "#334155", lineHeight: 1.8, marginBottom: "1.5rem", fontWeight: 600 }}>
                   {service.description}
                 </p>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: "6px" }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
                   {service.highlights.map((h) => (
                     <span key={h} className="pill">{h}</span>
                   ))}
@@ -666,50 +478,9 @@ export default function AdmissionServices() {
             ))}
           </div>
         </div>
-
-        {/* ─── CTA ─── 
-        <div style={{ maxWidth: "1000px", margin: "5rem auto 0" }}>
-          <div className="cta-wrap" style={{ padding: "3.5rem 3rem" }}>
-            <div style={{ position: "relative", zIndex: 1 }}>
-              <div className="badge-gold" style={{ marginBottom: "1.25rem" }}>Take the First Step</div>
-              <h2
-                className="serif"
-                style={{ color: "#fff", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 900, lineHeight: 1.25, marginBottom: "1rem" }}
-              >
-                Ready to Begin Your{" "}
-                <span style={{ color: "#F5C518" }}>MBBS Journey</span>?
-              </h2>
-              <p style={{ color: "rgba(255,255,255,0.82)", fontSize: "1rem", maxWidth: "540px", lineHeight: 1.8, marginBottom: "2rem" }}>
-                Speak to our counsellors today for a free eligibility assessment and personalised roadmap. Thousands of Indian students have made Vietnam their medical education destination — your story starts here.
-              </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.875rem" }}>
-                <a href="/contact" className="btn-gold">
-                  Get Free Counselling
-                  <svg style={{ marginLeft: "8px", width: "15px", height: "15px" }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-                <a href="https://wa.me/919003420057" target="_blank" rel="noreferrer" className="btn-wht">
-                  <svg style={{ marginRight: "8px", width: "17px", height: "17px" }} viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.198 0 -.52 .074 -.792 .372 -.272 .297 -1.04 1.016 -1.04 2.479 0 1.462 1.065 2.875 1.2₁₃ 3.0７₄ .₁₄₉ .₁₉₈ ₂₀₉₆ ₃.₂ ₅.₀₇₇ ₄.₄₈₇ .₇₀₉ .₃₀₆ ₁.₂₆₂ .₄₈₉ ₁.₆⁹⁴ .⁶²⁵ .⁷¹² .²²⁷ ₁.³⁶ .¹⁹⁵ ₁.⁸⁷¹ .¹¹⁸ .⁵⁷¹ -." />
-                  </svg>
-                  WhatsApp a Counsellor
-                </a>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-
-
-
-        
       </main>
 
-
-      
-     <CTA />
-
+      <CTA />
       <Footer />
     </div>
   );

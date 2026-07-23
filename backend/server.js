@@ -453,7 +453,7 @@ app.post("/send-email", async (req, res) => {
     await transporter.sendMail({
       from: `"Vietnam MBBS" <${process.env.EMAIL_USER}>`,
       replyTo: email,
-      to: "malathimurugan1411@gmail.com",
+      to: "ramyashan.1010@gmail.com",
       subject: `New Enquiry from ${fullName}`,
       text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
     });
@@ -466,22 +466,28 @@ app.post("/send-email", async (req, res) => {
 
 app.post("/api/enquiry", async (req, res) => {
   const { fullName, email, phone, state } = req.body;
-  if (!fullName || !email || !phone)
-    return res.status(400).json({ message: "Missing required fields" });
+  if (!fullName || !phone)
+    return res.status(400).json({ message: "Missing required fields (fullName and phone are required)" });
   try {
     const transporter = createEmailTransporter();
     await transporter.verify();
-    await transporter.sendMail({
+
+    const mailOptions = {
       from: `"Vietnam MBBS" <${process.env.EMAIL_USER}>`,
-      replyTo: email,
-      to: "malathimurugan1411@gmail.com",
+      to: "ramyashan.1010@gmail.com",
       subject: "New MBBS Enquiry Form Submission",
       html: `<h3>New Enquiry</h3>
              <p><b>Name:</b> ${fullName}</p>
-             <p><b>Email:</b> ${email}</p>
+             <p><b>Email:</b> ${email || "Not provided"}</p>
              <p><b>Phone:</b> ${phone}</p>
-             <p><b>State:</b> ${state}</p>`,
-    });
+             <p><b>State:</b> ${state || "Not provided"}</p>`,
+    };
+
+    if (email && email.trim() !== "") {
+      mailOptions.replyTo = email;
+    }
+
+    await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Email sent successfully" });
   } catch (error) {
     console.error("ENQUIRY EMAIL ERROR:", error.message);

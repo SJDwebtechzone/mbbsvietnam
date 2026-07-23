@@ -9,3 +9,15 @@
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+p {
+  text-align: justify;
+}
+
+.text-center p, [class*="text-center"] p {
+  text-align: center;
+}
+
+.text-left p, [class*="text-left"] p {
+  text-align: left;
+}

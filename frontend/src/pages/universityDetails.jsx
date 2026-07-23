@@ -88,12 +88,12 @@ export default function UHSVNUUniversity() {
 ───────────────────────────────────────────────────────── */
 function HeroSection({ isModalOpen, setIsModalOpen }) {
   return (
-    <section className="relative min-h-[500px] sm:min-h-[600px] md:h-[751px] flex items-center overflow-hidden">
+    <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[751px] flex items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           alt="UHS VNU Ho Chi Minh City"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-bottom"
           src={UHSBanner}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
@@ -103,27 +103,27 @@ function HeroSection({ isModalOpen, setIsModalOpen }) {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-10">
           {/* Left Content */}
-          <div className="w-full lg:max-w-[620px] text-center lg:text-left">
+          <div className="w-full lg:max-w-[850px] text-center lg:text-left">
             {/* Badges */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 mb-6">
-              <span className="inline-flex items-center gap-1.5 bg-yellow-400 text-yellow-900 font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+              <span className="inline-flex items-center gap-1.5 bg-yellow-400 text-yellow-900 font-black text-xs uppercase tracking-wider px-4 py-2 rounded-full">
                 <Icon name="verified" className="text-sm" style={{ color: "#3d2f00" }} />
                 No.1 Government Medical University
               </span>
-              <span className="inline-flex items-center gap-1.5 bg-white/15 text-white font-bold text-[10px] sm:text-xs uppercase tracking-wider px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-1.5 bg-white/15 text-white font-black text-xs uppercase tracking-wider px-4 py-2 rounded-full border border-white/30 backdrop-blur-sm">
                 NMC Recognised
               </span>
             </div>
 
-            <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-2 leading-tight">
-              University of Health & Sciences-Vietnam National University
+            <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-3 leading-tight tracking-tight">
+              University of <br /> Health & Sciences-<br /> Vietnam National University
             </h1>
-            <h2 className="font-headline text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-yellow-400 mb-6 sm:mb-7">
+            <h2 className="font-headline text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold text-yellow-400 mb-6 sm:mb-8 tracking-wide">
               Vietnam National University — Ho Chi Minh City
             </h2>
 
             <div className="border-l-4 border-yellow-400 pl-4 mb-6 sm:mb-8">
-              <p className="text-sm sm:text-base text-white/90 leading-relaxed">
+              <p className="text-base sm:text-lg text-white/95 leading-relaxed font-semibold">
                 Become a Doctor Beyond Your Dreams. Study MBBS at Vietnam's premier government
                 medical institution — WHO listed & globally recognised.
               </p>
@@ -134,7 +134,7 @@ function HeroSection({ isModalOpen, setIsModalOpen }) {
               {["NMC India", "WHO Listed", "USMLE Ready", "MOH Vietnam"].map((label) => (
                 <span
                   key={label}
-                  className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 py-1.5 rounded-lg text-[10px] sm:text-xs font-bold"
+                  className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-3 py-1.5 rounded-lg text-xs sm:text-sm font-black"
                 >
                   <Icon name="check_circle" className="text-sm" style={{ color: "#fecc00", fontVariationSettings: "'FILL' 1" }} />
                   {label}
@@ -165,8 +165,8 @@ function HeroSection({ isModalOpen, setIsModalOpen }) {
           {/* Right Stat Card */}
           <div className="w-full sm:max-w-sm lg:max-w-xs bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 mt-6 lg:mt-0">
             <div className="text-center mb-6">
-              <div className="font-headline text-4xl sm:text-5xl font-extrabold text-yellow-400">960+</div>
-              <div className="text-white/80 text-xs sm:text-sm font-semibold uppercase tracking-wide mt-1">Indian Students Currently</div>
+              <div className="font-headline text-4xl sm:text-5xl lg:text-6xl font-black text-yellow-400">960+</div>
+              <div className="text-white/80 text-xs sm:text-sm font-extrabold uppercase tracking-wide mt-1">Indian Students Currently</div>
               <div className="text-white/60 text-[10px] sm:text-xs mt-0.5">Studying MBBS in Vietnam</div>
             </div>
             <div className="h-px bg-white/20 mb-5" />
@@ -177,8 +177,8 @@ function HeroSection({ isModalOpen, setIsModalOpen }) {
                 { label: "Location", value: "Ho Chi Minh City" },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between items-center">
-                  <span className="text-white/60 text-xs sm:text-sm">{item.label}</span>
-                  <span className="text-white text-xs sm:text-sm font-bold">{item.value}</span>
+                  <span className="text-white/60 text-xs sm:text-sm font-semibold">{item.label}</span>
+                  <span className="text-white text-xs sm:text-sm font-extrabold">{item.value}</span>
                 </div>
               ))}
             </div>
@@ -197,10 +197,10 @@ function ImageGalleryStrip() {
     <section className="py-12 sm:py-14 md:py-16 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8 sm:mb-10">
-          <span className="inline-block bg-teal-50 text-teal-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
+          <span className="inline-block bg-red-50 text-red-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
             Campus Life & Academics
           </span>
-          <h2 className="font-headline text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-900 mt-3">
+          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 mt-3 tracking-tight">
             Experience <span className="text-[#CC1B1B]">UHS VNU HCM</span>
           </h2>
         </div>
@@ -211,7 +211,7 @@ function ImageGalleryStrip() {
             <img src={Hero1} alt="MBBS in Vietnam" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="text-yellow-400 font-bold text-sm">MBBS in Vietnam</span>
+              <span className="text-yellow-400 font-extrabold text-sm sm:text-base">MBBS in Vietnam</span>
             </div>
           </div>
 
@@ -219,7 +219,7 @@ function ImageGalleryStrip() {
             <img src={CanPic1} alt="Anatomy Lab Session" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="text-white font-bold text-sm">Anatomy Lab Sessions</span>
+              <span className="text-white font-extrabold text-sm sm:text-base">Anatomy Lab Sessions</span>
             </div>
           </div>
         </div>
@@ -230,7 +230,7 @@ function ImageGalleryStrip() {
             <img src={DocImage} alt="Indian Medical Students" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="text-white font-bold text-sm">Our Students</span>
+              <span className="text-white font-extrabold text-sm sm:text-base">Our Students</span>
             </div>
           </div>
 
@@ -238,7 +238,7 @@ function ImageGalleryStrip() {
             <img src={BlogImg} alt="MBBS Program" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="text-yellow-400 font-bold text-sm">Medical Program</span>
+              <span className="text-yellow-400 font-extrabold text-sm sm:text-base">Medical Program</span>
             </div>
           </div>
 
@@ -246,7 +246,7 @@ function ImageGalleryStrip() {
             <img src={CanPic3} alt="Clinical Training" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <span className="text-white font-bold text-sm">Hands-On Clinical Training</span>
+              <span className="text-white font-extrabold text-sm sm:text-base">Hands-On Clinical Training</span>
             </div>
           </div>
         </div>
@@ -277,13 +277,13 @@ function AdmissionFlow() {
     <section className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
-          <span className="inline-block bg-teal-50 text-teal-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-3">
+          <span className="inline-block bg-red-50 text-red-800 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-3">
             Step-by-Step Process
           </span>
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             Flow of the <span className="text-[#CC1B1B]">Admission Process</span>
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base mt-3 max-w-md mx-auto">
+          <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mt-3 max-w-2xl mx-auto leading-relaxed">
             A clear, guided path from document preparation to your first day at UHS VNU.
           </p>
         </div>
@@ -298,12 +298,12 @@ function AdmissionFlow() {
                 borderColor: i % 3 === 0 ? "#b2dfcf" : i % 3 === 1 ? "#e5e7eb" : "#fde9c0",
               }}
             >
-              <div className="absolute -top-3 left-4 bg-teal-700 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold">
+              <div className="absolute -top-3 left-4 bg-[#CC1B1B] text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-black">
                 {i + 1}
               </div>
-              <Icon name={step.icon} className="text-teal-700 text-3xl mb-2 mt-1" />
-              <h4 className="font-headline font-bold text-sm sm:text-base text-gray-900 mb-1">{step.label}</h4>
-              <p className="text-gray-500 text-xs leading-relaxed">{step.desc}</p>
+              <Icon name={step.icon} className="text-[#CC1B1B] text-3xl mb-2 mt-1" />
+              <h4 className="font-headline font-black text-base sm:text-lg text-gray-900 mb-1.5">{step.label}</h4>
+              <p className="text-slate-600 text-xs sm:text-sm font-semibold leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -326,11 +326,11 @@ function UniversityHighlights() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-teal-50/30">
+    <section className="py-12 sm:py-16 md:py-20 bg-red-50/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#CC1B1B]">Why Choose UHS VNU HCM?</h2>
-          <p className="text-gray-500 text-sm sm:text-base mt-3">Vietnam's No.1 Government Medical University with global recognition.</p>
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight">Why Choose UHS VNU HCM?</h2>
+          <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mt-3 max-w-2xl mx-auto leading-relaxed">Vietnam's No.1 Government Medical University with global recognition.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
@@ -341,8 +341,8 @@ function UniversityHighlights() {
               style={{ background: item.bg, color: item.color, border: item.bg === "white" ? "1.5px solid #e5e7eb" : "none" }}
             >
               <Icon name={item.icon} className="text-3xl sm:text-4xl mb-4" style={{ color: item.iconColor, fontVariationSettings: "'FILL' 1" }} />
-              <h3 className="font-headline font-bold text-base sm:text-lg mb-2">{item.title}</h3>
-              <p className="text-xs sm:text-sm leading-relaxed opacity-85">{item.desc}</p>
+              <h3 className="font-headline font-black text-lg sm:text-xl mb-2.5">{item.title}</h3>
+              <p className="text-xs sm:text-sm leading-relaxed opacity-95 font-semibold">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -360,21 +360,21 @@ function StudentLifeSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="mb-8 sm:mb-12 text-center sm:text-left">
           <span className="inline-block bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">Student Life</span>
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
-            Life at <span className="text-teal-700">UHS VNU</span> — Learning & Beyond
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
+            Life at <span className="text-[#CC1B1B]">UHS VNU</span> — Learning & Beyond
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base mt-3 max-w-2xl">From practical anatomy labs to a supportive Indian community — your journey here is more than just a degree.</p>
+          <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mt-3 max-w-2xl leading-relaxed">From practical anatomy labs to a supportive Indian community — your journey here is more than just a degree.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Left Image */}
           <div className="relative rounded-2xl overflow-hidden min-h-[400px] lg:flex-1">
             <img src={CanPic1} alt="Anatomy Lab" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-teal-800/85 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-red-950/85 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <Icon name="science" className="text-yellow-400 text-3xl mb-2" style={{ fontVariationSettings: "'FILL' 1" }} />
-              <h3 className="text-white text-xl sm:text-2xl font-headline font-extrabold mb-1">Hands-On Anatomy Labs</h3>
-              <p className="text-white/85 text-xs sm:text-sm">State-of-the-art anatomy dissection labs with expert faculty guiding students through every session from Year 1.</p>
+              <h3 className="text-white text-xl sm:text-2xl md:text-3xl font-headline font-black mb-1.5">Hands-On Anatomy Labs</h3>
+              <p className="text-white/95 text-xs sm:text-sm font-semibold">State-of-the-art anatomy dissection labs with expert faculty guiding students through every session from Year 1.</p>
             </div>
           </div>
 
@@ -384,16 +384,16 @@ function StudentLifeSection() {
               <img src={DocImage} alt="Indian Medical Students" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-4 left-5 right-5">
-                <span className="text-yellow-400 text-xs sm:text-sm font-bold">🇮🇳 Strong Indian Student Community</span>
-                <p className="text-white/85 text-xs mt-1">960+ Indian students currently enrolled — you're never alone.</p>
+                <span className="text-yellow-400 text-sm sm:text-base font-black">🇮🇳 Strong Indian Student Community</span>
+                <p className="text-white/95 text-xs sm:text-sm font-semibold mt-1">960+ Indian students currently enrolled — you're never alone.</p>
               </div>
             </div>
             <div className="relative rounded-xl overflow-hidden h-48 sm:h-56">
               <img src={CanPic3} alt="Clinical Training" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
               <div className="absolute bottom-4 left-5 right-5">
-                <span className="text-yellow-400 text-xs sm:text-sm font-bold">🏥 Clinical Training from Year 1</span>
-                <p className="text-white/85 text-xs mt-1">Real patient exposure at VNU-affiliated hospitals across Ho Chi Minh City.</p>
+                <span className="text-yellow-400 text-sm sm:text-base font-black">🏥 Clinical Training from Year 1</span>
+                <p className="text-white/95 text-xs sm:text-sm font-semibold mt-1">Real patient exposure at VNU-affiliated hospitals across Ho Chi Minh City.</p>
               </div>
             </div>
           </div>
@@ -407,10 +407,10 @@ function StudentLifeSection() {
             { icon: "local_hospital", value: "5+", label: "Affiliated Hospitals" },
             { icon: "verified", value: "NMC", label: "India Recognised" },
           ].map((stat) => (
-            <div key={stat.label} className="bg-teal-50 rounded-xl p-4 sm:p-5 text-center border border-teal-200">
-              <Icon name={stat.icon} className="text-teal-700 text-2xl sm:text-3xl mx-auto mb-2" style={{ fontVariationSettings: "'FILL' 1" }} />
-              <div className="font-headline text-xl sm:text-2xl font-extrabold text-teal-700">{stat.value}</div>
-              <div className="text-gray-500 text-xs sm:text-sm font-semibold mt-1">{stat.label}</div>
+            <div key={stat.label} className="bg-red-50 rounded-xl p-4 sm:p-5 text-center border border-red-200">
+              <Icon name={stat.icon} className="text-[#CC1B1B] text-2xl sm:text-3xl mx-auto mb-2" style={{ fontVariationSettings: "'FILL' 1" }} />
+              <div className="font-headline text-2xl sm:text-3xl font-black text-[#CC1B1B]">{stat.value}</div>
+              <div className="text-slate-600 text-xs sm:text-sm font-bold mt-1">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -445,34 +445,34 @@ function FeeStructure() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
           <span className="inline-block bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-3">Scholarship Available</span>
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
             Tuition <span className="text-[#CC1B1B]">Fee Structure</span>
           </h2>
-          <p className="text-gray-500 text-sm sm:text-base mt-3">Transparent, year-wise fee breakdown. USD is fixed; INR is approximate reference only.</p>
+          <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mt-3 max-w-2xl mx-auto leading-relaxed">Transparent, year-wise fee breakdown. USD is fixed; INR is approximate reference only.</p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
           {/* Fee Table */}
           <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
-            <div className="bg-teal-700 px-4 sm:px-6 py-4 sm:py-5">
-              <h3 className="text-white font-headline font-bold text-sm sm:text-base">Fees Per Year — 6 Years Program</h3>
+            <div className="bg-[#CC1B1B] px-4 sm:px-6 py-4 sm:py-5">
+              <h3 className="text-white font-headline font-extrabold text-sm sm:text-base">Fees Per Year — 6 Years Program</h3>
             </div>
             <div className="overflow-x-auto">
               <div className="min-w-[500px]">
-                <div className="grid grid-cols-3 bg-teal-50 px-4 sm:px-6 py-3 text-xs font-bold text-teal-700 uppercase">
+                <div className="grid grid-cols-3 bg-red-50 px-4 sm:px-6 py-3 text-xs font-black text-[#CC1B1B] uppercase">
                   <span>Year</span><span>USD</span><span>INR (Approx)</span>
                 </div>
                 {fees.map((row, i) => (
                   <div key={row.year} className={`grid grid-cols-3 px-4 sm:px-6 py-3 text-xs sm:text-sm ${i % 2 === 0 ? "bg-white" : "bg-gray-50"} border-b border-gray-100`}>
-                    <span className="font-semibold text-gray-900">{row.year}</span>
-                    <span className="font-bold text-teal-700">{row.usd}</span>
-                    <span className="text-gray-500">{row.inr}</span>
+                    <span className="font-extrabold text-gray-900">{row.year}</span>
+                    <span className="font-extrabold text-[#CC1B1B]">{row.usd}</span>
+                    <span className="text-slate-600 font-semibold">{row.inr}</span>
                   </div>
                 ))}
-                <div className="grid grid-cols-3 bg-teal-700 px-4 sm:px-6 py-4 text-sm">
-                  <span className="font-extrabold text-white">Grand Total</span>
-                  <span className="font-extrabold text-yellow-400">$40,848</span>
-                  <span className="font-extrabold text-yellow-400">₹38,24,928</span>
+                <div className="grid grid-cols-3 bg-[#CC1B1B] px-4 sm:px-6 py-4 text-sm">
+                  <span className="font-black text-white">Grand Total</span>
+                  <span className="font-black text-yellow-400">$40,848</span>
+                  <span className="font-black text-yellow-400">₹38,24,928</span>
                 </div>
               </div>
             </div>
@@ -481,26 +481,26 @@ function FeeStructure() {
           {/* Right Side */}
           <div className="flex-1 space-y-5">
             <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5 sm:p-7">
-              <h3 className="font-headline font-bold text-sm sm:text-base text-yellow-900 mb-1">Payment Before Departure from India</h3>
-              <p className="text-yellow-700 text-xs mb-4">One time charges for total 6 years</p>
+              <h3 className="font-headline font-black text-base sm:text-lg text-yellow-900 mb-1.5">Payment Before Departure from India</h3>
+              <p className="text-yellow-700 text-xs sm:text-sm font-semibold mb-4">One time charges for total 6 years</p>
               {initialPayments.map((item) => (
                 <div key={item.label} className="flex justify-between items-center py-3 border-b border-yellow-200/50">
-                  <span className="text-yellow-800 text-xs sm:text-sm">{item.label}</span>
-                  <span className="font-bold text-teal-700 text-sm sm:text-base">{item.amount}</span>
+                  <span className="text-yellow-800 text-xs sm:text-sm font-semibold">{item.label}</span>
+                  <span className="font-extrabold text-[#CC1B1B] text-sm sm:text-base">{item.amount}</span>
                 </div>
               ))}
-              <div className="mt-4 bg-teal-700 rounded-xl p-4 flex justify-between items-center">
-                <span className="text-white font-bold text-sm">Grand Total</span>
-                <span className="text-yellow-400 font-extrabold text-lg sm:text-xl">₹8,64,445</span>
+              <div className="mt-4 bg-[#CC1B1B] rounded-xl p-4 flex justify-between items-center">
+                <span className="text-white font-extrabold text-sm sm:text-base">Grand Total</span>
+                <span className="text-yellow-400 font-black text-xl sm:text-2xl">₹8,64,445</span>
               </div>
             </div>
 
-            <div className="bg-teal-50 border border-teal-200 rounded-xl p-5 sm:p-7">
-              <Icon name="hotel" className="text-teal-700 text-3xl mb-3" />
+            <div className="bg-red-50 border border-red-200 rounded-xl p-5 sm:p-7">
+              <Icon name="hotel" className="text-[#CC1B1B] text-3xl mb-3" />
               <h3 className="font-headline font-bold text-sm sm:text-base mb-1">Food & Accommodation</h3>
-              <div className="text-2xl sm:text-3xl font-extrabold text-teal-700">$2,500</div>
-              <div className="text-gray-500 text-xs mb-3">Approx ₹2,32,000 per year</div>
-              <p className="text-teal-800 text-xs leading-relaxed">Hostel for Boys and Girls with dedicated Indian food — North, South & North East Indian cuisine available.</p>
+              <div className="text-3xl sm:text-4xl font-black text-[#CC1B1B]">$2,500</div>
+              <div className="text-slate-600 text-xs sm:text-sm font-semibold mb-3">Approx ₹2,32,000 per year</div>
+              <p className="text-red-800 text-xs sm:text-sm font-semibold leading-relaxed">Hostel for Boys and Girls with dedicated Indian food — North, South & North East Indian cuisine available.</p>
             </div>
           </div>
         </div>
@@ -522,18 +522,18 @@ function ServicesSection() {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-teal-50/30">
+    <section className="py-12 sm:py-16 md:py-20 bg-red-50/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10 sm:mb-14">
-          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#CC1B1B]">Complete Services by Aswad Overseas</h2>
-          <p className="text-gray-500 text-sm sm:text-base mt-3">End-to-end support from India to Vietnam — everything handled for you.</p>
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-[#CC1B1B] tracking-tight">Complete Services by Aswad Overseas</h2>
+          <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mt-3 max-w-2xl mx-auto leading-relaxed">End-to-end support from India to Vietnam — everything handled for you.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
           {services.map((service) => (
             <div key={service} className="bg-white rounded-xl p-3 sm:p-4 flex items-start gap-3 border border-gray-200 shadow-sm">
-              <Icon name="check_circle" className="text-teal-600 text-xl flex-shrink-0 mt-0.5" style={{ fontVariationSettings: "'FILL' 1" }} />
-              <span className="text-gray-800 text-xs sm:text-sm font-medium leading-relaxed">{service}</span>
+              <Icon name="check_circle" className="text-red-600 text-xl flex-shrink-0 mt-0.5" style={{ fontVariationSettings: "'FILL' 1" }} />
+              <span className="text-slate-700 text-xs sm:text-sm font-bold leading-relaxed">{service}</span>
             </div>
           ))}
         </div>
@@ -553,10 +553,10 @@ function HostelSection() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <div className="flex-1 text-center lg:text-left">
               <span className="inline-block bg-red-700 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider mb-4">Student Life</span>
-              <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+              <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4">
                 Hostel & Indian Food — <span className="text-red-700">Feel at Home</span>
               </h2>
-              <p className="text-gray-500 text-sm sm:text-base mb-6">Separate hostels for boys and girls with dedicated caretakers. Enjoy authentic North, South, and North East Indian meals daily. Aswad-appointed Indian coordinators ensure your comfort throughout.</p>
+              <p className="text-slate-600 text-[15px] sm:text-lg font-semibold mb-6">Separate hostels for boys and girls with dedicated caretakers. Enjoy authentic North, South, and North East Indian meals daily. Aswad-appointed Indian coordinators ensure your comfort throughout.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {[
                   { icon: "home", label: "Separate Boys & Girls Hostel" },
@@ -566,7 +566,7 @@ function HostelSection() {
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3 bg-white rounded-xl p-3 border border-red-100">
                     <Icon name={item.icon} className="text-red-600 text-xl" style={{ fontVariationSettings: "'FILL' 1" }} />
-                    <span className="text-gray-800 text-xs sm:text-sm font-semibold">{item.label}</span>
+                    <span className="text-slate-700 text-xs sm:text-sm font-bold">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -578,8 +578,8 @@ function HostelSection() {
               </div>
               
               <div className="bg-white rounded-xl p-5 text-center border-2 border-red-600">
-                <div className="font-headline text-3xl sm:text-4xl font-extrabold text-red-600">6 Yrs</div>
-                <div className="text-gray-500 text-xs sm:text-sm mt-1">Local Support & Guidance</div>
+                <div className="font-headline text-3xl sm:text-4xl font-black text-red-600">6 Yrs</div>
+                <div className="text-slate-600 text-xs sm:text-sm font-bold mt-1">Local Support & Guidance</div>
               </div>
             </div>
           </div>
@@ -596,11 +596,11 @@ function DisclaimerSection() {
   return (
     <section className="py-10 sm:py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="border-2 border-dashed border-teal-200 rounded-2xl p-5 sm:p-7 bg-white">
+        <div className="border-2 border-dashed border-red-200 rounded-2xl p-5 sm:p-7 bg-white">
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <Icon name="policy" className="text-teal-700 text-4xl flex-shrink-0" />
+            <Icon name="policy" className="text-[#CC1B1B] text-4xl flex-shrink-0" />
             <div>
-              <h3 className="font-headline text-base sm:text-lg font-extrabold text-[#CC1B1B] mb-3">Eligibility & Important Notes</h3>
+              <h3 className="font-headline text-lg sm:text-xl font-black text-[#CC1B1B] mb-3">Eligibility & Important Notes</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
                 {[
                   { icon: "verified_user", label: "NMC Recognised Programs" },
@@ -609,12 +609,12 @@ function DisclaimerSection() {
                   { icon: "school", label: "Minimum 67% in High School" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-2">
-                    <Icon name={item.icon} className="text-teal-600 text-xl" />
-                    <span className="text-gray-700 text-xs sm:text-sm font-semibold">{item.label}</span>
+                    <Icon name={item.icon} className="text-red-600 text-xl" />
+                    <span className="text-slate-700 text-xs sm:text-sm font-bold">{item.label}</span>
                   </div>
                 ))}
               </div>
-              <p className="text-gray-500 text-[11px] sm:text-xs leading-relaxed">
+              <p className="text-slate-600 text-[11px] sm:text-xs font-semibold leading-relaxed">
                 Disclaimer: Candidates must have obtained a minimum aggregate of 67% marks in high school studies. NEET qualification (2024/2025/2026) is mandatory for Indian students as per NMC guidelines. Fees are non-refundable under any circumstances once the admission process is completed. USD is fixed; INR is for approximate reference only. Scholarship availability subject to eligibility criteria.
               </p>
             </div>
@@ -630,26 +630,29 @@ function DisclaimerSection() {
 ───────────────────────────────────────────────────────── */
 function CTASection({ isModalOpen, setIsModalOpen }) {
   return (
-    <section className="w-full py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-br from-teal-50 via-white to-yellow-50 relative overflow-hidden">
+    <section className="w-full py-12 sm:py-16 md:py-20 px-4 bg-gradient-to-br from-red-50 via-white to-yellow-50 relative overflow-hidden">
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        <span className="inline-block bg-yellow-400 text-yellow-900 text-xs sm:text-sm font-extrabold px-4 sm:px-5 py-2 rounded-full uppercase tracking-wider mb-4">2026 Admissions Open — Scholarship Available</span>
+        <span className="inline-block bg-yellow-400 text-yellow-900 text-xs sm:text-sm font-black px-4 sm:px-5 py-2 rounded-full uppercase tracking-wider mb-4">2026 Admissions Open — Scholarship Available</span>
         
-        <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-          Begin Your Medical Journey at <span className="text-teal-700">UHS VNU HCM</span>
+        <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-4 leading-tight">
+          Begin Your Medical Journey at <span className="text-[#CC1B1B]">UHS VNU HCM</span>
         </h2>
         
-        <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+        <p className="text-slate-600 text-base sm:text-lg font-semibold max-w-2xl mx-auto mb-8 leading-relaxed">
           Vietnam's No.1 Government Medical University. Secure your MBBS seat with expert guidance on admission, documentation, visa processing, and full travel support.
         </p>
         
         <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8">
-          <button onClick={() => setIsModalOpen(true)} className="bg-teal-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-teal-800 transition-all shadow-lg">
+          <button onClick={() => setIsModalOpen(true)} className="bg-[#CC1B1B] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-red-800 transition-all shadow-lg">
             Apply Now
           </button>
-          <a href="https://uhs.edu.vn/" target="_blank" rel="noopener noreferrer">
-            <button className="bg-white text-teal-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base border-2 border-teal-200 hover:bg-teal-50 transition-all">
-              Visit University
-            </button>
+          <a
+            href="https://uhsvnu.edu.vn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-white text-[#CC1B1B] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base border-2 border-red-200 hover:bg-red-50 transition-all text-center"
+          >
+            Visit University
           </a>
         </div>
         
@@ -661,8 +664,8 @@ function CTASection({ isModalOpen, setIsModalOpen }) {
             { value: "6 Yrs", label: "Local Support" },
           ].map((item) => (
             <div key={item.label} className="bg-white/80 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-gray-200">
-              <div className="font-headline text-xl sm:text-2xl font-extrabold text-teal-700">{item.value}</div>
-              <div className="text-gray-500 text-[10px] sm:text-xs font-semibold mt-1">{item.label}</div>
+              <div className="font-headline text-2xl sm:text-3xl font-black text-[#CC1B1B]">{item.value}</div>
+              <div className="text-slate-600 text-[10px] sm:text-xs font-bold mt-1">{item.label}</div>
             </div>
           ))}
         </div>
