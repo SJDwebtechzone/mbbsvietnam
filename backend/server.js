@@ -6,8 +6,8 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import pool from "./db.js";
 import dotenv from "dotenv";
-import nodemailer from "nodemailer";
-
+import { Resend } from "resend";
+const resend = new Resend(process.env.RESEND_API_KEY);
 dotenv.config();
 
 /* =========================
@@ -204,16 +204,28 @@ function normalizeImageUrl(req, image) {
   return `${req.protocol}://${req.get("host")}${normalized}`;
 }
 
-function createEmailTransporter() {
-  return nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // STARTTLS, not implicit SSL
-    family: 4,
-    auth: { user: process.env.EMAIL_USER, pass: process.env.EMAIL_PASS },
-    connectionTimeout: 10000, // 10s instead of default, fails faster if still blocked
-  });
-}
+app.post("/api/enquiry", async (req, res) => {
+  const { fullName, email, phone, state } = req.body;
+  if (!fullName || !phone)
+    return res.status(400).json({ message: "Missing required fields (fullName and phone are required)" });
+  try {
+    await resend.emails.send({
+      from: "Vietnam MBBS <onboarding@resend.dev>", // use this until you verify your own domain
+      to: "ramyashan.1010@gmail.com",
+      replyTo: email && email.trim() !== "" ? email : undefined,
+      subject: "New MBBS Enquiry Form Submission",
+      html: `<h3>New Enquiry</h3>
+             <p><b>Name:</b> ${fullName}</p>
+             <p><b>Email:</b> ${email || "Not provided"}</p>
+             <p><b>Phone:</b> ${phone}</p>
+             <p><b>State:</b> ${state || "Not provided"}</p>`,
+    });
+    res.status(200).json({ message: "Email sent successfully" });
+  } catch (error) {
+    console.error("ENQUIRY EMAIL ERROR:", error.message);
+    res.status(500).json({ message: error.message });
+  }
+});
 /* =========================
    AUTH MIDDLEWARE
 ========================= */
